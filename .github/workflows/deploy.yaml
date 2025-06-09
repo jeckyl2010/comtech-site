@@ -17,16 +17,26 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Hugo (latest)
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
 
+      - name: Cache Hugo resources
+        uses: actions/cache@v3
+        with:
+          path: |
+            resources
+          key: ${{ runner.os }}-hugo-${{ hashFiles('**/config.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-
+
       - name: Build site
         run: hugo --minify
 
       - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
