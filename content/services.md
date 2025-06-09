@@ -13,7 +13,7 @@ Crafting scalable, maintainable, and robust software systems with a focus on clo
 - Microservices and containerization
 - GxP-compliant system design
 
-<h2 class="service-heading"><img src="services/cloud.svg" alt="Cloud Solutions" class="service-icon" /> Cloud & AI Solutions</h2>
+<h2 class="service-heading"><img src="cloud.svg" alt="Cloud Solutions" class="service-icon" /> Cloud & AI Solutions</h2>
 Expert guidance and implementation for Azure cloud solutions and AI integration:
 - Azure cloud architecture and migration
 - AI/ML solution design and implementation
