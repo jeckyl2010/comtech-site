@@ -1,0 +1,56 @@
+baseURL = 'https://andershybertz.com/'
+languageCode = 'en-us'
+title = 'COM<tech> - Software Architecture & Cloud Solutions'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "auto"
+  ShowShareButtons = false
+  ShowReadingTime = true
+  ShowFullTextinRSS = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowWordCount = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = false
+  HideFooter = false
+  ShowCover = true
+  ShowCoverInArticle = true
+  ShowCoverInList = true
+
+[imaging]
+  resampleFilter = "lanczos"
+  quality = 75
+  anchor = "smart"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "services"
+    name = "Services"
+    url = "/services/"
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 40
+  [[menu.main]]
+    identifier = "testimonials"
+    name = "Testimonials"
+    url = "/testimonials/"
+    weight = 50
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

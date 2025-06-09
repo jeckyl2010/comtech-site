@@ -1,0 +1,7 @@
+/* Make main content area wider for PaperMod */
+.main {
+    max-width: 1000px;
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+} 
