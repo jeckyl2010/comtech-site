@@ -20,21 +20,21 @@ Expert guidance and implementation for Azure cloud solutions and AI integration:
 - Computer vision and analytics platforms
 - Containerized AI workload deployment
 
-<h2 class="service-heading"><img src="services/leadership.svg" alt="Technical Leadership" class="service-icon" /> Tech Lead & Mentoring</h2>
+<h2 class="service-heading"><img src="leadership.svg" alt="Technical Leadership" class="service-icon" /> Tech Lead & Mentoring</h2>
 Leading engineering teams and mentoring developers to build high-performing teams:
 - Technical team leadership
 - Architecture and code reviews
 - Best practices implementation
 - Knowledge sharing and mentoring
 
-<h2 class="service-heading"><img src="services/implementation.svg" alt="Full-stack Implementation" class="service-icon" /> Full-stack Implementation</h2>
+<h2 class="service-heading"><img src="implementation.svg" alt="Full-stack Implementation" class="service-icon" /> Full-stack Implementation</h2>
 End-to-end solution delivery using modern technologies:
 - .NET/C# development
 - RESTful API design
 - Event-driven architecture
 - Mobile application development
 
-<h2 class="service-heading"><img src="services/counseling.svg" alt="Strategic IT Counseling" class="service-icon" /> Strategic IT Counseling</h2>
+<h2 class="service-heading"><img src="counseling.svg" alt="Strategic IT Counseling" class="service-icon" /> Strategic IT Counseling</h2>
 Helping organizations make informed technology decisions:
 - Technology strategy development
 - Cloud migration planning
