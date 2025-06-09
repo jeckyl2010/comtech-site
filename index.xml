@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech> - Software Architecture &amp; Cloud Solutions</title><link>https://andershybertz.com/</link><description>Recent content in COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech> - Software Architecture &amp; Cloud Solutions</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><atom:link href="https://andershybertz.com/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://andershybertz.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://andershybertz.com/about/</guid><description>&lt;style>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech> - Software Architecture &amp; Cloud Solutions</title><link>https://andershybertz.com/</link><description>Recent content in COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech> - Software Architecture &amp; Cloud Solutions</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://andershybertz.com/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://andershybertz.com/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://andershybertz.com/about/</guid><description>&lt;style>
 .entry-cover, .entry-cover img {
-width: 75% !important;
-max-width: 75vw !important;
-height: auto !important;
-margin-left: auto;
-margin-right: auto;
-display: block;
+ width: 75% !important;
+ max-width: 75vw !important;
+ height: auto !important;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
 }
 &lt;/style>
 &lt;h1 id="about-comtech">About COM&amp;lt;tech&amp;gt;&lt;/h1>
@@ -48,115 +48,11 @@ display: block;
 &lt;li>&lt;strong>Public Sector:&lt;/strong> Delivered digital transformation solutions for government agencies&lt;/li>
 &lt;/ul>
 &lt;h2 id="our-approach">Our Approach&lt;/h2>
-&lt;p>We combine technical expertise with business acumen to deliver solutions that:&lt;/p></description><content:encoded><![CDATA[<style>
-.entry-cover, .entry-cover img {
-  width: 75% !important;
-  max-width: 75vw !important;
-  height: auto !important;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-</style>
-<h1 id="about-comtech">About COM&lt;tech&gt;</h1>
-<p><strong>COM&lt;tech&gt;</strong> is a premier software architecture and IT consultancy firm with over two decades of experience in transforming IT landscapes and helping organizations achieve their business goals. Established in 2000, we have been at the forefront of software development and IT consulting in Denmark.</p>
-<h2 id="our-journey">Our Journey</h2>
-<ul>
-<li><strong>2000s:</strong> Founded with expertise in software development and system design</li>
-<li><strong>2010s:</strong> Expanded to serve global enterprises in finance and insurance</li>
-<li><strong>2020s:</strong> Pioneering AI-driven solutions and cloud-native architecture</li>
-</ul>
-<h2 id="our-philosophy">Our Philosophy</h2>
-<ul>
-<li><strong>Technical Excellence:</strong> Delivering robust, scalable, and maintainable solutions</li>
-<li><strong>Business Alignment:</strong> Ensuring technology serves business objectives</li>
-<li><strong>Continuous Innovation:</strong> Staying ahead of technological trends</li>
-<li><strong>Client Partnership:</strong> Building long-term relationships based on trust and results</li>
-</ul>
-<h2 id="industries-we-serve">Industries We Serve</h2>
-<ul>
-<li><strong>Healthcare and Life Sciences</strong></li>
-<li><strong>Financial Services</strong></li>
-<li><strong>Manufacturing</strong></li>
-<li><strong>Retail and E-commerce</strong></li>
-<li><strong>Public Sector</strong></li>
-</ul>
-<h2 id="key-technologies">Key Technologies</h2>
-<ul>
-<li><strong>Cloud Architectures</strong></li>
-<li><strong>Microservices and Containerization</strong></li>
-<li><strong>AI and Machine Learning</strong></li>
-<li><strong>DevOps and CI/CD</strong></li>
-<li><strong>Enterprise Integration</strong></li>
-<li><strong>Security and Compliance</strong></li>
-</ul>
-<h2 id="notable-projects">Notable Projects</h2>
-<ul>
-<li><strong>Healthcare Platform:</strong> Developed a cloud-native platform for a leading healthcare provider</li>
-<li><strong>Financial Services:</strong> Implemented secure, scalable solutions for financial institutions</li>
-<li><strong>Manufacturing:</strong> Created IoT-based monitoring systems for manufacturing processes</li>
-<li><strong>Public Sector:</strong> Delivered digital transformation solutions for government agencies</li>
-</ul>
-<h2 id="our-approach">Our Approach</h2>
-<p>We combine technical expertise with business acumen to deliver solutions that:</p>
-<ul>
-<li>Address immediate business needs</li>
-<li>Scale for future growth</li>
-<li>Maintain high performance and reliability</li>
-<li>Ensure security and compliance</li>
-</ul>
-<h2 id="client-success-stories">Client Success Stories</h2>
-<p>We take pride in our clients&rsquo; success. <a href="/testimonials">Read what our clients say about working with us</a></p>
-]]></content:encoded></item><item><title>Client Testimonials</title><link>https://andershybertz.com/testimonials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://andershybertz.com/testimonials/</guid><description>What our clients say about COM&amp;lt;tech&amp;gt;</description><content:encoded><![CDATA[<h1 id="client-testimonials">Client Testimonials</h1>
-<p>Here&rsquo;s what our clients and partners say about working with <strong>COM&lt;tech&gt;</strong>.</p>
-<h2 id="leadership--technical-excellence">Leadership &amp; Technical Excellence</h2>
-<blockquote>
-<p>&ldquo;Anders delivers some of the most dedicated and proficient IT solutions I have ever worked with. He strives to design and deliver the best possible solutions and applications to achieve business objectives with a long-term business and IT perspective in mind. He challenge the mediocre ordinary and define and ensure compliance with new standards when needed.&rdquo;</p>
-<p>— <strong>Mads G. Jæger</strong>, Digital Transformation Field Marshal at KPMG</p></blockquote>
-<h2 id="project-delivery--team-leadership">Project Delivery &amp; Team Leadership</h2>
-<blockquote>
-<p>&ldquo;Anders is the type of collegue that no matter how busy he is, he always have the time to answer your questions or discuss design issues. This is a great gift and it helps the project run smoothly in the critical phases where everybody is busy. It was due to his architectural skills that we managed to make the solution stable and robust within the time given.&rdquo;</p>
-<p>— <strong>Arne Beck Hansen</strong>, Founder &amp; COO at N3O</p></blockquote>
-<h2 id="technical-expertise--mentoring">Technical Expertise &amp; Mentoring</h2>
-<blockquote>
-<p>&ldquo;Anders continue to impress with superior technical insight and the ability to lead projects in turbulent environments. Even in the most pressured situations, he can keep his head clear and focus at the core of the task. Anders could sit down with us and always understand the details of the problem and often give good inputs on how to continue or how to solve the problem in a better manner.&rdquo;</p>
-<p>— <strong>Søren Dalby</strong>, System Developer at SDU</p></blockquote>
-<h2 id="problem-solving--team-development">Problem-Solving &amp; Team Development</h2>
-<blockquote>
-<p>&ldquo;When Anders gives you an assignment, it seems as if they already know the solution and they&rsquo;re merely testing you, to see whether you will come up with the right solution. It&rsquo;s very motivating and makes you want to perform at your highest level. Apart from his technical skills, his is genuinely just great to work with.&rdquo;</p>
-<p>— <strong>Mikkel Colberg</strong>, Principal Developer at NNIT</p></blockquote>
-<h2 id="project-management--quality">Project Management &amp; Quality</h2>
-<blockquote>
-<p>&ldquo;Anders is dedicated to his projects. He strive to deliver on time and with high quality and do go the extra mile to ensure that this goal is met. He have high integrity and are open-minded for a discussion on architectural decisions. He not only have a sharp mind but are also able to share their ideas and visions in a manner that makes the team-members join in.&rdquo;</p>
-<p>— <strong>Morten Edward Foltmar</strong>, Freelance Software Developer</p></blockquote>
-<h2 id="strategic-vision--technical-depth">Strategic Vision &amp; Technical Depth</h2>
-<blockquote>
-<p>&ldquo;Anders is one of the rare, gifted people who have both detailed, technical knowledge and the ability of having the big overview as well. Anders is always ready to help and is very committed to his work.&rdquo;</p>
-<p>— <strong>Michael Henriksen</strong>, CEO at Wavepiston</p></blockquote>
-<style>
-.entry-content {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.entry-content blockquote {
-    border-left: 4px solid #2563eb;
-    padding-left: 1rem;
-    margin: 1.5rem 0;
-    background-color: rgba(37, 99, 235, 0.05);
-    padding: 1rem;
-    border-radius: 4px;
-}
-
-.entry-content h2 {
-    color: #1e40af;
-    margin-top: 2rem;
-    border-bottom: 2px solid #2563eb;
-    padding-bottom: 0.5rem;
-}
-</style> ]]></content:encoded></item><item><title>Contact COM&lt;tech></title><link>https://andershybertz.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://andershybertz.com/contact/</guid><description>&lt;p>Get in touch with &lt;strong>COM&amp;lt;tech&amp;gt;&lt;/strong> for IT consultancy and software architecture services.&lt;/p>
+&lt;p>We combine technical expertise with business acumen to deliver solutions that:&lt;/p></description></item><item><title>Client Testimonials</title><link>https://andershybertz.com/testimonials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://andershybertz.com/testimonials/</guid><description>&lt;h1 id="client-testimonials">Client Testimonials&lt;/h1>
+&lt;p>Here&amp;rsquo;s what our clients and partners say about working with &lt;strong>COM&amp;lt;tech&amp;gt;&lt;/strong>.&lt;/p>
+&lt;h2 id="leadership--technical-excellence">Leadership &amp;amp; Technical Excellence&lt;/h2>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Anders delivers some of the most dedicated and proficient IT solutions I have ever worked with. He strives to design and deliver the best possible solutions and applications to achieve business objectives with a long-term business and IT perspective in mind. He challenge the mediocre ordinary and define and ensure compliance with new standards when needed.&amp;rdquo;&lt;/p></description></item><item><title>Contact COM&lt;tech></title><link>https://andershybertz.com/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://andershybertz.com/contact/</guid><description>&lt;p>Get in touch with &lt;strong>COM&amp;lt;tech&amp;gt;&lt;/strong> for IT consultancy and software architecture services.&lt;/p>
 &lt;p>We&amp;rsquo;re always open to discussing new projects, creative ideas, or opportunities to be part of your vision.&lt;/p>
 &lt;h2 id="company-details">Company Details&lt;/h2>
 &lt;ul>
@@ -164,86 +60,77 @@ display: block;
 &lt;li>&lt;strong>CVR Number:&lt;/strong> 25567471&lt;/li>
 &lt;li>&lt;strong>Email:&lt;/strong> &lt;a href="mailto:anders@hybertz.dk">anders@hybertz.dk&lt;/a>&lt;/li>
 &lt;li>&lt;strong>LinkedIn:&lt;/strong> &lt;a href="https://www.linkedin.com/in/andershybertz/">linkedin.com/in/andershybertz&lt;/a>&lt;/li>
-&lt;/ul></description><content:encoded><![CDATA[<p>Get in touch with <strong>COM&lt;tech&gt;</strong> for IT consultancy and software architecture services.</p>
-<p>We&rsquo;re always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-<h2 id="company-details">Company Details</h2>
-<ul>
-<li><strong>Company Name:</strong> COM&lt;tech&gt;</li>
-<li><strong>CVR Number:</strong> 25567471</li>
-<li><strong>Email:</strong> <a href="mailto:anders@hybertz.dk">anders@hybertz.dk</a></li>
-<li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/andershybertz/">linkedin.com/in/andershybertz</a></li>
-</ul>
-]]></content:encoded></item><item><title>Services</title><link>https://andershybertz.com/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://andershybertz.com/services/</guid><description>Expert software architecture, cloud solutions, and IT consultancy services</description><content:encoded><![CDATA[<h1 id="our-services">Our Services</h1>
-<h2 class="service-heading"><img src="/services/architecture.svg" alt="Software Architecture" class="service-icon" /> Software Architecture & Design</h2>
+&lt;/ul></description></item><item><title>Services</title><link>https://andershybertz.com/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://andershybertz.com/services/</guid><description>&lt;h1 id="our-services">Our Services&lt;/h1>
+&lt;h2 class="service-heading">&lt;img src="https://andershybertz.com/services/architecture.svg" alt="Software Architecture" class="service-icon" /> Software Architecture &amp; Design&lt;/h2>
 Crafting scalable, maintainable, and robust software systems with a focus on cloud-native architecture and event-driven design. Our expertise includes:
 - Cloud-native architecture design
 - Event-driven system architecture
 - Microservices and containerization
 - GxP-compliant system design
-<h2 class="service-heading"><img src="/services/cloud.svg" alt="Cloud Solutions" class="service-icon" /> Cloud & AI Solutions</h2>
+&lt;h2 class="service-heading">&lt;img src="https://andershybertz.com/services/cloud.svg" alt="Cloud Solutions" class="service-icon" /> Cloud &amp; AI Solutions&lt;/h2>
 Expert guidance and implementation for Azure cloud solutions and AI integration:
 - Azure cloud architecture and migration
 - AI/ML solution design and implementation
 - Computer vision and analytics platforms
 - Containerized AI workload deployment
-<h2 class="service-heading"><img src="/services/leadership.svg" alt="Technical Leadership" class="service-icon" /> Tech Lead & Mentoring</h2>
+&lt;h2 class="service-heading">&lt;img src="https://andershybertz.com/services/leadership.svg" alt="Technical Leadership" class="service-icon" /> Tech Lead &amp; Mentoring&lt;/h2>
 Leading engineering teams and mentoring developers to build high-performing teams:
 - Technical team leadership
 - Architecture and code reviews
 - Best practices implementation
 - Knowledge sharing and mentoring
-<h2 class="service-heading"><img src="/services/implementation.svg" alt="Full-stack Implementation" class="service-icon" /> Full-stack Implementation</h2>
+&lt;h2 class="service-heading">&lt;img src="https://andershybertz.com/services/implementation.svg" alt="Full-stack Implementation" class="service-icon" /> Full-stack Implementation&lt;/h2>
 End-to-end solution delivery using modern technologies:
 - .NET/C# development
 - RESTful API design
 - Event-driven architecture
 - Mobile application development
-<h2 class="service-heading"><img src="/services/counseling.svg" alt="Strategic IT Counseling" class="service-icon" /> Strategic IT Counseling</h2>
+&lt;h2 class="service-heading">&lt;img src="https://andershybertz.com/services/counseling.svg" alt="Strategic IT Counseling" class="service-icon" /> Strategic IT Counseling&lt;/h2>
 Helping organizations make informed technology decisions:
 - Technology strategy development
 - Cloud migration planning
 - AI/ML adoption strategy
 - Performance optimization
-<style>
+&lt;style>
 .entry-content {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ background-color: rgba(255, 255, 255, 0.95);
+ padding: 2rem;
+ border-radius: 8px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .service-heading {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: #1e40af;
-    margin-top: 2rem;
-    border-bottom: 2px solid #2563eb;
-    padding-bottom: 0.5rem;
+ display: flex;
+ align-items: center;
+ gap: 0.75rem;
+ color: #1e40af;
+ margin-top: 2rem;
+ border-bottom: 2px solid #2563eb;
+ padding-bottom: 0.5rem;
 }
 
 .service-icon {
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-    display: block;
+ width: 32px;
+ height: 32px;
+ flex-shrink: 0;
+ display: block;
 }
 
 .entry-content ul {
-    list-style-type: none;
-    padding-left: 1rem;
+ list-style-type: none;
+ padding-left: 1rem;
 }
 
 .entry-content ul li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
+ position: relative;
+ padding-left: 1.5rem;
+ margin-bottom: 0.5rem;
 }
 
 .entry-content ul li::before {
-    content: "•";
-    color: #2563eb;
-    position: absolute;
-    left: 0;
+ content: "•";
+ color: #2563eb;
+ position: absolute;
+ left: 0;
 }
-</style> ]]></content:encoded></item></channel></rss>
+&lt;/style></description></item></channel></rss>
