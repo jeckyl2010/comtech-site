@@ -6,7 +6,7 @@ type: "page"
 
 # Our Services
 
-<h2 class="service-heading"><img src="/comtech-site/services/architecture.svg" alt="Software Architecture" class="service-icon" /> Software Architecture & Design</h2>
+<h2 class="service-heading"><img src="architecture.svg" alt="Software Architecture" class="service-icon" /> Software Architecture & Design</h2>
 Crafting scalable, maintainable, and robust software systems with a focus on cloud-native architecture and event-driven design. Our expertise includes:
 - Cloud-native architecture design
 - Event-driven system architecture
