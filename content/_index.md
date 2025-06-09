@@ -3,7 +3,7 @@ title: "COM&lt;tech&gt; - Software Architecture & Cloud Solutions"
 description: "Top-tier Software Architecture, Cloud Solutions & IT Consultancy"
 ---
 
-![COM&lt;tech&gt;](/comtech.jpg)
+![COM&lt;tech&gt;](comtech.jpg)
 
 # Empowering Businesses with World-Class Software Architecture
 
