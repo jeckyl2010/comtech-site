@@ -3,7 +3,7 @@ title: "Client Testimonials"
 description: "What our clients say about COM<tech>"
 type: "page"
 cover:
-  image: "/testimonials/testimonials-bg.jpg"
+  image: "testimonials/testimonials-bg.jpg"
   alt: "Client Testimonials"
   caption: "What our clients say about COM&lt;tech&gt;"
   relative: false

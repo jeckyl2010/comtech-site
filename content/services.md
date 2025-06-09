@@ -6,35 +6,35 @@ type: "page"
 
 # Our Services
 
-<h2 class="service-heading"><img src="/services/architecture.svg" alt="Software Architecture" class="service-icon" /> Software Architecture & Design</h2>
+<h2 class="service-heading"><img src="services/architecture.svg" alt="Software Architecture" class="service-icon" /> Software Architecture & Design</h2>
 Crafting scalable, maintainable, and robust software systems with a focus on cloud-native architecture and event-driven design. Our expertise includes:
 - Cloud-native architecture design
 - Event-driven system architecture
 - Microservices and containerization
 - GxP-compliant system design
 
-<h2 class="service-heading"><img src="/services/cloud.svg" alt="Cloud Solutions" class="service-icon" /> Cloud & AI Solutions</h2>
+<h2 class="service-heading"><img src="services/cloud.svg" alt="Cloud Solutions" class="service-icon" /> Cloud & AI Solutions</h2>
 Expert guidance and implementation for Azure cloud solutions and AI integration:
 - Azure cloud architecture and migration
 - AI/ML solution design and implementation
 - Computer vision and analytics platforms
 - Containerized AI workload deployment
 
-<h2 class="service-heading"><img src="/services/leadership.svg" alt="Technical Leadership" class="service-icon" /> Tech Lead & Mentoring</h2>
+<h2 class="service-heading"><img src="services/leadership.svg" alt="Technical Leadership" class="service-icon" /> Tech Lead & Mentoring</h2>
 Leading engineering teams and mentoring developers to build high-performing teams:
 - Technical team leadership
 - Architecture and code reviews
 - Best practices implementation
 - Knowledge sharing and mentoring
 
-<h2 class="service-heading"><img src="/services/implementation.svg" alt="Full-stack Implementation" class="service-icon" /> Full-stack Implementation</h2>
+<h2 class="service-heading"><img src="services/implementation.svg" alt="Full-stack Implementation" class="service-icon" /> Full-stack Implementation</h2>
 End-to-end solution delivery using modern technologies:
 - .NET/C# development
 - RESTful API design
 - Event-driven architecture
 - Mobile application development
 
-<h2 class="service-heading"><img src="/services/counseling.svg" alt="Strategic IT Counseling" class="service-icon" /> Strategic IT Counseling</h2>
+<h2 class="service-heading"><img src="services/counseling.svg" alt="Strategic IT Counseling" class="service-icon" /> Strategic IT Counseling</h2>
 Helping organizations make informed technology decisions:
 - Technology strategy development
 - Cloud migration planning

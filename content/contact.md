@@ -2,7 +2,7 @@
 title: "Contact COM<tech>"
 type: "page"
 cover:
-  image: "/contact/contact-bg.jpg"
+  image: "contact/contact-bg.jpg"
   alt: "Contact COM<tech>"
   caption: "Get in touch with us"
   relative: false

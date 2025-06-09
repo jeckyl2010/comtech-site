@@ -2,7 +2,7 @@
 title: ""
 type: "page"
 cover:
-  image: "/about/anders-hybertz-portrait.jpg"
+  image: "about/anders-hybertz-portrait.jpg"
   alt: "Anders Hybertz - Founder of COM&lt;tech&gt;"
   caption: "Anders Hybertz - Founder of COM&lt;tech&gt;"
   relative: false
