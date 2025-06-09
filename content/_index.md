@@ -19,7 +19,7 @@ Welcome to **COM&lt;tech&gt;**, a premier software architecture and IT consultan
 
 > "Transforming complex challenges into elegant, maintainable solutions through cloud-native architecture and AI integration."
 
-[Contact Us](/contact/)  |  [Our Services](/services/)  |  [About Us](/about/)
+[Contact Us](contact/)  |  [Our Services](services/)  |  [About Us](about/)
 
 <style>
 .entry-content {
