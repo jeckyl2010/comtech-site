@@ -15,6 +15,7 @@ Get in touch with **COM&lt;tech&gt;** for IT consultancy and software architectu
 We're always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
 
 ## Company Details
+
 - **Company Name:** COM&lt;tech&gt;
 - **CVR Number:** 25567471
 - **Email:** [anders@hybertz.dk](mailto:anders@hybertz.dk)

@@ -5,7 +5,7 @@ description: "Top-tier Software Architecture, Cloud Solutions & IT Consultancy"
 
 ![COM&lt;tech&gt;](comtech.jpg)
 
-# Empowering Businesses with World-Class Software Architecture
+# Practical Software Architecture & Cloud Solutions for Your Business
 
 Welcome to **COM&lt;tech&gt;**, a premier software architecture and IT consultancy firm with over two decades of experience delivering robust, scalable, and innovative solutions. Led by Anders Hybertz, our team specializes in AI-driven, cloud-native platforms and enterprise architecture, currently serving major clients in the pharmaceutical and healthcare sectors.
 
