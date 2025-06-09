@@ -5,3 +5,7 @@
     margin-left: auto;
     margin-right: auto;
 } 
+
+body.dark .service-icon {
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(180deg) saturate(2);
+} 
