@@ -40,8 +40,11 @@ jobs:
 
       - name: Build site
         run: |
-          hugo --minify --debug
+          hugo --minify --logLevel debug
+          echo "Listing public directory contents:"
           ls -la public/
+          echo "Listing public/assets directory contents:"
+          ls -la public/assets/
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
