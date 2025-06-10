@@ -1,4 +1,4 @@
-baseURL = 'https://jeckyl2010.github.io/comtech-site/'
+baseURL = 'https://comtech.softwarearchitect.dk/'
 languageCode = 'en-us'
 title = 'COM<tech> - Software Architecture & Cloud Solutions'
 theme = 'PaperMod'
