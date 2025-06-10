@@ -23,6 +23,12 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Debug - List directory contents
+        run: |
+          ls -la
+          ls -la themes/
+          ls -la static/
+
       - name: Cache Hugo resources
         uses: actions/cache@v3
         with:
@@ -33,7 +39,9 @@ jobs:
             ${{ runner.os }}-hugo-
 
       - name: Build site
-        run: hugo --minify
+        run: |
+          hugo --minify --debug
+          ls -la public/
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
