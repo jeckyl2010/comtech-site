@@ -55,3 +55,11 @@ theme = 'PaperMod'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[build]
+  writeStats = true
+
+[assetDir]
+  css = "assets/css"
+  js = "assets/js"
+  images = "assets/images"
