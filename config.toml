@@ -2,6 +2,7 @@ baseURL = 'https://comtech.softwarearchitect.dk/'
 languageCode = 'en-us'
 title = 'COM<tech> - Software Architecture & Cloud Solutions'
 theme = 'PaperMod'
+assetDir = 'assets'
 
 # Site configuration
 [params]
@@ -59,11 +60,6 @@ theme = 'PaperMod'
 [build]
   writeStats = true
   noJSConfigInAssets = true
-
-[assetDir]
-  css = "assets/css"
-  js = "assets/js"
-  images = "assets/images"
 
 [params.assets]
   disableFingerprinting = false
