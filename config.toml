@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'COM<tech> - Software Architecture & Cloud Solutions'
 theme = 'PaperMod'
 
+# Site configuration
 [params]
   defaultTheme = "auto"
   ShowShareButtons = false
