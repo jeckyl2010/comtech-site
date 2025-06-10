@@ -1,69 +1,54 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech&gt; - Software Architecture &amp; Cloud Solutions</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech&gt; - Software Architecture &amp; Cloud Solutions</description>
-    <generator>Hugo -- 0.147.8</generator>
-    <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;style&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech> - Software Architecture &amp; Cloud Solutions</title><link>https://comtech.softwarearchitect.dk/</link><description>Recent content in COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech> - Software Architecture &amp; Cloud Solutions</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><atom:link href="https://comtech.softwarearchitect.dk/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://comtech.softwarearchitect.dk/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://comtech.softwarearchitect.dk/about/</guid><description>&lt;style>
 .entry-cover, .entry-cover img {
-  width: 75% !important;
-  max-width: 75vw !important;
-  height: auto !important;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+width: 75% !important;
+max-width: 75vw !important;
+height: auto !important;
+margin-left: auto;
+margin-right: auto;
+display: block;
 }
-&lt;/style&gt;
-&lt;h1 id=&#34;about-comtech&#34;&gt;About COM&amp;lt;tech&amp;gt;&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;COM&amp;lt;tech&amp;gt;&lt;/strong&gt; is a premier software architecture and IT consultancy firm with over two decades of experience in transforming IT landscapes and helping organizations achieve their business goals. Established in 2000, we have been at the forefront of software development and IT consulting in Denmark.&lt;/p&gt;
-&lt;h2 id=&#34;our-journey&#34;&gt;Our Journey&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;2000s:&lt;/strong&gt; Founded with expertise in software development and system design&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2010s:&lt;/strong&gt; Expanded to serve global enterprises in finance and insurance&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;2020s:&lt;/strong&gt; Pioneering AI-driven solutions and cloud-native architecture&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;our-philosophy&#34;&gt;Our Philosophy&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Technical Excellence:&lt;/strong&gt; Delivering robust, scalable, and maintainable solutions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Business Alignment:&lt;/strong&gt; Ensuring technology serves business objectives&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Continuous Innovation:&lt;/strong&gt; Staying ahead of technological trends&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Client Partnership:&lt;/strong&gt; Building long-term relationships based on trust and results&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;industries-we-serve&#34;&gt;Industries We Serve&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Healthcare and Life Sciences&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Financial Services&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Manufacturing&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Retail and E-commerce&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Public Sector&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;key-technologies&#34;&gt;Key Technologies&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cloud Architectures&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Microservices and Containerization&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI and Machine Learning&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DevOps and CI/CD&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Enterprise Integration&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Security and Compliance&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;notable-projects&#34;&gt;Notable Projects&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Healthcare Platform:&lt;/strong&gt; Developed a cloud-native platform for a leading healthcare provider&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Financial Services:&lt;/strong&gt; Implemented secure, scalable solutions for financial institutions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Manufacturing:&lt;/strong&gt; Created IoT-based monitoring systems for manufacturing processes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Public Sector:&lt;/strong&gt; Delivered digital transformation solutions for government agencies&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;our-approach&#34;&gt;Our Approach&lt;/h2&gt;
-&lt;p&gt;We combine technical expertise with business acumen to deliver solutions that:&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<style>
+&lt;/style>
+&lt;h1 id="about-comtech">About COM&amp;lt;tech&amp;gt;&lt;/h1>
+&lt;p>&lt;strong>COM&amp;lt;tech&amp;gt;&lt;/strong> is a premier software architecture and IT consultancy firm with over two decades of experience in transforming IT landscapes and helping organizations achieve their business goals. Established in 2000, we have been at the forefront of software development and IT consulting in Denmark.&lt;/p>
+&lt;h2 id="our-journey">Our Journey&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>2000s:&lt;/strong> Founded with expertise in software development and system design&lt;/li>
+&lt;li>&lt;strong>2010s:&lt;/strong> Expanded to serve global enterprises in finance and insurance&lt;/li>
+&lt;li>&lt;strong>2020s:&lt;/strong> Pioneering AI-driven solutions and cloud-native architecture&lt;/li>
+&lt;/ul>
+&lt;h2 id="our-philosophy">Our Philosophy&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Technical Excellence:&lt;/strong> Delivering robust, scalable, and maintainable solutions&lt;/li>
+&lt;li>&lt;strong>Business Alignment:&lt;/strong> Ensuring technology serves business objectives&lt;/li>
+&lt;li>&lt;strong>Continuous Innovation:&lt;/strong> Staying ahead of technological trends&lt;/li>
+&lt;li>&lt;strong>Client Partnership:&lt;/strong> Building long-term relationships based on trust and results&lt;/li>
+&lt;/ul>
+&lt;h2 id="industries-we-serve">Industries We Serve&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Healthcare and Life Sciences&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Financial Services&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Manufacturing&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Retail and E-commerce&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Public Sector&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="key-technologies">Key Technologies&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Cloud Architectures&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Microservices and Containerization&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>AI and Machine Learning&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>DevOps and CI/CD&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Enterprise Integration&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Security and Compliance&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h2 id="notable-projects">Notable Projects&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Healthcare Platform:&lt;/strong> Developed a cloud-native platform for a leading healthcare provider&lt;/li>
+&lt;li>&lt;strong>Financial Services:&lt;/strong> Implemented secure, scalable solutions for financial institutions&lt;/li>
+&lt;li>&lt;strong>Manufacturing:&lt;/strong> Created IoT-based monitoring systems for manufacturing processes&lt;/li>
+&lt;li>&lt;strong>Public Sector:&lt;/strong> Delivered digital transformation solutions for government agencies&lt;/li>
+&lt;/ul>
+&lt;h2 id="our-approach">Our Approach&lt;/h2>
+&lt;p>We combine technical expertise with business acumen to deliver solutions that:&lt;/p></description><content:encoded><![CDATA[<style>
 .entry-cover, .entry-cover img {
   width: 75% !important;
   max-width: 75vw !important;
@@ -122,15 +107,7 @@
 </ul>
 <h2 id="client-success-stories">Client Success Stories</h2>
 <p>We take pride in our clients&rsquo; success. <a href="testimonials">Read what our clients say about working with us</a></p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Client Testimonials</title>
-      <link>http://localhost:1313/testimonials/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/testimonials/</guid>
-      <description>What our clients say about COM&amp;lt;tech&amp;gt;</description>
-      <content:encoded><![CDATA[<h1 id="client-testimonials">Client Testimonials</h1>
+]]></content:encoded></item><item><title>Client Testimonials</title><link>https://comtech.softwarearchitect.dk/testimonials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://comtech.softwarearchitect.dk/testimonials/</guid><description>What our clients say about COM&amp;lt;tech&amp;gt;</description><content:encoded><![CDATA[<h1 id="client-testimonials">Client Testimonials</h1>
 <p>Here&rsquo;s what our clients and partners say about working with <strong>COM&lt;tech&gt;</strong>.</p>
 <h2 id="leadership--technical-excellence">Leadership &amp; Technical Excellence</h2>
 <blockquote>
@@ -179,23 +156,15 @@
     border-bottom: 2px solid #2563eb;
     padding-bottom: 0.5rem;
 }
-</style> ]]></content:encoded>
-    </item>
-    <item>
-      <title>Contact COM&lt;tech&gt;</title>
-      <link>http://localhost:1313/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
-      <description>&lt;p&gt;Get in touch with &lt;strong&gt;COM&amp;lt;tech&amp;gt;&lt;/strong&gt; for IT consultancy and software architecture services.&lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;re always open to discussing new projects, creative ideas, or opportunities to be part of your vision.&lt;/p&gt;
-&lt;h2 id=&#34;company-details&#34;&gt;Company Details&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Company Name:&lt;/strong&gt; COM&amp;lt;tech&amp;gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CVR Number:&lt;/strong&gt; 25567471&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:anders@hybertz.dk&#34;&gt;anders@hybertz.dk&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;LinkedIn:&lt;/strong&gt; &lt;a href=&#34;https://www.linkedin.com/in/andershybertz/&#34;&gt;linkedin.com/in/andershybertz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-      <content:encoded><![CDATA[<p>Get in touch with <strong>COM&lt;tech&gt;</strong> for IT consultancy and software architecture services.</p>
+</style> ]]></content:encoded></item><item><title>Contact COM&lt;tech></title><link>https://comtech.softwarearchitect.dk/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://comtech.softwarearchitect.dk/contact/</guid><description>&lt;p>Get in touch with &lt;strong>COM&amp;lt;tech&amp;gt;&lt;/strong> for IT consultancy and software architecture services.&lt;/p>
+&lt;p>We&amp;rsquo;re always open to discussing new projects, creative ideas, or opportunities to be part of your vision.&lt;/p>
+&lt;h2 id="company-details">Company Details&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Company Name:&lt;/strong> COM&amp;lt;tech&amp;gt;&lt;/li>
+&lt;li>&lt;strong>CVR Number:&lt;/strong> 25567471&lt;/li>
+&lt;li>&lt;strong>Email:&lt;/strong> &lt;a href="mailto:anders@hybertz.dk">anders@hybertz.dk&lt;/a>&lt;/li>
+&lt;li>&lt;strong>LinkedIn:&lt;/strong> &lt;a href="https://www.linkedin.com/in/andershybertz/">linkedin.com/in/andershybertz&lt;/a>&lt;/li>
+&lt;/ul></description><content:encoded><![CDATA[<p>Get in touch with <strong>COM&lt;tech&gt;</strong> for IT consultancy and software architecture services.</p>
 <p>We&rsquo;re always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
 <h2 id="company-details">Company Details</h2>
 <ul>
@@ -204,15 +173,7 @@
 <li><strong>Email:</strong> <a href="mailto:anders@hybertz.dk">anders@hybertz.dk</a></li>
 <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/andershybertz/">linkedin.com/in/andershybertz</a></li>
 </ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Services</title>
-      <link>http://localhost:1313/services/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/services/</guid>
-      <description>Expert software architecture, cloud solutions, and IT consultancy services</description>
-      <content:encoded><![CDATA[<h1 id="our-services">Our Services</h1>
+]]></content:encoded></item><item><title>Services</title><link>https://comtech.softwarearchitect.dk/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://comtech.softwarearchitect.dk/services/</guid><description>Expert software architecture, cloud solutions, and IT consultancy services</description><content:encoded><![CDATA[<h1 id="our-services">Our Services</h1>
 <h2 class="service-heading"><img src="architecture.svg" alt="Software Architecture" class="service-icon" /> Software Architecture & Design</h2>
 Crafting scalable, maintainable, and robust software systems with a focus on cloud-native architecture and event-driven design. Our expertise includes:
 - Cloud-native architecture design
@@ -284,7 +245,4 @@ Helping organizations make informed technology decisions:
     position: absolute;
     left: 0;
 }
-</style> ]]></content:encoded>
-    </item>
-  </channel>
-</rss>
+</style> ]]></content:encoded></item></channel></rss>
