@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech> - Software Architecture &amp; Cloud Solutions</title><link>https://jeckyl2010.github.io/comtech-site/</link><description>Recent content in COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech> - Software Architecture &amp; Cloud Solutions</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><atom:link href="https://jeckyl2010.github.io/comtech-site/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://jeckyl2010.github.io/comtech-site/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jeckyl2010.github.io/comtech-site/about/</guid><description>&lt;style>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech> - Software Architecture &amp; Cloud Solutions</title><link>https://comtech.softwarearchitect.dk/</link><description>Recent content in COM&amp;lt;tech&amp;gt; - Software Architecture &amp; Cloud Solutions on COM&lt;tech> - Software Architecture &amp; Cloud Solutions</description><generator>Hugo -- 0.147.8</generator><language>en-us</language><atom:link href="https://comtech.softwarearchitect.dk/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://comtech.softwarearchitect.dk/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://comtech.softwarearchitect.dk/about/</guid><description>&lt;style>
 .entry-cover, .entry-cover img {
 width: 75% !important;
 max-width: 75vw !important;
@@ -107,7 +107,7 @@ display: block;
 </ul>
 <h2 id="client-success-stories">Client Success Stories</h2>
 <p>We take pride in our clients&rsquo; success. <a href="testimonials">Read what our clients say about working with us</a></p>
-]]></content:encoded></item><item><title>Client Testimonials</title><link>https://jeckyl2010.github.io/comtech-site/testimonials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jeckyl2010.github.io/comtech-site/testimonials/</guid><description>What our clients say about COM&amp;lt;tech&amp;gt;</description><content:encoded><![CDATA[<h1 id="client-testimonials">Client Testimonials</h1>
+]]></content:encoded></item><item><title>Client Testimonials</title><link>https://comtech.softwarearchitect.dk/testimonials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://comtech.softwarearchitect.dk/testimonials/</guid><description>What our clients say about COM&amp;lt;tech&amp;gt;</description><content:encoded><![CDATA[<h1 id="client-testimonials">Client Testimonials</h1>
 <p>Here&rsquo;s what our clients and partners say about working with <strong>COM&lt;tech&gt;</strong>.</p>
 <h2 id="leadership--technical-excellence">Leadership &amp; Technical Excellence</h2>
 <blockquote>
@@ -156,7 +156,7 @@ display: block;
     border-bottom: 2px solid #2563eb;
     padding-bottom: 0.5rem;
 }
-</style> ]]></content:encoded></item><item><title>Contact COM&lt;tech></title><link>https://jeckyl2010.github.io/comtech-site/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jeckyl2010.github.io/comtech-site/contact/</guid><description>&lt;p>Get in touch with &lt;strong>COM&amp;lt;tech&amp;gt;&lt;/strong> for IT consultancy and software architecture services.&lt;/p>
+</style> ]]></content:encoded></item><item><title>Contact COM&lt;tech></title><link>https://comtech.softwarearchitect.dk/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://comtech.softwarearchitect.dk/contact/</guid><description>&lt;p>Get in touch with &lt;strong>COM&amp;lt;tech&amp;gt;&lt;/strong> for IT consultancy and software architecture services.&lt;/p>
 &lt;p>We&amp;rsquo;re always open to discussing new projects, creative ideas, or opportunities to be part of your vision.&lt;/p>
 &lt;h2 id="company-details">Company Details&lt;/h2>
 &lt;ul>
@@ -173,7 +173,7 @@ display: block;
 <li><strong>Email:</strong> <a href="mailto:anders@hybertz.dk">anders@hybertz.dk</a></li>
 <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/andershybertz/">linkedin.com/in/andershybertz</a></li>
 </ul>
-]]></content:encoded></item><item><title>Services</title><link>https://jeckyl2010.github.io/comtech-site/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jeckyl2010.github.io/comtech-site/services/</guid><description>Expert software architecture, cloud solutions, and IT consultancy services</description><content:encoded><![CDATA[<h1 id="our-services">Our Services</h1>
+]]></content:encoded></item><item><title>Services</title><link>https://comtech.softwarearchitect.dk/services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://comtech.softwarearchitect.dk/services/</guid><description>Expert software architecture, cloud solutions, and IT consultancy services</description><content:encoded><![CDATA[<h1 id="our-services">Our Services</h1>
 <h2 class="service-heading"><img src="architecture.svg" alt="Software Architecture" class="service-icon" /> Software Architecture & Design</h2>
 Crafting scalable, maintainable, and robust software systems with a focus on cloud-native architecture and event-driven design. Our expertise includes:
 - Cloud-native architecture design
