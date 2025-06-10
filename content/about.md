@@ -73,4 +73,4 @@ We combine technical expertise with business acumen to deliver solutions that:
 
 ## Client Success Stories
 
-We take pride in our clients' success. [Read what our clients say about working with us](testimonials/)
+We take pride in our clients' success. [Read what our clients say about working with us](/testimonials/)
