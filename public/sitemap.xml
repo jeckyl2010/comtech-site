@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/comtech-site/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/comtech-site/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/comtech-site/testimonials/</loc>
+  </url><url>
+    <loc>http://localhost:1313/comtech-site/</loc>
+  </url><url>
+    <loc>http://localhost:1313/comtech-site/contact/</loc>
+  </url><url>
+    <loc>http://localhost:1313/comtech-site/services/</loc>
+  </url><url>
+    <loc>http://localhost:1313/comtech-site/tags/</loc>
+  </url>
+</urlset>
