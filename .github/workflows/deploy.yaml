@@ -1,20 +1,25 @@
-name: Deploy Hugo site to GitHub Pages
+name: Deploy Hugo site to Pages
 
 on:
   push:
-    branches: [main]
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: write
 
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
+jobs:
+  build:
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
         with:
+          submodules: recursive
           fetch-depth: 0
 
       - name: Setup Hugo
@@ -23,33 +28,34 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Debug - List directory contents
+      - name: List directory contents
         run: |
           ls -la
           ls -la themes/
           ls -la static/
 
-      - name: Cache Hugo resources
-        uses: actions/cache@v3
-        with:
-          path: |
-            resources
-          key: ${{ runner.os }}-hugo-${{ hashFiles('**/config.toml') }}
-          restore-keys: |
-            ${{ runner.os }}-hugo-
-
-      - name: Build site
+      - name: Build with Hugo
         run: |
           hugo --minify --logLevel debug
           echo "Listing public directory contents:"
           ls -la public/
           echo "Listing public/assets directory contents:"
           ls -la public/assets/
+          echo "Listing public/assets/css directory contents:"
+          ls -la public/assets/css/
 
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
