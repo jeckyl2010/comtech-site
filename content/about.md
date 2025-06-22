@@ -1,17 +1,17 @@
 ---
-title: ""
+title: "Founder and Owner"
 type: "page"
 cover:
   image: "about/anders-hybertz-portrait.jpg"
-  alt: "Anders Hybertz - Founder and owner of COM&lt;tech&gt;"
-  caption: "Anders Hybertz - Founder and owner of COM&lt;tech&gt;"
+  alt: "Anders Hybertz"
+  caption: "_Anders Hybertz_"
   relative: false
   hidden: false
 ---
 
 <style>
 .entry-cover, .entry-cover img {
-  width: 75% !important;
+  width: 50% !important;
   max-width: 75vw !important;
   height: auto !important;
   margin-left: auto;
@@ -22,8 +22,8 @@ cover:
 
 # About COM&lt;tech&gt;
 
-
 **COM&lt;tech&gt;** is a premier software architecture and IT consultancy firm with over two decades of experience in transforming IT landscapes and helping organizations achieve their business goals. Established in 2000, we have been at the forefront of software development and IT consulting in Denmark.
+
 
 ## Our Journey
 

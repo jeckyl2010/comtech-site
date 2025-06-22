@@ -1,11 +1,140 @@
-/* Make main content area wider for PaperMod */
-.main {
-    max-width: 1000px;
-    width: 95vw;
-    margin-left: auto;
-    margin-right: auto;
-} 
+/* Consistent Page Styling */
 
-body.dark .service-icon {
-    filter: brightness(0) invert(1) sepia(1) hue-rotate(180deg) saturate(2);
-} 
+/* Make all pages use the list class for consistent background */
+body {
+    background: var(--theme);
+}
+
+/* Main content area */
+.main {
+    max-width: 1200px;
+    width: 82vw;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Page Content - Match home page style */
+.entry-content, .post-content, .page-header, .post-entry, article, .post-single, .first-entry {
+    background: var(--entry);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Service Page */
+.service-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.service-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+}
+
+/* Testimonials Page */
+.entry-content blockquote {
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    background: var(--entry);
+    border-radius: var(--radius);
+}
+
+/* Lists */
+.entry-content ul {
+    list-style-type: none;
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+
+.entry-content ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.entry-content ul li::before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+}
+
+/* Links */
+.entry-content a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.entry-content a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Post Single Page Specific */
+.post-single {
+    background: var(--entry);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.post-header {
+    margin-bottom: 2rem;
+}
+
+.post-title {
+    margin-bottom: 0.5rem;
+}
+
+.post-description {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+/* Page Header */
+.page-header {
+    background: var(--entry);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main {
+        width: 95vw;
+        padding: 1rem 0;
+    }
+    
+    .entry-content, .post-content, .page-header, .post-entry, article, .first-entry, .post-single {
+        padding: 1.5rem;
+    }
+}
+
+
+
+.main {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  pointer-events: auto; /* Ensure it's clickable */
+}
+
+.main.page-loaded {
+  opacity: 1;
+}
+
+.main.page-fade {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms ease-in-out;
+}
+

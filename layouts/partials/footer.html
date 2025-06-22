@@ -1,0 +1,60 @@
+<footer class="footer">
+  <span>&copy; {{ now.Year }} {{ .Site.Title }}</span>
+  {{ if .Site.Params.ShowPoweredBy }}
+    <span class="powerby">
+      Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a> &amp;
+      <a href="https://github.com/adityatelange/hugo-PaperMod" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+  {{ end }}
+  {{ if not .Site.Params.DisableScrollToTop }}
+    <span><a href="#top" aria-label="Go to top" class="top-link">⬆</a></span>
+  {{ end }}
+</footer>
+
+<script>
+  const main = document.querySelector(".main");
+
+  if (main) {
+    main.classList.remove("page-fade");
+
+    requestAnimationFrame(() => {
+      main.classList.add("page-loaded");
+    });
+
+    main.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute("href");
+      const isInternal = link.hostname === location.hostname;
+      const isAnchor = href.startsWith("#");
+      const isNewTab = link.target === "_blank";
+
+      link.addEventListener("click", e => {
+        if (
+          e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0 ||
+          !isInternal || isAnchor || isNewTab
+        ) {
+          return;
+        }
+
+        e.preventDefault();
+        main.classList.remove("page-loaded");
+        main.classList.add("page-fade");
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 500);
+      });
+    });
+  }
+
+  document.querySelector('#theme-toggle')?.addEventListener('click', () => {
+    const body = document.body;
+    const isDark = body.classList.contains("dark");
+    if (isDark) {
+      body.classList.remove("dark");
+      localStorage.setItem("pref-theme", "light");
+    } else {
+      body.classList.add("dark");
+      localStorage.setItem("pref-theme", "dark");
+    }
+  });
+</script>

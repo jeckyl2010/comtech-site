@@ -21,50 +21,6 @@ Welcome to **COM&lt;tech&gt;**, a premier software architecture and IT consultan
 
 [Contact Us](contact/)  |  [Our Services](services/)  |  [About Us](about/)
 
-<style>
-.entry-content {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.entry-content blockquote {
-    border-left: 4px solid #2563eb;
-    padding-left: 1rem;
-    margin: 1.5rem 0;
-    background-color: rgba(37, 99, 235, 0.05);
-    padding: 1rem;
-    border-radius: 4px;
-    font-style: italic;
-}
-
-.entry-content ul {
-    list-style-type: none;
-    padding-left: 1rem;
-}
-
-.entry-content ul li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.entry-content ul li::before {
-    content: "•";
-    color: #2563eb;
-    position: absolute;
-    left: 0;
-}
-
-.entry-content img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 2rem 0;
-}
-</style>
-
 ---
 
 ## Why Choose COM&lt;tech&gt;?

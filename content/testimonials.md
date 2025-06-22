@@ -43,28 +43,3 @@ Here's what our clients and partners say about working with **COM&lt;tech&gt;**.
 > "Anders is one of the rare, gifted people who have both detailed, technical knowledge and the ability of having the big overview as well. Anders is always ready to help and is very committed to his work."
 > 
 > — **Michael Henriksen**, CEO at Wavepiston
-
-<style>
-.entry-content {
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.entry-content blockquote {
-    border-left: 4px solid #2563eb;
-    padding-left: 1rem;
-    margin: 1.5rem 0;
-    background-color: rgba(37, 99, 235, 0.05);
-    padding: 1rem;
-    border-radius: 4px;
-}
-
-.entry-content h2 {
-    color: #1e40af;
-    margin-top: 2rem;
-    border-bottom: 2px solid #2563eb;
-    padding-bottom: 0.5rem;
-}
-</style> 
