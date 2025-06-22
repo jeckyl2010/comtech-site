@@ -58,6 +58,9 @@ assetDir = 'assets'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+      hardWraps = false
+      xhtml = false
+      anchor = false
 
 [build]
   writeStats = true
