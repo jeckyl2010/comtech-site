@@ -11,6 +11,46 @@
   {{ end }}
 </footer>
 
+<style>
+  /* Mobile-optimized footer */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    
+    .footer span {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer .top-link {
+      display: inline-block;
+      min-height: 44px;
+      min-width: 44px;
+      line-height: 44px;
+      text-align: center;
+      border-radius: 50%;
+      background: var(--entry);
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+    }
+    
+    .footer .top-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* iPhone 13 notch support for footer */
+  @supports (padding: max(0px)) {
+    .footer {
+      padding-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+  }
+</style>
+
 <script>
   const main = document.querySelector(".main");
 
@@ -57,4 +97,28 @@
       localStorage.setItem("pref-theme", "dark");
     }
   });
+  
+  // Mobile-specific optimizations
+  if ('ontouchstart' in window) {
+    // Add touch feedback for mobile devices
+    document.querySelectorAll('a, button').forEach(element => {
+      element.addEventListener('touchstart', function() {
+        this.style.opacity = '0.7';
+      });
+      
+      element.addEventListener('touchend', function() {
+        this.style.opacity = '1';
+      });
+    });
+  }
+  
+  // Prevent zoom on double tap for iOS
+  let lastTouchEnd = 0;
+  document.addEventListener('touchend', function (event) {
+    const now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+      event.preventDefault();
+    }
+    lastTouchEnd = now;
+  }, false);
 </script>

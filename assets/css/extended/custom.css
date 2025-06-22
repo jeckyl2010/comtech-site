@@ -22,6 +22,37 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Headings - Reduced sizes */
+.entry-content h1, .post-content h1, .page-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.entry-content h2, .post-content h2, .page-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.entry-content h3, .post-content h3, .page-header h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.entry-content h4, .post-content h4, .page-header h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.entry-content h5, .post-content h5, .page-header h5 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.entry-content h6, .post-content h6, .page-header h6 {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
 /* Service Page */
 .service-heading {
     display: flex;
@@ -30,6 +61,10 @@ body {
     margin-top: 2rem;
     border-bottom: 1px solid var(--border);
     padding-bottom: 0.5rem;
+}
+
+.service-heading h3 {
+    margin: 0;
 }
 
 .service-icon {
@@ -45,6 +80,7 @@ body {
     margin: 1.5rem 0;
     background: var(--entry);
     border-radius: var(--radius);
+    font-style: italic;
 }
 
 /* Lists */
@@ -108,7 +144,113 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Responsive adjustments */
+.page-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.entry-content p, .post-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Enhanced Mobile Responsiveness */
+/* iPhone 13 and similar devices (375px width) */
+@media (max-width: 428px) {
+    body {
+        font-size: 0.85rem; /* Smaller font size only on mobile */
+    }
+    
+    .main {
+        width: 95vw;
+        padding: 1rem 0;
+    }
+    
+    .entry-content, .post-content, .page-header, .post-entry, article, .first-entry, .post-single {
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Mobile heading sizes */
+    .entry-content h1, .post-content h1, .page-header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .entry-content h2, .post-content h2, .page-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .entry-content h3, .post-content h3, .page-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .entry-content h4, .post-content h4, .page-header h4 {
+        font-size: 1rem;
+    }
+    
+    .entry-content h5, .post-content h5, .page-header h5 {
+        font-size: 0.95rem;
+    }
+    
+    .entry-content h6, .post-content h6, .page-header h6 {
+        font-size: 0.9rem;
+    }
+    
+    /* Improve touch targets */
+    .entry-content a, .post-content a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+    
+    /* Adjust service headings for mobile */
+    .service-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .service-heading h3 {
+        font-size: 1.2rem;
+    }
+    
+    .service-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    /* Optimize blockquotes for mobile */
+    .entry-content blockquote {
+        padding: 1rem;
+        margin: 1rem 0;
+        font-size: 0.85rem;
+    }
+    
+    /* Better list spacing on mobile */
+    .entry-content ul {
+        padding-left: 0.5rem;
+    }
+    
+    .entry-content ul li {
+        padding-left: 1.25rem;
+        margin-bottom: 0.75rem;
+        line-height: 1.6;
+        font-size: 0.85rem;
+    }
+    
+    /* Mobile paragraph sizing */
+    .entry-content p, .post-content p {
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+}
+
+/* Tablet and larger mobile devices */
 @media (max-width: 768px) {
     .main {
         width: 95vw;
@@ -117,11 +259,74 @@ body {
     
     .entry-content, .post-content, .page-header, .post-entry, article, .first-entry, .post-single {
         padding: 1.5rem;
+        font-size: 0.88rem;
+    }
+    
+    /* Ensure proper spacing for touch interactions */
+    .entry-content a, .post-content a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
     }
 }
 
+/* Landscape orientation on mobile */
+@media (max-width: 926px) and (orientation: landscape) {
+    .main {
+        width: 90vw;
+        padding: 0.75rem 0;
+    }
+    
+    .entry-content, .post-content, .page-header, .post-entry, article, .first-entry, .post-single {
+        padding: 1.25rem;
+        margin-bottom: 1.25rem;
+        font-size: 0.87rem;
+    }
+}
 
+/* High DPI displays (iPhone 13 Pro, etc.) */
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 3dppx) {
+    /* Ensure crisp text rendering */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+    }
+}
 
+/* Dark mode optimizations for mobile */
+@media (prefers-color-scheme: dark) {
+    /* Ensure good contrast on mobile dark mode */
+    .entry-content a, .post-content a {
+        color: var(--primary);
+    }
+    
+    .entry-content a:hover, .post-content a:hover {
+        color: var(--primary);
+        opacity: 0.9;
+    }
+}
+
+/* Prevent horizontal scrolling on mobile */
+html, body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Optimize images for mobile */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Improve form elements on mobile */
+input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    max-width: 100%;
+}
+
+/* Enhanced page transitions */
 .main {
   opacity: 0;
   transition: opacity 500ms ease-in-out;

@@ -1,0 +1,50 @@
+<!-- Mobile-specific meta tags and optimizations -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Title }}">
+
+<!-- iPhone 13 specific optimizations -->
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!-- Prevent zoom on form inputs for iOS -->
+<style>
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select,
+    textarea,
+    input {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<!-- Mobile-specific CSS optimizations -->
+<style>
+  /* Ensure proper touch targets on mobile */
+  @media (max-width: 768px) {
+    a, button, input[type="submit"], input[type="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Improve tap highlight */
+    * {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Smooth scrolling for iOS */
+    html {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  
+  /* iPhone 13 notch support */
+  @supports (padding: max(0px)) {
+    .main {
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+  }
+</style> 

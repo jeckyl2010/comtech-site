@@ -10,7 +10,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/categories/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.3fc9110e133fea43a4c5eca66b94bded0fa55303463a28e677657014d5923cfb.css" integrity="sha256-P8kRDhM/6kOkxeyma5S97Q&#43;lUwNGOijmd2VwFNWSPPs=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a2eb5b3bbe6147f379b369d674b0355256b7de754e92fbcf85ba6342c803ed2a.css" integrity="sha256-outbO75hR/N5s2nWdLA1Ula33nVOkvvPhbpjQsgD7So=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -57,6 +57,55 @@
 
     </style>
 </noscript>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="COM&lt;tech&gt; - Software Architecture &amp; Cloud Solutions">
+
+
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+<style>
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select,
+    textarea,
+    input {
+      font-size: 16px;
+    }
+  }
+</style>
+
+
+<style>
+   
+  @media (max-width: 768px) {
+    a, button, input[type="submit"], input[type="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+     
+    * {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+    }
+    
+     
+    html {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  
+   
+  @supports (padding: max(0px)) {
+    .main {
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+  }
+</style> 
 </head>
 
 <body class="list" id="top">
@@ -143,6 +192,46 @@
   
 </footer>
 
+<style>
+   
+  @media (max-width: 768px) {
+    .footer {
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    
+    .footer span {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer .top-link {
+      display: inline-block;
+      min-height: 44px;
+      min-width: 44px;
+      line-height: 44px;
+      text-align: center;
+      border-radius: 50%;
+      background: var(--entry);
+      box-shadow: var(--shadow);
+      transition: all 0.2s ease;
+    }
+    
+    .footer .top-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+   
+  @supports (padding: max(0px)) {
+    .footer {
+      padding-bottom: max(1rem, env(safe-area-inset-bottom));
+    }
+  }
+</style>
+
 <script>
   const main = document.querySelector(".main");
 
@@ -189,6 +278,30 @@
       localStorage.setItem("pref-theme", "dark");
     }
   });
+  
+  
+  if ('ontouchstart' in window) {
+    
+    document.querySelectorAll('a, button').forEach(element => {
+      element.addEventListener('touchstart', function() {
+        this.style.opacity = '0.7';
+      });
+      
+      element.addEventListener('touchend', function() {
+        this.style.opacity = '1';
+      });
+    });
+  }
+  
+  
+  let lastTouchEnd = 0;
+  document.addEventListener('touchend', function (event) {
+    const now = (new Date()).getTime();
+    if (now - lastTouchEnd <= 300) {
+      event.preventDefault();
+    }
+    lastTouchEnd = now;
+  }, false);
 </script>
 </body>
 
