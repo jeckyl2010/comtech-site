@@ -14,6 +14,12 @@ cover:
 
 Here's what our clients and partners say about working with **COM&lt;tech&gt;**.
 
+## Computer Vision Platforms & Enterprise AI Architecture
+> "Anders was the driving force in bringing our CCTV AI initiative to reality. As Technical Lead and Architect, he established and led a program of four product teams, masterfully orchestrating complex stakeholder interests across Novo Nordisk and our strategic partners, Siemens and Microsoft. His rare ability to bridge deep technical knowledge with proactive leadership was essential in delivering our AI-driven manufacturing solutions."
+> 
+> — **Isabela Bolotti de Oliveira**, Strategy & AI Leadership at Novo Nordisk
+
+
 ## Leadership & Technical Excellence
 > "Anders delivers some of the most dedicated and proficient IT solutions I have ever worked with. He strives to design and deliver the best possible solutions and applications to achieve business objectives with a long-term business and IT perspective in mind. He challenge the mediocre ordinary and define and ensure compliance with new standards when needed."
 > 
