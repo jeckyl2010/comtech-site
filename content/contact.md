@@ -18,5 +18,5 @@ We're always open to discussing new projects, creative ideas, or opportunities t
 
 - **Company Name:** COM&lt;tech&gt;
 - **CVR Number:** 25567471
-- **Email:** [anders@hybertz.dk](mailto:anders@hybertz.dk)
+- **Email:** [anders@comtechconsulting.dk](mailto:anders@comtechconsulting.dk)
 - **LinkedIn:** [linkedin.com/in/andershybertz](https://www.linkedin.com/in/andershybertz/)
