@@ -1,4 +1,4 @@
-baseURL = 'https://comtech.softwarearchitect.dk/'
+baseURL = 'https://comtechconsulting.dk/'
 languageCode = 'en-us'
 title = 'COM<tech> - Software Architecture & Cloud Solutions'
 theme = 'PaperMod'
