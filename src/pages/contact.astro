@@ -131,6 +131,9 @@ import Layout from '../layouts/Layout.astro';
     font-weight: 500;
     color: var(--text);
     transition: color 0.15s ease;
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-all;
   }
   .contact-primary-link:hover .contact-link-value { color: var(--accent); }
   .contact-note {
@@ -191,5 +194,6 @@ import Layout from '../layouts/Layout.astro';
 
   @media (max-width: 768px) {
     .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .contact-section { padding-top: 3.5rem; padding-bottom: 3.5rem; }
   }
 </style>
