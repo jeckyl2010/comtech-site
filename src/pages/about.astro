@@ -1,0 +1,306 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const domains = [
+  'Pharmaceutical manufacturing',
+  'Financial services and insurance',
+  'Manufacturing and industrial',
+  'Energy and utilities',
+  'Public sector',
+  'Telecom and mobile',
+  'Healthcare and life sciences',
+  'Banking',
+];
+
+const strengths = [
+  {
+    title: 'Architecture that lasts',
+    body: 'Systems built to be understood and maintained two years from now. Traceability and compliance built in, not added at the end.',
+  },
+  {
+    title: 'Cross-domain depth',
+    body: 'Two decades across pharma, finance, manufacturing, and energy. The architectural patterns transfer. So does the rigour.',
+  },
+  {
+    title: 'Delivery under pressure',
+    body: 'Led programs with multiple teams, competing stakeholders, and real deadlines. Keeping a clear head in the critical phase.',
+  },
+  {
+    title: 'Team elevation',
+    body: 'Mentoring is not a side task. The team that owns the architecture after you leave matters as much as the architecture itself.',
+  },
+  {
+    title: 'Everything-as-code',
+    body: 'Infrastructure, pipelines, documentation. Automation and traceability as a default, not an afterthought.',
+  },
+  {
+    title: 'Less is more',
+    body: 'Pragmatic over clever. The best architecture is the one the team can explain at the whiteboard.',
+  },
+];
+
+const technologies = [
+  '.NET / C#', 'Python', 'Microsoft Azure', 'Kubernetes', 'Docker', 'Dapr',
+  'Azure DevOps', 'Terraform', 'Bicep', 'Event-driven architecture',
+  'RESTful APIs', 'Azure ML', 'OpenShift', 'CI/CD pipelines',
+];
+
+const awards = [
+  {
+    year: '2021',
+    title: 'PSQIT Innovation Prize 2020',
+    issuer: 'Novo Nordisk',
+    detail: 'Team prize for a solution that optimised batch changeover procedures on production lines.',
+  },
+  {
+    year: '2020',
+    title: 'Best Individual Performance of the Year',
+    issuer: '7N, associated with Novo Nordisk',
+    detail: '',
+  },
+  {
+    year: '2016',
+    title: 'Best Individual Performance of the Year',
+    issuer: '7N, associated with RSA / Codan',
+    detail: '',
+  },
+  {
+    year: '2016',
+    title: 'Nominee, Best Team Performance of the Year',
+    issuer: '7N, associated with RSA / Codan',
+    detail: '',
+  },
+];
+---
+
+<Layout
+  title="About | COM<tech>"
+  description="About Anders Hybertz and COM<tech>. Senior software architect and technical lead based in Copenhagen, Denmark."
+>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container">
+      <div class="about-intro-grid">
+        <div class="about-intro-left">
+          <p class="section-label">About</p>
+          <h1 class="page-h1">Anders Hybertz</h1>
+          <p class="about-lead">
+            Senior software architect and technical lead, working out of Copenhagen. The work is senior, hands-on, and personal. Clients work with Anders directly.
+          </p>
+          <p class="about-body">
+            COM&lt;tech&gt; has been a one-person operation by design since 2000. Over the years, the work has spanned pharmaceutical manufacturing, financial services, insurance, banking, energy, telecom, and the public sector. The common thread is complexity: systems where the architecture matters, compliance is real, and the cost of getting it wrong is not abstract.
+          </p>
+        </div>
+        <div class="about-intro-right">
+          <blockquote class="about-pull-quote">
+            &ldquo;Anders not only has a sharp mind but is also able to share his ideas and visions in a manner that makes the team-members join in. He also possesses the ability to lift the competences of his team-members.&rdquo;
+            <div class="testimonial-author">
+              <strong>Morten Edward Foltmar</strong>, Freelance Software Developer, AP Pension
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="section section-alt">
+    <div class="container">
+      <p class="section-label">Philosophy</p>
+      <h2 style="margin-bottom: 1rem;">How I work</h2>
+      <p style="max-width: 58ch; margin-bottom: 2.5rem;">
+        Trust, respect, empathy, and knowledge. Less is more. Build things that work, that the team understands, and that someone can maintain two years from now without calling you.
+      </p>
+      <div class="strengths-grid">
+        {strengths.map(s => (
+          <div class="strength-item">
+            <h4>{s.title}</h4>
+            <p>{s.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Active work -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Projects</p>
+      <h2 style="margin-bottom: 0.5rem;">Active projects</h2>
+      <p style="max-width: 52ch; margin-bottom: 2rem; color: var(--text-2);">
+        Tools built for problems worth solving. Both in active use.
+      </p>
+      <div class="repo-grid">
+
+        <a href="https://github.com/jeckyl2010/mkdocs2confluence" target="_blank" rel="noopener noreferrer" class="repo-card">
+          <div class="repo-card-header">
+            <svg class="repo-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            <span class="repo-name">mkdocs2confluence</span>
+            <span class="repo-lang repo-lang-python">Python</span>
+          </div>
+          <p class="repo-desc">Compiles MkDocs markdown into native Confluence storage format and publishes directly to Confluence Cloud. Supports PDF conversion and syncing Confluence comments back to GitHub pull requests.</p>
+        </a>
+
+        <a href="https://github.com/jeckyl2010/risk-assistant" target="_blank" rel="noopener noreferrer" class="repo-card">
+          <div class="repo-card-header">
+            <svg class="repo-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            <span class="repo-name">risk-assistant</span>
+            <span class="repo-lang repo-lang-ts">TypeScript</span>
+          </div>
+          <p class="repo-desc">A rule-based guardrail engine that evaluates facts against conditional rules to surface compliance controls. Built for explainability over scoring: no black boxes, no workshops.</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries + Technologies -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="domains-tech-grid">
+        <div>
+          <p class="section-label">Industries</p>
+          <h2 style="margin-bottom: 0.75rem;">Where I have worked</h2>
+          <p style="margin-bottom: 1.25rem; color: var(--text-2);">
+            Sectors where getting the architecture wrong costs real money.
+          </p>
+          <div class="domain-list">
+            {domains.map(d => <span class="tag" style="font-size: 0.8125rem; padding: 0.375rem 0.875rem;">{d}</span>)}
+          </div>
+        </div>
+        <div>
+          <p class="section-label">Technologies</p>
+          <h2 style="margin-bottom: 0.75rem;">Core stack</h2>
+          <p style="margin-bottom: 1.25rem; color: var(--text-2);">
+            Primarily the Microsoft stack. Technology-agnostic in approach.
+          </p>
+          <div class="domain-list">
+            {technologies.map(t => <span class="tag" style="font-size: 0.8125rem; padding: 0.375rem 0.875rem;">{t}</span>)}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Recognition</p>
+      <h2 style="margin-bottom: 0.75rem;">Awards and nominations</h2>
+      <p style="max-width: 52ch; margin-bottom: 2rem;">
+        7N is one of Denmark's most selective freelance networks. Their annual awards are voted by clients and peers across a competitive field.
+      </p>
+      <div class="awards-list">
+        {awards.map(a => (
+          <div class="award-item">
+            <div class="award-year">{a.year}</div>
+            <h4>{a.title}</h4>
+            <p>{a.issuer}</p>
+            {a.detail && <p style="margin-top: 0.375rem;">{a.detail}</p>}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-strip">
+    <div class="container">
+      <h2>Want to know more?</h2>
+      <p>Read what past clients and colleagues say, or get in touch directly.</p>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="/testimonials/" class="btn btn-ghost">Read testimonials</a>
+        <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .about-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-lead {
+    font-size: 1.0625rem;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.875rem;
+    line-height: 1.7;
+  }
+  .about-body {
+    font-size: 1rem;
+    color: var(--text-2);
+    line-height: 1.75;
+  }
+  .about-pull-quote {
+    margin-top: 3rem;
+  }
+  .domains-tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  @media (max-width: 768px) {
+    .about-intro-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .about-pull-quote { margin-top: 0; }
+    .domains-tech-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
+  /* Repo cards */
+  .repo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+  .repo-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .repo-card:hover {
+    box-shadow: var(--shadow);
+    border-color: rgba(83, 82, 204, 0.3);
+  }
+  .repo-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .repo-icon { color: var(--text-3); flex-shrink: 0; }
+  .repo-name {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text);
+    flex: 1;
+  }
+  .repo-lang {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .repo-lang-python { background: #fef3c7; color: #92400e; }
+  .repo-lang-ts { background: #dbeafe; color: #1e40af; }
+  .repo-desc {
+    font-size: 0.875rem;
+    color: var(--text-2);
+    line-height: 1.65;
+  }
+  @media (max-width: 640px) {
+    .repo-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,107 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Senior Software Architect & Technical Lead. COM<tech> Consulting, Copenhagen.',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+
+const nav = [
+  { href: '/services/', label: 'Services' },
+  { href: '/about/', label: 'About' },
+  { href: '/testimonials/', label: 'Testimonials' },
+  { href: '/contact/', label: 'Contact' },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#09090b" />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|jetbrains-mono:500&display=swap" rel="stylesheet" />
+  <ViewTransitions />
+</head>
+<body>
+
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a href="/" class="wordmark" aria-label="COM<tech> home">
+          COM<span class="ct">&lt;tech&gt;</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="nav-links" role="list">
+          {nav.map(({ href, label }) => (
+            <li>
+              <a
+                href={href}
+                aria-current={currentPath.startsWith(href) ? 'page' : undefined}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <a href="/" class="wordmark" aria-label="COM<tech>">
+          COM<span class="ct">&lt;tech&gt;</span>
+        </a>
+        <span class="footer-cvr">CVR 25567471</span>
+      </div>
+      <a href="mailto:anders@comtechconsulting.dk" class="footer-email">
+        anders@comtechconsulting.dk
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function initNav() {
+      const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+      const links = document.querySelector<HTMLElement>('.nav-links');
+      if (!toggle || !links) return;
+
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        links.classList.toggle('open');
+      });
+
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          links.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    document.addEventListener('astro:page-load', initNav);
+    initNav();
+  </script>
+
+</body>
+</html>

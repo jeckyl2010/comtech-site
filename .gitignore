@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Astro cache
+.astro/
+
+# Review screenshots (generated)
+screenshots/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Hugo build output and generated files
+public/
+hugo_stats.json
+.hugo_build.lock
+resources/
+
+# Claude Code project settings
+.claude/

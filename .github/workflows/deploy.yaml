@@ -1,4 +1,4 @@
-name: Deploy Hugo site to Pages
+name: Deploy Astro site to Pages
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   id-token: write
   pages: write
 
@@ -20,36 +20,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          submodules: recursive
-          fetch-depth: 0
+          node-version: 20
+          cache: npm
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
+      - name: Install dependencies
+        run: npm ci
 
-      - name: List directory contents
-        run: |
-          ls -la
-          ls -la themes/
-          ls -la static/
-
-      - name: Build with Hugo
-        run: |
-          hugo --minify --logLevel debug
-          echo "Listing public directory contents:"
-          ls -la public/
-          echo "Listing public/assets directory contents:"
-          ls -la public/assets/
-          echo "Listing public/assets/css directory contents:"
-          ls -la public/assets/css/
+      - name: Build with Astro
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./dist
 
   deploy:
     environment:

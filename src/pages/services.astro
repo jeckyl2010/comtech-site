@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>`,
+    name: 'Software Architecture & Design',
+    description:
+      'Both greenfield and legacy. With specific experience in GxP-regulated environments where every architectural decision needs to be justified, documented, and traceable. Cloud-native and event-driven where it fits the problem.',
+    tags: ['Cloud-native architecture', 'Event-driven design', 'Microservices', 'GxP / regulated systems', 'API design', 'Domain-driven design'],
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>`,
+    name: 'Cloud & AI Solutions',
+    description:
+      'Azure-native platforms with integrated AI. Work at Novo Nordisk included computer vision for aseptic production, containerised AI workloads, and deployments that needed to run in air-gapped manufacturing environments. Kubernetes, Dapr, Azure ML, and Python.',
+    tags: ['Microsoft Azure', 'Kubernetes / Docker', 'AI/ML integration', 'Computer vision', 'Dapr', 'Azure DevOps / CI/CD'],
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    name: 'Technical Leadership & Mentoring',
+    description:
+      'Leading teams through the hard parts of delivery. Architecture and code reviews, hands-on mentoring, and building practices that outlast the engagement. The team that owns the architecture after you leave matters as much as the architecture itself.',
+    tags: ['Tech lead', 'Architecture reviews', 'Team mentoring', 'Delivery governance', 'Best practices'],
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>`,
+    name: 'Strategic IT Counseling',
+    description:
+      'Helping organisations decide what to build, what to buy, and when not to build at all. Technology strategy, cloud migration, AI adoption, and vendor alignment across complex stakeholder landscapes.',
+    tags: ['Technology strategy', 'Cloud migration', 'AI/ML adoption', 'Vendor assessment', 'Stakeholder alignment'],
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`,
+    name: 'Independent Software Auditing',
+    description:
+      'Third-party review of software deliveries against agreed requirements. Security, quality assurance, SDLC processes, system reliability, and regulatory compliance. Findings are presented to both customer and vendor with concrete recommendations.',
+    tags: ['Third-party audit', 'SDLC compliance', 'Security assessment', 'Quality assurance', 'Regulatory compliance'],
+  },
+];
+---
+
+<Layout
+  title="Services | COM<tech>"
+  description="Software architecture, cloud and AI solutions, technical leadership, and independent software auditing services."
+>
+
+  <section class="section"><div class="container">
+    <h1 class="page-h1">Services</h1>
+    <p class="page-lead">
+      Senior consulting across software architecture. Design, delivery, governance, and team development.
+    </p>
+
+    <div class="svc-grid">
+      {services.map((s, i) => (
+        <div class={`svc-card${i === 0 ? ' svc-featured' : ''}`}>
+          <div class="svc-icon" set:html={s.icon} />
+          <h3 class="svc-title">{s.name}</h3>
+          <p class="svc-desc">{s.description}</p>
+          <div class="svc-tags">
+            {s.tags.map(tag => <span class="tag">{tag}</span>)}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div></section>
+
+  <section class="cta-strip">
+    <div class="container">
+      <h2>Got a problem worth solving?</h2>
+      <p>Reach out with your challenge. Even if you are not sure what kind of help you need yet.</p>
+      <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .svc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.25rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+  .svc-card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: #d4d4d8;
+    transform: translateY(-2px);
+  }
+  .svc-featured {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, #fafaff 0%, #f0f0ff 100%);
+    border-color: rgba(83, 82, 204, 0.2);
+  }
+  .svc-featured .svc-title { font-size: 1.25rem; }
+  .svc-icon {
+    width: fit-content;
+    padding: 0.5rem;
+    background: var(--accent-dim);
+    border-radius: 8px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .svc-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+  .svc-desc {
+    font-size: 0.9375rem;
+    color: var(--text-2);
+    line-height: 1.7;
+    flex: 1;
+  }
+  .svc-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-top: 0.25rem;
+  }
+  @media (max-width: 680px) {
+    .svc-grid { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const featured = [
+  {
+    category: 'AI & computer vision',
+    quote: `It's even hard to put in just a few words all the reasons why I would strongly recommend Anders to any team. If I were to rank my recommendations, he would for sure be top 1. I had the pleasure of having Anders joining me in the very early phase of looking into CCTV AI use cases and he has since then become my right arm in bringing the ideas to reality, establishing and leading a program composed of 4 product teams, orchestrating many stakeholders within Novo Nordisk and our collaboration with Siemens and Microsoft. Anders brings outstanding knowledge, proactivity, efficiency, creativity, structure, teamwork and great communication and presentation skills: a highly valuable and rare combination of so many different competencies in one single person. I really hope we can work together again one day.`,
+    name: 'Isabela Bolotti de Oliveira',
+    title: 'Founder & CEO, Meridian | formerly Strategy & AI Leadership, Novo Nordisk',
+  },
+  {
+    category: 'Technical leadership',
+    quote: `Anders is one of the most dedicated and proficient IT Solution and Software professionals I have ever worked with. I've had the pleasure of knowing Anders for 3 years, during a complex IT Transition Programme in RSA Codan for which Anders was the Solution Architect and Technical Lead and I was the Programme Delivery Lead. Anders strives to design and deliver the best possible solutions and applications to achieve business objectives with a long-term business and IT perspective in mind. Anders challenges the mediocre ordinary and defines and ensures compliance with new standards when needed. He leads by example and takes great pride in upskilling and coaching other technical professionals to foster high-performance delivery teams, which makes him well recognised and respected. Anders would be a true asset for any senior IT positions around solution architecture, continuous delivery or application development and comes with my heartfelt recommendation.`,
+    name: 'Mads G. Jæger',
+    title: 'Digital Transformation Field Marshal, KPMG',
+  },
+];
+
+const standard = [
+  {
+    category: 'Delivery & architecture',
+    quote: `It was a pleasure to be a part of the development team having Anders Hybertz as architect and team lead. Anders is the type of person that, no matter how busy he is, he always has the time to answer your questions or discuss design issues. This is a great gift and it helps the project run smoothly in the critical phases where everybody is busy. It was due to Anders' architectural skills that the team managed to make the solution stable and robust within the time given. Although Anders functioned as team lead and architect he also proved to have a deep and extensive knowledge of both Java and C#. Only a few people master both of these languages as Anders does. I can highly recommend Anders as architect or team lead. He would be a valuable asset to any project.`,
+    name: 'Arne Beck Hansen',
+    title: 'Founder & CIO, N3O',
+  },
+  {
+    category: 'Project quality',
+    quote: `Anders is dedicated to his projects. He strives to deliver on time and with high quality and does go the extra mile to ensure that this goal is met. He has high integrity and is open-minded for a discussion on architectural decisions. I've had the pleasure to have Anders as team lead and architect on Digital Tinglysning for almost 4.5 years. Anders not only has a sharp mind but is also able to share his ideas and visions in a manner that makes the team-members join in. Anders also possesses the ability to lift the competences of his team-members.`,
+    name: 'Morten Edward Foltmar',
+    title: 'Freelance Software Developer, AP Pension',
+  },
+  {
+    category: 'Team mentoring',
+    quote: `Awesome architect, awesome developer! When Anders gives you an assignment, it seems as if he already knows the solution and he's merely testing you, to see whether you will come up with the right solution. It's very motivating and makes you want to perform at your highest level. Apart from his technical skills, he's genuinely just a very nice guy and very pleasant to be around. I'd work with him anytime!`,
+    name: 'Mikkel Colberg',
+    title: 'Principal Developer, NNIT',
+  },
+];
+---
+
+<Layout
+  title="Testimonials | COM<tech>"
+  description="What clients and colleagues say about Anders Hybertz and COM<tech>."
+>
+
+  <section class="section"><div class="container">
+    <p class="section-label">Client testimonials</p>
+    <h1 class="page-h1">What clients say</h1>
+    <p class="page-lead" style="margin-bottom: 3.5rem;">
+      Recommendations from clients, colleagues, and direct reports. Quoted directly from LinkedIn.
+    </p>
+
+    <div class="featured-testimonials">
+      {featured.map(t => (
+        <div class="featured-entry">
+          <p class="t-category">{t.category}</p>
+          <blockquote class="featured-quote">
+            &ldquo;{t.quote}&rdquo;
+          </blockquote>
+          <div class="t-author">
+            <strong>{t.name}</strong>, {t.title}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="standard-testimonials">
+      {standard.map(t => (
+        <div class="standard-entry">
+          <p class="t-category">{t.category}</p>
+          <blockquote class="standard-quote">
+            &ldquo;{t.quote}&rdquo;
+          </blockquote>
+          <div class="t-author">
+            <strong>{t.name}</strong>, {t.title}
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div></section>
+
+  <section class="cta-strip">
+    <div class="container">
+      <h2>Working on something worth talking about?</h2>
+      <p>Get in touch to discuss your architecture challenge.</p>
+      <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  /* Featured testimonials — top two */
+  .featured-testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .featured-entry {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 2.5rem 2.5rem 2rem;
+    box-shadow: var(--shadow);
+  }
+  .featured-quote {
+    font-style: italic;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin: 1rem 0 1.25rem;
+    border: none;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* Standard testimonials — bottom three */
+  .standard-testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 2.5rem;
+  }
+  .standard-entry {
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 1rem 3rem;
+    align-items: start;
+  }
+  .standard-entry .t-category {
+    padding-top: 0.125rem;
+  }
+  .standard-entry .standard-quote {
+    font-style: italic;
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--text-2);
+    border: none;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 0.75rem;
+  }
+  .standard-entry .t-author {
+    grid-column: 2;
+  }
+
+  /* Shared */
+  .t-category {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+  .t-author {
+    font-size: 0.8125rem;
+    color: var(--text-3);
+  }
+  .t-author strong {
+    color: var(--text-2);
+    font-weight: 600;
+  }
+
+  @media (max-width: 680px) {
+    .standard-entry { grid-template-columns: 1fr; gap: 0.75rem; }
+    .standard-entry .t-author { grid-column: 1; }
+    .featured-entry { padding: 1.75rem 1.5rem 1.5rem; }
+  }
+</style>

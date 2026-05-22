@@ -1,0 +1,19 @@
+{
+  "name": "comtech-site",
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "review": "node scripts/review.js",
+    "review:open": "node scripts/review.js --open",
+    "review:fast": "node scripts/review.js --no-build --open"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}
