@@ -43,12 +43,14 @@ const nav = [
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(ogImage, Astro.site)} />
   <meta property="og:locale" content="en_DK" />
+  <meta property="og:site_name" content="COM&lt;tech&gt;" />
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.bunny.net" />
   <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|jetbrains-mono:500&display=swap" rel="stylesheet" />
   <ViewTransitions />
