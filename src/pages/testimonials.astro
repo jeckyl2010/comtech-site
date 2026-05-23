@@ -67,12 +67,14 @@ const standard = [
 >
   <section class="section">
     <div class="container testimonials-page">
-      <p class="section-label">Client testimonials</p>
-      <h1 class="page-h1">What clients say when the work has to hold up</h1>
-      <p class="page-lead testimonials-lead">
-        Selected recommendations from clients, colleagues, and direct reports. Presented in a more
-        scannable form here, with full LinkedIn recommendations available inline below.
-      </p>
+      <div class="testimonials-header">
+        <p class="section-label">Client testimonials</p>
+        <h1 class="page-h1">What clients say when the work has to hold up</h1>
+        <p class="page-lead testimonials-lead">
+          Selected recommendations from clients, colleagues, and direct reports. Presented in a more
+          scannable form here, with full LinkedIn recommendations available inline below.
+        </p>
+      </div>
 
       <div class="signal-grid">
         {highlights.map((item) => (
@@ -89,7 +91,6 @@ const standard = [
           <article class="featured-card">
             <p class="t-category">{t.category}</p>
             <blockquote class="featured-excerpt">&ldquo;{t.excerpt}&rdquo;</blockquote>
-            <p class="testimonial-summary">This recommendation is shown in full below.</p>
             <div class="t-author">
               <strong>{t.name}</strong>
               <span>{t.title}</span>
@@ -145,8 +146,10 @@ const standard = [
     gap: 3rem;
   }
 
-  .testimonials-page .section-label {
-    margin-bottom: 0.75rem;
+  .testimonials-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 
   .testimonials-lead {
@@ -219,11 +222,6 @@ const standard = [
     font-size: 1.25rem;
     line-height: 1.5;
     font-style: italic;
-  }
-
-  .testimonial-summary {
-    font-size: 0.875rem;
-    color: var(--text-3);
   }
 
   .testimonial-list {

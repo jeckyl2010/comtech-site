@@ -6,6 +6,7 @@
   --border: #e4e4e7;
   --border-subtle: #f0f0ef;
   --accent: #5352cc;
+  --accent-text: #7c7bef;
   --accent-hover: #4340b0;
   --accent-dim: rgba(83, 82, 204, 0.08);
   --text: #111112;
@@ -26,12 +27,12 @@
   --dark-border: #2a2a35;
   --dark-text: #f4f4f5;
   --dark-text-2: #a1a1aa;
-  --dark-text-3: #52525b;
+  --dark-text-3: #7c7c7c;
 }
 
 /* ─── Reset ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; scroll-behavior: smooth; height: 100%; }
+html { font-size: 16px; scroll-behavior: smooth; height: 100%; scrollbar-gutter: stable; }
 img, svg { display: block; max-width: 100%; }
 
 /* ─── Base ─── */
@@ -706,3 +707,42 @@ blockquote {
 html, body { overflow-x: hidden; }
 img { max-width: 100%; height: auto; }
 input, textarea, select { font-size: 16px; max-width: 100%; }
+
+/* ─── Page transition (Astro ViewTransitions) ─── */
+@keyframes page-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+::view-transition-old(root) {
+  animation: 150ms ease-out both page-fade-in reverse;
+}
+::view-transition-new(root) {
+  animation: 200ms ease-out both page-fade-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none; }
+}
+
+/* ─── Scroll-triggered fade-up ─── */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.js .fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.js .fade-up.visible {
+  animation: fade-up 420ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}

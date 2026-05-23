@@ -52,6 +52,8 @@ const nav = [
   <link rel="preconnect" href="https://fonts.bunny.net" />
   <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700|jetbrains-mono:500&display=swap" rel="stylesheet" />
   <ViewTransitions />
+  <!-- Stamp js class before first paint so fade-up initial state never flashes -->
+  <script is:inline>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
@@ -99,6 +101,7 @@ const nav = [
   </footer>
 
   <script>
+    // ── Nav mobile toggle ────────────────────────────────────────────────────
     function initNav() {
       const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
       const links = document.querySelector<HTMLElement>('.nav-links');
@@ -118,7 +121,38 @@ const nav = [
       });
     }
 
-    document.addEventListener('astro:page-load', initNav);
+    // ── Scroll-triggered fade-up ─────────────────────────────────────────────
+    function initFadeUp() {
+      // Skip for users who prefer reduced motion
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              (entry.target as HTMLElement).classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      document.querySelectorAll('section').forEach(el => {
+        // Hero is already in viewport on load — show immediately, no animation
+        if (el.classList.contains('hero')) {
+          el.classList.add('fade-up', 'visible');
+        } else {
+          el.classList.add('fade-up');
+          observer.observe(el);
+        }
+      });
+    }
+
+    document.addEventListener('astro:page-load', () => {
+      initNav();
+      initFadeUp();
+    });
   </script>
 
 </body>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://comtechconsulting.dk/sitemap-index.xml
