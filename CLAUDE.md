@@ -1,30 +1,36 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance for working in this repository.
 
 ## Commands
 
 ```bash
-hugo server          # local dev server with live reload
-hugo                 # build site to ./public
-hugo --minify        # production build (matches CI)
+npm install        # install dependencies
+npm run dev        # start local Astro dev server with live reload
+npm run build      # build site to ./dist
+npm run preview    # preview the production build locally
+npm run review     # build, preview, and capture screenshots with Playwright
 ```
-
-The PaperMod theme is a git submodule — after cloning, run `git submodule update --init --recursive`.
 
 ## Architecture
 
-This is a Hugo static site for COM\<tech\> consulting, deployed to GitHub Pages via GitHub Actions on every push to `main`.
+This is an Astro static site for COM<tech> consulting, deployed to GitHub Pages via GitHub Actions on every push to `main`.
 
-**Theme**: PaperMod (`themes/PaperMod/`), loaded as a git submodule. Never edit files inside `themes/` — override via the mechanisms below instead.
+Key structure:
+- `src/layouts/Layout.astro` — shared page shell, navigation, footer, and document head
+- `src/pages/*.astro` — route-based pages for the marketing site
+- `src/styles/global.css` — global design tokens, layout, typography, and shared components
+- `public/` — static assets copied verbatim to the build output; currently used for `CNAME`
+- `.github/workflows/deploy.yaml` — CI build and GitHub Pages deployment for the Astro site
 
-**Customisation layers** (Hugo precedence: project files win over theme files):
-- `assets/css/extended/custom.css` — extends the theme's CSS; PaperMod automatically merges any file in this directory
-- `layouts/partials/footer.html` — overrides the theme footer; includes page-transition JS and mobile touch optimisations
-- `layouts/partials/extend_head.html` — injected into `<head>`; sets mobile viewport meta tags and iOS-specific CSS
+## Conventions
 
-**Content** (`content/*.md`): Each file becomes a page. Front matter uses `title` and `description`. Raw HTML is allowed in Markdown because `markup.goldmark.renderer.unsafe = true` is set in `config.toml`. The services page uses custom HTML (`<div class="service-heading">`) for icon+heading pairs.
+- Prefer updating shared styles in `src/styles/global.css` before adding page-local styling.
+- Keep page copy and layout decisions aligned with the current premium, calm, high-trust brand direction.
+- Use Astro pages and layouts rather than reintroducing framework-specific legacy structure.
+- Build output belongs in `dist/`; do not commit generated files unless explicitly requested.
 
-**Static assets** (`static/`): Copied verbatim to the build output. Images for each page live in a subdirectory matching the page name (e.g. `static/services/`).
+## Deployment
 
-**Deployment**: `.github/workflows/deploy.yaml` — builds with `hugo --minify` on `ubuntu-latest` using `peaceiris/actions-hugo@v2 (extended: true)`, then deploys `./public` to GitHub Pages. The live site is at `https://comtechconsulting.dk/`.
+GitHub Actions installs Node 20, runs `npm ci`, builds with `npm run build`, and deploys `./dist` to GitHub Pages.
+The live site is at `https://comtechconsulting.dk/`.

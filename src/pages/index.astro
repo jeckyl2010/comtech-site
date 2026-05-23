@@ -4,10 +4,9 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout
   title="COM<tech> | Software Architecture & Technical Leadership"
-  description="Senior software architect based in Copenhagen. Two decades of project delivery across pharmaceutical manufacturing, finance, insurance, energy, and the public sector."
+  description="Senior software architect based in Copenhagen. Architecture, technical leadership, and pragmatic delivery for organisations where reliability, traceability, and long-term maintainability matter."
 >
 
-  <!-- Hero: dark section -->
   <section class="hero dark-section">
     <div class="aurora" aria-hidden="true">
       <div class="aurora-blob aurora-blob-1"></div>
@@ -19,16 +18,16 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="hero-content">
         <p class="hero-eyebrow">Anders Hybertz, Copenhagen</p>
-        <h1>Architecture built<br />for the places<br />where it has to work.</h1>
+        <h1>Software architecture built for the places where it has to work.</h1>
         <p class="hero-sub">
-          Senior software architect. Two decades across pharmaceutical
-          manufacturing, finance, energy, and the public sector,
-          environments where compliance is real and the cost of
-          getting it wrong is not abstract.
+          Senior software architect and technical lead with three decades of experience across
+          pharmaceutical manufacturing, finance, energy, telecom, and the public sector.
+          Brought in when the architecture matters, the delivery has to work, and the solution
+          should still make sense after the excitement has worn off.
         </p>
         <div class="hero-actions">
-          <a href="/services/" class="btn btn-primary">View Services</a>
-          <a href="/contact/" class="btn btn-ghost-dark">Get in Touch</a>
+          <a href="/services/" class="btn btn-primary">See services</a>
+          <a href="/contact/" class="btn btn-ghost-dark">Contact Anders</a>
         </div>
       </div>
 
@@ -55,23 +54,26 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- What I deliver: light -->
   <section class="section" style="background: var(--bg);">
     <div class="container">
-      <p class="section-label">Core capabilities</p>
-      <h2 class="section-title">What I deliver</h2>
+      <p class="section-label">What I do</p>
+      <h2 class="section-title">Practical help where architecture and delivery meet</h2>
       <div class="bento-grid">
 
         <div class="bento-card bento-featured">
-          <div class="bento-tag">Architecture &amp; Design</div>
-          <h3>Built for the places where it has to work</h3>
-          <p>Both greenfield and legacy. GxP-regulated environments, event-driven platforms, cloud-native systems. Every decision justified, documented, and traceable.</p>
-          <a href="/services/" class="bento-link">All services &rarr;</a>
+          <div class="bento-tag">Architecture &amp; design</div>
+          <h3>Clear architecture for complex environments</h3>
+          <p>
+            Greenfield or legacy. Regulated environments or ordinary line-of-business systems.
+            The goal is the same: sound decisions, clear boundaries, and a solution the team can
+            work with over time.
+          </p>
+          <a href="/services/" class="bento-link">View all services &rarr;</a>
         </div>
 
         <div class="bento-card bento-domains">
-          <div class="bento-tag">Industries</div>
-          <p class="bento-stat">8 industries.<br />One architect.</p>
+          <div class="bento-tag">Where I have worked</div>
+          <p class="bento-stat">Eight industries.<br />One senior point of contact.</p>
           <div class="bento-tag-cloud">
             <span class="tag">Pharma</span>
             <span class="tag">Finance</span>
@@ -86,14 +88,20 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="bento-card">
           <div class="bento-tag">Cloud &amp; AI</div>
-          <h3>Azure-native, production-grade</h3>
-          <p>Computer vision, containerised AI workloads, and deployments that run in air-gapped manufacturing environments.</p>
+          <h3>Used where it creates value, not for effect</h3>
+          <p>
+            Azure-native platforms, event-driven systems, containerised workloads, and AI solutions
+            that still have to meet operational, compliance, and delivery realities.
+          </p>
         </div>
 
         <div class="bento-card">
-          <div class="bento-tag">Leadership</div>
-          <h3>Teams that outlast the engagement</h3>
-          <p>Mentoring that sticks. The goal is a team that owns the architecture after you leave, not a dependency on the consultant who built it.</p>
+          <div class="bento-tag">Technical leadership</div>
+          <h3>Teams should be stronger when the engagement ends</h3>
+          <p>
+            Architecture reviews, mentoring, technical direction, and hands-on support where needed.
+            The aim is not dependency. It is a team that can carry the work forward with confidence.
+          </p>
         </div>
 
         <div class="bento-card bento-mini-quote">
@@ -105,28 +113,31 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Testimonial: white surface -->
   <section class="section" style="background: var(--surface); padding-top: 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
     <div class="container" style="padding-top: 5rem;">
-      <p class="section-label">What clients say</p>
+      <p class="section-label">Client perspective</p>
       <blockquote style="max-width: 68ch;">
         &ldquo;Anders is one of the most dedicated and proficient IT Solution and Software professionals I have ever worked with. He leads by example and takes great pride in upskilling and coaching other technical professionals to foster high-performance delivery teams.&rdquo;
         <div class="testimonial-author">
           <strong>Mads G. J&aelig;ger</strong>, Digital Transformation Field Marshal, KPMG
         </div>
       </blockquote>
+      <p class="client-perspective-note">Serious work does not need theatrics. It helps if people remember it anyway.</p>
       <div style="margin-top: 1.5rem;">
-        <a href="/testimonials/" class="btn btn-ghost" style="font-size: 0.8125rem;">All testimonials &rarr;</a>
+        <a href="/testimonials/" class="btn btn-ghost" style="font-size: 0.8125rem;">Read testimonials &rarr;</a>
       </div>
     </div>
   </section>
 
-  <!-- CTA strip -->
-  <section class="cta-strip">
+  <section class="cta-strip home-cta-strip">
     <div class="container">
-      <h2>Got an architecture problem?</h2>
-      <p>Available for new engagements. Reach out directly.</p>
-      <a href="/contact/" class="btn btn-primary">Get in Touch</a>
+      <p class="section-label">When to reach out</p>
+      <h2>Need an experienced architectural perspective?</h2>
+      <p>
+        Typically when a delivery has become harder to steer, a technical decision carries real
+        consequences, or the team needs a calm senior perspective without turning the process into a performance.
+      </p>
+      <a href="/contact/" class="btn btn-primary">Get in touch</a>
     </div>
   </section>
 
