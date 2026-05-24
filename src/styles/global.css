@@ -629,8 +629,6 @@ blockquote {
 .award-item--featured {
   grid-column: 1 / -1;
 }
-.award-item--featured .award-content {
-}
 
 /* Shared heading + lead for all secondary pages */
 .page-h1 {
