@@ -628,17 +628,9 @@ blockquote {
 .award-item p { font-size: 0.8125rem; color: var(--text-3); }
 .award-item--featured {
   grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 0 2rem;
-  align-items: start;
 }
 .award-item--featured .award-content {
   max-width: 80ch;
-}
-.award-item--featured .award-year {
-  padding-top: 0.25rem;
-  white-space: nowrap;
 }
 
 /* Shared heading + lead for all secondary pages */
