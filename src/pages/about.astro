@@ -47,6 +47,13 @@ const technologies = [
 
 const awards = [
   {
+    year: '2022',
+    title: 'Court-Appointed Independent Software Expert',
+    issuer: 'Danmarks Domstole · Sø- og Handelsretten',
+    detail: 'Appointed to a five-member expert panel to provide independent technical assessment in a commercial software dispute. Held primary responsibility for architecture, application design, performance, and adherence to established engineering practices. Contributed to resolving the matter before the first court date.',
+    featured: true,
+  },
+  {
     year: '2021',
     title: 'PSQIT Innovation Prize 2020',
     issuer: 'Novo Nordisk',
@@ -195,17 +202,19 @@ const awards = [
   <section class="section">
     <div class="container">
       <p class="section-label">Recognition</p>
-      <h2 style="margin-bottom: 0.75rem;">Awards and nominations</h2>
+      <h2 style="margin-bottom: 0.75rem;">Appointments, awards, and nominations</h2>
       <p style="max-width: 52ch; margin-bottom: 2rem;">
-        Recognition from clients, peers, and the freelance network around the work. Useful as a trust signal, but always secondary to whether the work itself stands up.
+        Recognition from clients, peers, the freelance network, and courts. Useful as a trust signal, but always secondary to whether the work itself stands up.
       </p>
       <div class="awards-list">
         {awards.map(a => (
-          <div class="award-item">
+          <div class={`award-item${a.featured ? ' award-item--featured' : ''}`}>
             <div class="award-year">{a.year}</div>
-            <h4>{a.title}</h4>
-            <p>{a.issuer}</p>
-            {a.detail && <p style="margin-top: 0.375rem;">{a.detail}</p>}
+            <div class="award-content">
+              <h4>{a.title}</h4>
+              <p>{a.issuer}</p>
+              {a.detail && <p style="margin-top: 0.375rem;">{a.detail}</p>}
+            </div>
           </div>
         ))}
       </div>
