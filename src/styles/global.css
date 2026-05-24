@@ -630,7 +630,6 @@ blockquote {
   grid-column: 1 / -1;
 }
 .award-item--featured .award-content {
-  max-width: 80ch;
 }
 
 /* Shared heading + lead for all secondary pages */
