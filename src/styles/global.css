@@ -471,6 +471,9 @@ main { padding-top: var(--nav-h); }
   border: 1px solid var(--dark-border);
 }
 .btn-ghost-dark:hover { color: var(--dark-text); border-color: var(--dark-text-3); }
+.btn-ai-summary { display: inline-flex; align-items: center; gap: 0.4em; opacity: 0.6; }
+.btn-ai-summary:hover { opacity: 1; }
+.btn-ai-icon { width: 1em; height: 1em; flex-shrink: 0; }
 .btn-ghost {
   background: transparent;
   color: var(--text-2);
@@ -757,4 +760,64 @@ input, textarea, select { font-size: 16px; max-width: 100%; }
   font-size: 0.8125rem;
   color: var(--text-3);
   margin-top: 1.25rem;
+}
+
+/* ─── AI summary section ─── */
+.ai-summary {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 0;
+}
+
+.ai-summary-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.ai-summary-heading {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-2);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.ai-summary-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.ai-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5625rem 1.125rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+.ai-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 680px) {
+  .ai-summary-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
 }

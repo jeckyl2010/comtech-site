@@ -1,0 +1,57 @@
+# COM<tech> — comtechconsulting.dk
+
+## Who
+
+Anders Hybertz is a senior software architect and technical lead based in Copenhagen, Denmark.
+COM<tech> is a one-person consultancy by design. Clients work directly with Anders from the first conversation and throughout the engagement.
+
+Anders has three decades of experience in software architecture, technical leadership, and complex technical deliveries across regulated and demanding environments.
+
+## What COM<tech> does
+
+COM<tech> provides senior technical consulting in four main areas:
+
+### Software Architecture & Design
+Assessment, design, and hands-on architecture work for greenfield and legacy systems. Sound decisions, clear boundaries, and maintainable solutions built for the long term.
+
+### Cloud & AI Solutions
+Azure-native platforms, event-driven systems, containerised workloads, and AI solutions that meet operational, compliance, and delivery realities. Technology applied where it creates value, not for effect.
+
+### Technical Leadership & Delivery
+Architecture reviews, mentoring, technical direction, and hands-on support. The aim is a team that can carry the work forward with confidence after the engagement ends.
+
+### Independent Software Auditing & Expert Assessment
+Third-party code and architecture audits, SDLC reviews, security assessments, and quality assurance. In 2022, Anders was appointed by Danmarks Domstole (Sø- og Handelsretten) as a court-appointed independent software expert on a five-member panel in a commercial software dispute.
+
+## Industries
+
+Pharmaceutical manufacturing, financial services, insurance, banking, energy and utilities, manufacturing and industrial, telecom and mobile, healthcare and life sciences, public sector.
+
+## Selected recognition
+
+- Court-Appointed Independent Software Expert, Danmarks Domstole · Sø- og Handelsretten (2022)
+- PSQIT Innovation Prize, Novo Nordisk (2021)
+- Best Individual Performance of the Year, 7N (2020 and 2016)
+
+## What clients say
+
+"A highly valuable and rare combination of so many different competencies in one single person." — Isabela Bolotti de Oliveira, Founder & CEO, Meridian | formerly Strategy & AI Leadership, Novo Nordisk
+
+"One of the most dedicated and proficient IT Solution and Software professionals I have ever worked with." — Mads G. Jæger, Digital Transformation Field Marshal, KPMG
+
+"It was due to Anders' architectural skills that the team managed to make the solution stable and robust within the time given." — Arne Beck Hansen, Founder & CIO, N3O
+
+## Contact
+
+Email: anders@comtechconsulting.dk
+LinkedIn: https://www.linkedin.com/in/andershybertz/
+Based in Copenhagen. Working with clients across Denmark and internationally.
+CVR 25567471
+
+## Site structure
+
+- / — Home: overview, services summary, client perspective
+- /services/ — Full services detail and typical engagement situations
+- /about/ — Background, strengths, technologies, and recognition
+- /testimonials/ — Client recommendations in full
+- /contact/ — How to get in touch and how engagements typically start
