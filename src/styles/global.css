@@ -703,8 +703,9 @@ blockquote {
 .page-lead {
   font-size: 1.0625rem;
   color: var(--text-2);
-  max-width: 52ch;
+  max-width: 68ch;
   line-height: 1.7;
+  margin-bottom: 2rem;
 }
 
 /* ─── Mobile ─── */

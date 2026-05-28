@@ -74,14 +74,18 @@ for (const vp of VIEWPORTS) {
     await page.evaluate(async () => {
       const delay = (ms) => new Promise(r => setTimeout(r, ms));
       const scrollHeight = document.body.scrollHeight;
-      const step = Math.ceil(scrollHeight / 10);
+      const step = Math.ceil(scrollHeight / 20);
       for (let y = 0; y <= scrollHeight; y += step) {
         window.scrollTo(0, y);
-        await delay(80);
+        await delay(120);
       }
+      // Pause at the bottom to ensure deep sections are revealed
+      await delay(300);
       window.scrollTo(0, 0);
-      await delay(200);
+      await delay(500);
     });
+    // Extra settle time after returning to top
+    await page.waitForTimeout(400);
 
     // Above-the-fold
     const foldFile = resolve(OUT, `${pg.name}--${vp.name}--fold.png`);
