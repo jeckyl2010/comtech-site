@@ -57,8 +57,10 @@ const services = [
     <div class="svc-grid">
       {services.map((s, i) => (
         <div class={`svc-card${i === 0 ? ' svc-featured' : ''}`}>
-          <div class="svc-icon" set:html={s.icon} />
-          <h3 class="svc-title">{s.name}</h3>
+          <div class="svc-header">
+            <div class="svc-icon" set:html={s.icon} />
+            <h3 class="svc-title">{s.name}</h3>
+          </div>
           <p class="svc-desc">{s.description}</p>
           <div class="svc-tags">
             {s.tags.map(tag => <span class="tag">{tag}</span>)}
@@ -105,6 +107,11 @@ const services = [
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
     margin-top: 2.5rem;
+  }
+  .svc-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
   }
   .svc-card {
     background: var(--surface);
