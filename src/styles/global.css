@@ -406,6 +406,9 @@ main { padding-top: var(--nav-h); }
   gap: 0.75rem;
   flex-wrap: wrap;
 }
+.hero-actions .btn {
+  min-width: 9rem;
+}
 
 /* Right panel */
 .hero-proof {
