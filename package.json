@@ -8,7 +8,9 @@
     "preview": "astro preview",
     "review": "node scripts/review.js",
     "review:open": "node scripts/review.js --open",
-    "review:fast": "node scripts/review.js --no-build --open"
+    "review:fast": "node scripts/review.js --no-build --open",
+    "critique": "node scripts/critique.js",
+    "critique:fast": "node scripts/critique.js --no-build"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
