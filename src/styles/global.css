@@ -408,6 +408,8 @@ main { padding-top: var(--nav-h); }
 }
 .hero-actions .btn {
   min-width: 9rem;
+  text-align: center;
+  justify-content: center;
 }
 
 /* Right panel */
