@@ -477,9 +477,7 @@ main { padding-top: var(--nav-h); }
   border: 1px solid var(--dark-border);
 }
 .btn-ghost-dark:hover { color: var(--dark-text); border-color: var(--dark-text-3); }
-.btn-ai-summary { display: inline-flex; align-items: center; gap: 0.4em; opacity: 0.6; }
-.btn-ai-summary:hover { opacity: 1; }
-.btn-ai-icon { width: 1em; height: 1em; flex-shrink: 0; }
+
 .btn-ghost {
   background: transparent;
   color: var(--text-2);
