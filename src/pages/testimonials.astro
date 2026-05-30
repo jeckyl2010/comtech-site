@@ -166,7 +166,7 @@ const standard = [
   .signal-card {
     background: linear-gradient(180deg, #fafaff 0%, #f5f5ff 100%);
     border: 1px solid rgba(83, 82, 204, 0.14);
-    border-radius: 12px;
+    border-radius: calc(var(--radius) * 1.5);
     padding: 1.25rem;
     box-shadow: var(--shadow-sm);
   }
@@ -203,7 +203,7 @@ const standard = [
   .featured-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: calc(var(--radius) * 1.5);
     padding: 2rem;
     box-shadow: var(--shadow);
     display: flex;

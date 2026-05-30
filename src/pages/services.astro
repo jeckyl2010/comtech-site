@@ -116,19 +116,16 @@ const services = [
   .svc-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
+    border-radius: calc(var(--radius) * 1.5);
     padding: 2.25rem;
     box-shadow: var(--shadow-sm);
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
     align-self: stretch;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
   }
-  .svc-card:hover {
-    box-shadow: var(--shadow);
-    border-color: #d4d4d8;
-  }
+  .svc-card:hover { box-shadow: var(--shadow); border-color: #d4d4d8; }
   .svc-featured {
     grid-column: 1 / -1;
     background: linear-gradient(135deg, #fafaff 0%, #f0f0ff 100%);
