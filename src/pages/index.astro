@@ -35,8 +35,8 @@ import Layout from '../layouts/Layout.astro';
       <div class="hero-proof">
         <div class="hero-quote">
           &ldquo;A highly valuable and rare combination of so many different competencies in one single person.&rdquo;
-          <div class="testimonial-author" style="color: var(--dark-text-2);">
-            <strong style="color: var(--dark-text-2);">Isabela Bolotti de Oliveira</strong><br />
+          <div class="testimonial-author">
+            <strong>Isabela Bolotti de Oliveira</strong><br />
             Strategy &amp; AI Leadership, Novo Nordisk
           </div>
         </div>
@@ -55,7 +55,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="section" style="background: var(--bg);">
+  <section class="section">
     <div class="container">
       <p class="section-label">What I do</p>
       <h2 class="section-title">Practical help where architecture and delivery meet</h2>
@@ -117,7 +117,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="section section-alt">
     <div class="container">
       <p class="section-label">Client perspective</p>
-      <blockquote style="max-width: 68ch;">
+      <blockquote class="blockquote-card index-pull-quote">
         &ldquo;Anders is one of the most dedicated and proficient IT Solution and Software professionals I have ever worked with. He leads by example and takes great pride in upskilling and coaching other technical professionals to foster high-performance delivery teams.&rdquo;
         <div class="testimonial-author">
           <strong>Mads G. J&aelig;ger</strong>, Digital Transformation Field Marshal, KPMG
@@ -129,7 +129,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="cta-strip home-cta-strip">
+  <section class="cta-strip">
     <div class="container">
       <p class="section-label">When to reach out</p>
       <h2>Need an experienced architectural perspective?</h2>
@@ -142,3 +142,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
 </Layout>
+
+<style>
+  .index-pull-quote { max-width: 68ch; }
+</style>
