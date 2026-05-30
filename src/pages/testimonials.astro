@@ -50,7 +50,7 @@ const standard  = (await getCollection('testimonialsS')).sort((a, b) => a.data.o
             <div class="testimonial-body">
               <p class="testimonial-excerpt">{t.data.excerpt}</p>
               <details class="quote-details">
-                <summary>Read full recommendation</summary>
+                <summary aria-label="Read full recommendation">Read full recommendation</summary>
                 <blockquote class="full-quote">&ldquo;{t.data.quote}&rdquo;</blockquote>
               </details>
             </div>
@@ -114,7 +114,6 @@ const standard  = (await getCollection('testimonialsS')).sort((a, b) => a.data.o
   .testimonial-list {
     display: flex;
     flex-direction: column;
-    gap: 0;
     border-top: 1px solid var(--border);
   }
 
@@ -170,6 +169,10 @@ const standard  = (await getCollection('testimonialsS')).sort((a, b) => a.data.o
     font-weight: 600;
     color: var(--accent);
     width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    user-select: none;
   }
 
   .quote-details summary::-webkit-details-marker {
@@ -177,11 +180,18 @@ const standard  = (await getCollection('testimonialsS')).sort((a, b) => a.data.o
   }
 
   .quote-details summary::after {
-    content: ' +';
+    content: '';
+    display: inline-block;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: rotate(45deg) translate(-1px, -2px);
+    transition: transform 0.15s ease;
   }
 
   .quote-details[open] summary::after {
-    content: ' −';
+    transform: rotate(-135deg) translate(-2px, -1px);
   }
 
   .full-quote {

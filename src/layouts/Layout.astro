@@ -42,7 +42,7 @@ const nav = [
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(ogImage, Astro.site)} />
-  <meta property="og:locale" content="en_DK" />
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:site_name" content="COM&lt;tech&gt;" />
 
   <!-- Twitter / X Card -->
@@ -52,15 +52,43 @@ const nav = [
   <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/inter-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
   <ClientRouter />
   <!-- Stamp js class before first paint so fade-up initial state never flashes -->
   <script is:inline>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://comtechconsulting.dk/#person",
+        "name": "Anders Hybertz",
+        "jobTitle": "Senior Software Architect & Technical Lead",
+        "url": "https://comtechconsulting.dk/",
+        "sameAs": ["https://www.linkedin.com/in/andershybertz/"],
+        "email": "anders@comtechconsulting.dk",
+        "worksFor": { "@id": "https://comtechconsulting.dk/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://comtechconsulting.dk/#org",
+        "name": "COM<tech>",
+        "url": "https://comtechconsulting.dk/",
+        "founder": { "@id": "https://comtechconsulting.dk/#person" },
+        "address": { "@type": "PostalAddress", "addressLocality": "Copenhagen", "addressCountry": "DK" }
+      }
+    ]
+  })} />
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
   <header>
-    <nav class="nav" role="navigation" aria-label="Main navigation">
+    <nav class="nav" aria-label="Main navigation">
       <div class="nav-inner">
         <a href="/" class="wordmark" aria-label="COM<tech> home">
           COM<span class="ct">&lt;tech&gt;</span>
@@ -84,7 +112,7 @@ const nav = [
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <slot />
   </main>
 

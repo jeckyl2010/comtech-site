@@ -57,8 +57,10 @@
   --border-subtle: #f0f0ef;
   --accent: #5352cc;
   --accent-text: #7c7bef;
+  --accent-light: #818cf8;
   --accent-hover: #4340b0;
   --accent-dim: rgba(83, 82, 204, 0.08);
+  --accent-border: rgba(83, 82, 204, 0.2);
   --text: #111112;
   --text-2: #52525b;
   --text-3: #a1a1aa;
@@ -79,6 +81,23 @@
   --dark-text-2: #a1a1aa;
   --dark-text-3: #7c7c7c;
 }
+
+/* ─── Skip link ─── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0 0 var(--radius) var(--radius);
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus { top: 0; }
 
 /* ─── Reset ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -300,7 +319,7 @@ main { padding-top: var(--nav-h); }
 .dark-section h4 { color: var(--dark-text); }
 .dark-section p { color: var(--dark-text-2); }
 .dark-section strong { color: var(--dark-text); }
-.dark-section .section-label { color: #818cf8; }
+.dark-section .section-label { color: var(--accent-light); }
 
 /* ─── Hero ─── */
 .hero {
@@ -321,6 +340,7 @@ main { padding-top: var(--nav-h); }
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
+  will-change: transform;
 }
 .aurora-blob-1 {
   width: 560px;
@@ -429,7 +449,7 @@ main { padding-top: var(--nav-h); }
 .hero-quote {
   background: var(--dark-surface);
   border: 1px solid var(--dark-border);
-  border-left: 3px solid #818cf8;
+  border-left: 3px solid var(--accent-light);
   border-radius: var(--radius);
   padding: 1.5rem;
   font-style: italic;
@@ -453,7 +473,7 @@ main { padding-top: var(--nav-h); }
 }
 .hero-award-row + .hero-award-row { border-top: 1px solid var(--dark-border); }
 .hero-award-label { color: var(--dark-text-2); }
-.hero-award-year { color: #818cf8; font-weight: 600; white-space: nowrap; }
+.hero-award-year { color: var(--accent-light); font-weight: 600; white-space: nowrap; }
 
 @media (max-width: 860px) {
   .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
@@ -533,7 +553,7 @@ main { padding-top: var(--nav-h); }
 .bento-featured {
   grid-column: span 2;
   background: linear-gradient(135deg, #fafaff 0%, #f0f0ff 100%);
-  border-color: rgba(83, 82, 204, 0.2);
+  border-color: var(--accent-border);
 }
 .bento-card h3 { font-size: 1.125rem; color: var(--text); }
 .bento-card p { font-size: 0.9375rem; color: var(--text-2); flex: 1; }
