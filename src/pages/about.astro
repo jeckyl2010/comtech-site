@@ -140,28 +140,28 @@ const awards = [
       </p>
       <div class="repo-grid repo-grid-single-source">
 
-        <div class="repo-card repo-card-static">
+        <div class="card repo-card repo-card-static">
           <div class="repo-card-header">
             <span class="repo-name">Architecture and delivery recovery</span>
           </div>
           <p class="repo-desc">When a programme or project has become technically unclear, too coupled, or difficult to steer, the first task is usually to make the shape of the problem visible and help the team regain control.</p>
         </div>
 
-        <div class="repo-card repo-card-static">
+        <div class="card repo-card repo-card-static">
           <div class="repo-card-header">
             <span class="repo-name">Regulated and high-consequence systems</span>
           </div>
           <p class="repo-desc">Work where traceability, auditability, documentation, and reliability are not administrative extras but part of what makes the solution acceptable.</p>
         </div>
 
-        <div class="repo-card repo-card-static">
+        <div class="card repo-card repo-card-static">
           <div class="repo-card-header">
             <span class="repo-name">Cloud, platform, and AI decisions</span>
           </div>
           <p class="repo-desc">Especially where there is a need to separate useful technology choices from fashionable ones, and where operations and adoption matter as much as the architecture diagram.</p>
         </div>
 
-        <div class="repo-card repo-card-static">
+        <div class="card repo-card repo-card-static">
           <div class="repo-card-header">
             <span class="repo-name">Senior sparring for teams and leaders</span>
           </div>
@@ -275,16 +275,11 @@ const awards = [
     gap: 1.25rem;
   }
   .repo-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
     padding: 1.5rem;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    box-shadow: var(--shadow-sm);
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
   }
   .repo-card:hover {
     box-shadow: var(--shadow);
