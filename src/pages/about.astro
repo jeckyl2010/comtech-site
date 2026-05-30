@@ -97,7 +97,7 @@ const awards = [
           <p class="about-body">
             Since 2000, the work has centred on software architecture, technical leadership, and difficult deliveries across regulated industries and complex organisations. The common denominator is not a particular technology. It is situations where the architecture matters, the systems have to hold up in practice, and the organisation needs clear judgement rather than noise.
           </p>
-          <p class="about-body" style="margin-top: 1rem;">
+          <p class="about-body about-body-spaced">
           The working style is pragmatic, calm, and long-term minded. Good solutions balance technical quality, business reality, and a team's ability to evolve them over time. The preference is to be present from the first architectural decision through to production — and to see value delivered, not just handed over.
           </p>
         </div>
@@ -116,8 +116,8 @@ const awards = [
   <section class="section section-alt">
     <div class="container">
       <p class="section-label">How I work</p>
-      <h2 style="margin-bottom: 1rem;">Professional craftsmanship over noise</h2>
-      <p style="max-width: 60ch; margin-bottom: 2.5rem;">
+      <h2 class="section-h2">Professional craftsmanship over noise</h2>
+      <p class="section-sub section-sub-wide">
         The aim is to create clarity, reduce unnecessary complexity, and make sound decisions that the organisation can live with afterwards. Less noise. More substance. Architecture should help the work move forward, not become a separate performance around it.
       </p>
       <div class="strengths-grid">
@@ -134,8 +134,8 @@ const awards = [
   <section class="section">
     <div class="container">
       <p class="section-label">Selected focus areas</p>
-      <h2 style="margin-bottom: 0.5rem;">What clients typically bring me in for</h2>
-      <p style="max-width: 58ch; margin-bottom: 2rem; color: var(--text-2);">
+      <h2 class="section-h2 section-h2-tight">What clients typically bring me in for</h2>
+      <p class="section-sub">
         Architecture work under delivery pressure. Modernisation without unnecessary rewrites. Technical leadership where teams need direction, calm, and practical judgement.
       </p>
       <div class="repo-grid repo-grid-single-source">
@@ -177,22 +177,22 @@ const awards = [
       <div class="domains-tech-grid">
         <div>
           <p class="section-label">Industries</p>
-          <h2 style="margin-bottom: 0.75rem;">Where I have worked</h2>
-          <p style="margin-bottom: 1.25rem; color: var(--text-2);">
+          <h2 class="section-h2 section-h2-snug">Where I have worked</h2>
+          <p class="section-sub section-sub-snug">
             Different sectors, but usually with real operational, financial, or regulatory consequences.
           </p>
           <div class="domain-list">
-            {domains.map(d => <span class="tag" style="font-size: 0.8125rem; padding: 0.375rem 0.875rem;">{d}</span>)}
+            {domains.map(d => <span class="tag tag-md">{d}</span>)}
           </div>
         </div>
         <div>
           <p class="section-label">Technologies</p>
-          <h2 style="margin-bottom: 0.75rem;">Core stack</h2>
-          <p style="margin-bottom: 1.25rem; color: var(--text-2);">
+          <h2 class="section-h2 section-h2-snug">Core stack</h2>
+          <p class="section-sub section-sub-snug">
             Strongest around the Microsoft ecosystem, but guided by architecture and context rather than attachment to a stack.
           </p>
           <div class="domain-list">
-            {technologies.map(t => <span class="tag" style="font-size: 0.8125rem; padding: 0.375rem 0.875rem;">{t}</span>)}
+            {technologies.map(t => <span class="tag tag-md">{t}</span>)}
           </div>
         </div>
       </div>
@@ -202,8 +202,8 @@ const awards = [
   <section class="section">
     <div class="container">
       <p class="section-label">Recognition</p>
-      <h2 style="margin-bottom: 0.75rem;">Appointments, awards, and nominations</h2>
-      <p style="max-width: 52ch; margin-bottom: 2rem;">
+      <h2 class="section-h2 section-h2-snug">Appointments, awards, and nominations</h2>
+      <p class="section-sub section-sub-narrow">
         Recognition from clients, peers, the freelance network, and courts. Useful as a trust signal, but always secondary to whether the work itself stands up.
       </p>
       <div class="awards-list">
@@ -213,7 +213,7 @@ const awards = [
             <div class="award-content">
               <h4>{a.title}</h4>
               <p>{a.issuer}</p>
-              {a.detail && <p style="margin-top: 0.375rem;">{a.detail}</p>}
+              {a.detail && <p class="award-detail">{a.detail}</p>}
             </div>
           </div>
         ))}
@@ -226,7 +226,7 @@ const awards = [
       <p class="section-label">When to reach out</p>
       <h2>Need a calm senior perspective on a difficult situation?</h2>
       <p>If a system has become harder to steer, a delivery needs firmer technical footing, or an important decision should be worked through properly, write.</p>
-      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+      <div class="btn-row">
         <a href="/testimonials/" class="btn btn-ghost">Read testimonials</a>
         <a href="/contact/" class="btn btn-primary">Contact Anders</a>
       </div>
@@ -254,6 +254,15 @@ const awards = [
     color: var(--text-2);
     line-height: 1.75;
   }
+  .about-body-spaced { margin-top: 1rem; }
+  .section-h2 { margin-bottom: 1rem; }
+  .section-h2-tight { margin-bottom: 0.5rem; }
+  .section-h2-snug { margin-bottom: 0.75rem; }
+  .section-sub { max-width: 58ch; margin-bottom: 2rem; color: var(--text-2); }
+  .section-sub-wide { max-width: 60ch; margin-bottom: 2.5rem; }
+  .section-sub-snug { max-width: none; margin-bottom: 1.25rem; }
+  .section-sub-narrow { max-width: 52ch; }
+  .award-detail { margin-top: 0.375rem; }
   .about-pull-quote {
     margin-top: 3rem;
   }
