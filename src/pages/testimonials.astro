@@ -88,7 +88,7 @@ const standard = [
 
       <div class="featured-grid">
         {featured.map((t) => (
-          <article class="featured-card">
+          <article class="featured-card card">
             <p class="t-category label-caps-muted">{t.category}</p>
             <blockquote class="featured-excerpt">&ldquo;{t.excerpt}&rdquo;</blockquote>
             <div class="t-author">
@@ -197,11 +197,7 @@ const standard = [
   }
 
   .featured-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: calc(var(--radius) * 1.5);
     padding: 2rem;
-    box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
     gap: 1rem;
