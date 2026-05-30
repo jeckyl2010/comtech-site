@@ -543,7 +543,6 @@ main { padding-top: var(--nav-h); }
   background: linear-gradient(135deg, #fafaff 0%, #f0f0ff 100%);
   border-color: rgba(83, 82, 204, 0.2);
 }
-.bento-full { grid-column: 1 / -1; }
 .bento-card h3 { font-size: 1.125rem; color: var(--text); }
 .bento-card p { font-size: 0.9375rem; color: var(--text-2); flex: 1; }
 .bento-tag {
@@ -642,9 +641,6 @@ main { padding-top: var(--nav-h); }
   color: var(--text-3);
   border: 1px solid var(--border);
 }
-
-/* ─── Divider ─── */
-.divider { border: none; border-top: 1px solid var(--border); margin: 4rem 0; }
 
 /* ─── Utility ─── */
 .btn-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }

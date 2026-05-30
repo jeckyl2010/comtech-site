@@ -1,0 +1,17 @@
+{
+  "domains": [
+    "Pharmaceutical manufacturing",
+    "Financial services and insurance",
+    "Manufacturing and industrial",
+    "Energy and utilities",
+    "Public sector",
+    "Telecom and mobile",
+    "Healthcare and life sciences",
+    "Banking"
+  ],
+  "technologies": [
+    ".NET / C#", "Python", "Microsoft Azure", "Kubernetes", "Docker", "Dapr",
+    "Azure DevOps", "Terraform", "Bicep", "Event-driven architecture",
+    "RESTful APIs", "Azure ML", "OpenShift", "CI/CD pipelines"
+  ]
+}

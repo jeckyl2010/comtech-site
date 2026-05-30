@@ -1,83 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import aboutData from '../data/about.json';
 
-const domains = [
-  'Pharmaceutical manufacturing',
-  'Financial services and insurance',
-  'Manufacturing and industrial',
-  'Energy and utilities',
-  'Public sector',
-  'Telecom and mobile',
-  'Healthcare and life sciences',
-  'Banking',
-];
+const strengths = await getCollection('strengths');
+const awards    = await getCollection('awards');
 
-const strengths = [
-  {
-    title: 'Architecture with a long view',
-    body: 'Decisions should still make sense when the project pressure is gone. Maintainability, traceability, and operational reality are part of the job from the beginning.',
-  },
-  {
-    title: 'Pragmatic and clear-headed',
-    body: 'There are no best practices, only good practices, and the judgment to know which ones fit here. It starts with listening. Understanding the actual problem before proposing a solution is not a courtesy. It is the work.',
-  },
-  {
-    title: 'Hands-on when needed',
-    body: 'Architecture, delivery, reviews, mentoring, and implementation support. The work follows the problem instead of protecting a role description.',
-  },
-  {
-    title: 'Calm under delivery pressure',
-    body: 'Much of the work has been in programmes with real deadlines, competing stakeholders, and systems that could not simply fail and be retried later.',
-  },
-  {
-    title: 'Knowledge that stays behind',
-    body: 'An engagement should leave the organisation with better understanding, better practices, and a team that can continue without artificial dependency.',
-  },
-  {
-    title: 'Less, but better',
-    body: 'Complexity is easy to add and expensive to carry. Good architecture often comes from reducing what is unnecessary and making the rest clearer.',
-  },
-];
-
-const technologies = [
-  '.NET / C#', 'Python', 'Microsoft Azure', 'Kubernetes', 'Docker', 'Dapr',
-  'Azure DevOps', 'Terraform', 'Bicep', 'Event-driven architecture',
-  'RESTful APIs', 'Azure ML', 'OpenShift', 'CI/CD pipelines',
-];
-
-const awards = [
-  {
-    year: '2022',
-    title: 'Court-Appointed Independent Software Expert',
-    issuer: 'Danmarks Domstole · Sø- og Handelsretten',
-    detail: 'Appointed to a five-member expert panel to provide independent technical assessment in a commercial software dispute. Held primary responsibility for architecture, application design, performance, and adherence to established engineering practices. Contributed to resolving the matter before the first court date.',
-    featured: true,
-  },
-  {
-    year: '2021',
-    title: 'PSQIT Innovation Prize 2020',
-    issuer: 'Novo Nordisk',
-    detail: 'Team prize for a solution that optimised batch changeover procedures on production lines.',
-  },
-  {
-    year: '2020',
-    title: 'Best Individual Performance of the Year',
-    issuer: '7N, associated with Novo Nordisk',
-    detail: '',
-  },
-  {
-    year: '2016',
-    title: 'Best Individual Performance of the Year',
-    issuer: '7N, associated with RSA / Codan',
-    detail: '',
-  },
-  {
-    year: '2016',
-    title: 'Nominee, Best Team Performance of the Year',
-    issuer: '7N, associated with RSA / Codan',
-    detail: '',
-  },
-];
+const { domains, technologies } = aboutData;
 ---
 
 <Layout
@@ -123,8 +52,8 @@ const awards = [
       <div class="strengths-grid">
         {strengths.map(s => (
           <div class="strength-item">
-            <h4>{s.title}</h4>
-            <p>{s.body}</p>
+            <h4>{s.data.title}</h4>
+            <p>{s.data.body}</p>
           </div>
         ))}
       </div>
@@ -138,7 +67,7 @@ const awards = [
       <p class="section-sub">
         Architecture work under delivery pressure. Modernisation without unnecessary rewrites. Technical leadership where teams need direction, calm, and practical judgement.
       </p>
-      <div class="repo-grid repo-grid-single-source">
+      <div class="repo-grid">
 
         <div class="card repo-card repo-card-static">
           <div class="repo-card-header">
@@ -208,12 +137,12 @@ const awards = [
       </p>
       <div class="awards-list">
         {awards.map(a => (
-          <div class:list={['award-item', { 'award-item--featured': a.featured }]}>
-            <div class="award-year section-label">{a.year}</div>
+          <div class:list={['award-item', { 'award-item--featured': a.data.featured }]}>
+            <div class="award-year section-label">{a.data.year}</div>
             <div class="award-content">
-              <h4>{a.title}</h4>
-              <p>{a.issuer}</p>
-              {a.detail && <p class="award-detail">{a.detail}</p>}
+              <h4>{a.data.title}</h4>
+              <p>{a.data.issuer}</p>
+              {a.data.detail && <p class="award-detail">{a.data.detail}</p>}
             </div>
           </div>
         ))}

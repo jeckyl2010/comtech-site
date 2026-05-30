@@ -1,75 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
-const highlights = [
-  {
-    label: 'Strategic trust',
-    quote: 'Top 1 recommendation. A highly valuable and rare combination of competencies.',
-    source: 'Isabela Bolotti de Oliveira, Meridian / formerly Novo Nordisk',
-  },
-  {
-    label: 'Delivery confidence',
-    quote: 'The solution became stable and robust within the time given.',
-    source: 'Arne Beck Hansen, N3O',
-  },
-  {
-    label: 'Leadership impact',
-    quote: 'Leads by example and strengthens the technical people around him.',
-    source: 'Mads G. Jæger, KPMG',
-  },
-];
-
-const featured = [
-  {
-    category: 'AI & computer vision',
-    excerpt: 'Top 1 recommendation. A highly valuable and rare combination of competencies in one single person.',
-    quote: `It's even hard to put in just a few words all the reasons why I would strongly recommend Anders to any team. If I were to rank my recommendations, he would for sure be top 1. I had the pleasure of having Anders joining me in the very early phase of looking into CCTV AI use cases and he has since then become my right arm in bringing the ideas to reality, establishing and leading a program composed of 4 product teams, orchestrating many stakeholders within Novo Nordisk and our collaboration with Siemens and Microsoft. Anders brings outstanding knowledge, proactivity, efficiency, creativity, structure, teamwork and great communication and presentation skills: a highly valuable and rare combination of so many different competencies in one single person. I really hope we can work together again one day.`,
-    name: 'Isabela Bolotti de Oliveira',
-    title: 'Founder & CEO, Meridian | formerly Strategy & AI Leadership, Novo Nordisk',
-  },
-  {
-    category: 'Engineering leadership',
-    excerpt: 'Tech lead on an AI initiative deploying into an air-gapped network with Kubernetes and multiple external vendors. Somehow, everyone came out the other side on board with the plan. That\'s Anders.',
-    quote: `I had the pleasure of working with Anders for five years at Novo Nordisk — first as a fellow tech lead, and later when I led the team he worked on. Anders is genuinely full-stack: a deeply experienced backend developer who is just as comfortable on the frontend, and he knows Azure inside out. He's well versed enough in software architecture to have the conversation at any level — from pairing with a junior on a bug to debating trade-offs with a principal architect — and he designs solutions that hold up.
-
-His real superpower, though, is people. Anders builds trust across complicated organisations the way few engineers can, and that lets him drive alignment and land outcomes that simply wouldn't be possible otherwise. He was tech lead on an AI initiative that required aligning multiple external vendors with internal IT on a genuinely hard problem: deploying their products into an air-gapped network and introducing Kubernetes into that layer, with everything that implies in terms of risk. Somehow, everyone came out the other side on board with the plan. That's Anders.
-
-He's also a thoughtful mentor to juniors, unafraid to call out what isn't working, and proactive about fixing it. Every team I've seen him on has been better for him being there. On top of all that, he's just a genuinely lovely person to be around. Any team that gets to work with Anders is fortunate — I certainly was.`,
-    name: 'Janus Tøth',
-    title: 'Engineering Leader, formerly Novo Nordisk',
-  },
-];
-
-const standard = [
-  {
-    category: 'Technical leadership',
-    excerpt: 'Dedicated, proficient, long-term minded, and recognised for leading by example.',
-    quote: `Anders is one of the most dedicated and proficient IT Solution and Software professionals I have ever worked with. I've had the pleasure of knowing Anders for 3 years, during a complex IT Transition Programme in RSA Codan for which Anders was the Solution Architect and Technical Lead and I was the Programme Delivery Lead. Anders strives to design and deliver the best possible solutions and applications to achieve business objectives with a long-term business and IT perspective in mind. Anders challenges the mediocre ordinary and defines and ensures compliance with new standards when needed. He leads by example and takes great pride in upskilling and coaching other technical professionals to foster high-performance delivery teams, which makes him well recognised and respected. Anders would be a true asset for any senior IT positions around solution architecture, continuous delivery or application development and comes with my heartfelt recommendation.`,
-    name: 'Mads G. Jæger',
-    title: 'Digital Transformation Field Marshal, KPMG',
-  },
-  {
-    category: 'Delivery & architecture',
-    excerpt: 'Calm, available leadership and architectural judgement that made the solution stable and robust under pressure.',
-    quote: `It was a pleasure to be a part of the development team having Anders Hybertz as architect and team lead. Anders is the type of person that, no matter how busy he is, he always has the time to answer your questions or discuss design issues. This is a great gift and it helps the project run smoothly in the critical phases where everybody is busy. It was due to Anders' architectural skills that the team managed to make the solution stable and robust within the time given. Although Anders functioned as team lead and architect he also proved to have a deep and extensive knowledge of both Java and C#. Only a few people master both of these languages as Anders does. I can highly recommend Anders as architect or team lead. He would be a valuable asset to any project.`,
-    name: 'Arne Beck Hansen',
-    title: 'Founder & CIO, N3O',
-  },
-  {
-    category: 'Project quality',
-    excerpt: 'High integrity, strong quality focus, and the ability to lift the competence of the team around him.',
-    quote: `Anders is dedicated to his projects. He strives to deliver on time and with high quality and does go the extra mile to ensure that this goal is met. He has high integrity and is open-minded for a discussion on architectural decisions. I've had the pleasure to have Anders as team lead and architect on Digital Tinglysning for almost 4.5 years. Anders not only has a sharp mind but is also able to share his ideas and visions in a manner that makes the team-members join in. Anders also possesses the ability to lift the competences of his team-members.`,
-    name: 'Morten Edward Foltmar',
-    title: 'Freelance Software Developer, AP Pension',
-  },
-  {
-    category: 'Team mentoring',
-    excerpt: 'A motivating architect and developer who raises the standard and makes people want to perform at their best.',
-    quote: `Awesome architect, awesome developer! When Anders gives you an assignment, it seems as if he already knows the solution and he's merely testing you, to see whether you will come up with the right solution. It's very motivating and makes you want to perform at your highest level. Apart from his technical skills, he's genuinely just a very nice guy and very pleasant to be around. I'd work with him anytime!`,
-    name: 'Mikkel Colberg',
-    title: 'Principal Developer, NNIT',
-  },
-];
+const featured  = await getCollection('testimonialsF');
+const standard  = await getCollection('testimonialsS');
 ---
 
 <Layout
@@ -89,15 +23,15 @@ const standard = [
       <div class="featured-grid">
         {featured.map((t) => (
           <article class="featured-card card">
-            <p class="t-category label-caps-muted">{t.category}</p>
-            <blockquote class="featured-excerpt">&ldquo;{t.excerpt}&rdquo;</blockquote>
+            <p class="t-category label-caps-muted">{t.data.category}</p>
+            <blockquote class="featured-excerpt">&ldquo;{t.data.excerpt}&rdquo;</blockquote>
             <div class="t-author">
-              <strong>{t.name}</strong>
-              <span>{t.title}</span>
+              <strong>{t.data.name}</strong>
+              <span>{t.data.title}</span>
             </div>
             <details class="quote-details">
               <summary>Read full recommendation</summary>
-              <blockquote class="full-quote">&ldquo;{t.quote}&rdquo;</blockquote>
+              <blockquote class="full-quote">&ldquo;{t.data.quote}&rdquo;</blockquote>
             </details>
           </article>
         ))}
@@ -107,17 +41,17 @@ const standard = [
         {standard.map((t) => (
           <article class="testimonial-item">
             <div class="testimonial-meta">
-              <p class="t-category label-caps-muted">{t.category}</p>
+              <p class="t-category label-caps-muted">{t.data.category}</p>
               <div class="t-author">
-                <strong>{t.name}</strong>
-                <span>{t.title}</span>
+                <strong>{t.data.name}</strong>
+                <span>{t.data.title}</span>
               </div>
             </div>
             <div class="testimonial-body">
-              <p class="testimonial-excerpt">{t.excerpt}</p>
+              <p class="testimonial-excerpt">{t.data.excerpt}</p>
               <details class="quote-details">
                 <summary>Read full recommendation</summary>
-                <blockquote class="full-quote">&ldquo;{t.quote}&rdquo;</blockquote>
+                <blockquote class="full-quote">&ldquo;{t.data.quote}&rdquo;</blockquote>
               </details>
             </div>
           </article>
@@ -176,7 +110,6 @@ const standard = [
     color: var(--text);
     font-size: 1.25rem;
     line-height: 1.5;
-    font-style: italic;
   }
 
   .testimonial-list {
@@ -262,7 +195,6 @@ const standard = [
   }
 
   @media (max-width: 980px) {
-    .signal-grid,
     .featured-grid {
       grid-template-columns: 1fr;
     }

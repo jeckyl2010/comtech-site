@@ -1,0 +1,32 @@
+[
+  {
+    "id": "architecture-long-view",
+    "title": "Architecture with a long view",
+    "body": "Decisions should still make sense when the project pressure is gone. Maintainability, traceability, and operational reality are part of the job from the beginning."
+  },
+  {
+    "id": "pragmatic-clear-headed",
+    "title": "Pragmatic and clear-headed",
+    "body": "There are no best practices, only good practices, and the judgment to know which ones fit here. It starts with listening. Understanding the actual problem before proposing a solution is not a courtesy. It is the work."
+  },
+  {
+    "id": "hands-on",
+    "title": "Hands-on when needed",
+    "body": "Architecture, delivery, reviews, mentoring, and implementation support. The work follows the problem instead of protecting a role description."
+  },
+  {
+    "id": "calm-under-pressure",
+    "title": "Calm under delivery pressure",
+    "body": "Much of the work has been in programmes with real deadlines, competing stakeholders, and systems that could not simply fail and be retried later."
+  },
+  {
+    "id": "knowledge-stays-behind",
+    "title": "Knowledge that stays behind",
+    "body": "An engagement should leave the organisation with better understanding, better practices, and a team that can continue without artificial dependency."
+  },
+  {
+    "id": "less-but-better",
+    "title": "Less, but better",
+    "body": "Complexity is easy to add and expensive to carry. Good architecture often comes from reducing what is unnecessary and making the rest clearer."
+  }
+]
