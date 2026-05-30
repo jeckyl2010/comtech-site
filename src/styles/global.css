@@ -599,7 +599,7 @@ main { padding-top: var(--nav-h); }
   font-size: 0.75rem;
   color: var(--text-3);
   font-style: normal;
-  margin-top: 0 !important;
+  margin-top: 0;
   flex: 0;
 }
 
