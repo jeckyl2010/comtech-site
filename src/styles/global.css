@@ -138,6 +138,7 @@ a:hover { color: var(--accent); }
 }
 .dark-section .wordmark { color: var(--dark-text); }
 .footer .wordmark { color: var(--dark-text); }
+.footer .wordmark:hover { color: var(--accent); }
 
 /* ─── Layout ─── */
 .container {
