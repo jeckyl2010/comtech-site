@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import aboutData from '../data/about.json';
 
-const strengths = await getCollection('strengths');
-const awards    = await getCollection('awards');
+const strengths = (await getCollection('strengths')).sort((a, b) => a.data.order - b.data.order);
+const awards    = (await getCollection('awards')).sort((a, b) => a.data.order - b.data.order);
 
 const { domains, technologies } = aboutData;
 ---
@@ -17,7 +17,7 @@ const { domains, technologies } = aboutData;
   <section class="section">
     <div class="container">
       <div class="about-intro-grid">
-        <div class="about-intro-left">
+        <div>
           <p class="section-label">About</p>
           <h1 class="page-h1">Anders Hybertz</h1>
           <p class="about-lead">
@@ -30,7 +30,7 @@ const { domains, technologies } = aboutData;
           The working style is pragmatic, calm, and long-term minded. Good solutions balance technical quality, business reality, and a team's ability to evolve them over time. The preference is to be present from the first architectural decision through to production — and to see value delivered, not just handed over.
           </p>
         </div>
-        <div class="about-intro-right">
+        <div>
           <blockquote class="about-pull-quote blockquote-card">
             &ldquo;Anders not only has a sharp mind but is also able to share his ideas and visions in a manner that makes the team-members join in. He also possesses the ability to lift the competences of his team-members.&rdquo;
             <div class="testimonial-author">
@@ -139,7 +139,7 @@ const { domains, technologies } = aboutData;
         {awards.map(a => (
           <div class:list={['award-item', { 'award-item--featured': a.data.featured }]}>
             <div class="award-year section-label">{a.data.year}</div>
-            <div class="award-content">
+            <div>
               <h4>{a.data.title}</h4>
               <p>{a.data.issuer}</p>
               {a.data.detail && <p class="award-detail">{a.data.detail}</p>}
@@ -219,10 +219,7 @@ const { domains, technologies } = aboutData;
     flex-direction: column;
     gap: 0.75rem;
   }
-  .repo-card-static:hover {
-    box-shadow: var(--shadow-sm);
-    border-color: var(--border);
-  }
+  .repo-card-static { cursor: default; }
   .repo-card-header {
     display: flex;
     align-items: center;

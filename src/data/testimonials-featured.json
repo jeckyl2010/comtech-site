@@ -5,7 +5,8 @@
     "excerpt": "Top 1 recommendation. A highly valuable and rare combination of competencies in one single person.",
     "quote": "It's even hard to put in just a few words all the reasons why I would strongly recommend Anders to any team. If I were to rank my recommendations, he would for sure be top 1. I had the pleasure of having Anders joining me in the very early phase of looking into CCTV AI use cases and he has since then become my right arm in bringing the ideas to reality, establishing and leading a program composed of 4 product teams, orchestrating many stakeholders within Novo Nordisk and our collaboration with Siemens and Microsoft. Anders brings outstanding knowledge, proactivity, efficiency, creativity, structure, teamwork and great communication and presentation skills: a highly valuable and rare combination of so many different competencies in one single person. I really hope we can work together again one day.",
     "name": "Isabela Bolotti de Oliveira",
-    "title": "Founder & CEO, Meridian | formerly Strategy & AI Leadership, Novo Nordisk"
+    "title": "Founder & CEO, Meridian | formerly Strategy & AI Leadership, Novo Nordisk",
+    "order": 1
   },
   {
     "id": "janus-toth",
@@ -13,6 +14,7 @@
     "excerpt": "Tech lead on an AI initiative deploying into an air-gapped network with Kubernetes and multiple external vendors. Somehow, everyone came out the other side on board with the plan. That's Anders.",
     "quote": "I had the pleasure of working with Anders for five years at Novo Nordisk — first as a fellow tech lead, and later when I led the team he worked on. Anders is genuinely full-stack: a deeply experienced backend developer who is just as comfortable on the frontend, and he knows Azure inside out. He's well versed enough in software architecture to have the conversation at any level — from pairing with a junior on a bug to debating trade-offs with a principal architect — and he designs solutions that hold up.\n\nHis real superpower, though, is people. Anders builds trust across complicated organisations the way few engineers can, and that lets him drive alignment and land outcomes that simply wouldn't be possible otherwise. He was tech lead on an AI initiative that required aligning multiple external vendors with internal IT on a genuinely hard problem: deploying their products into an air-gapped network and introducing Kubernetes into that layer, with everything that implies in terms of risk. Somehow, everyone came out the other side on board with the plan. That's Anders.\n\nHe's also a thoughtful mentor to juniors, unafraid to call out what isn't working, and proactive about fixing it. Every team I've seen him on has been better for him being there. On top of all that, he's just a genuinely lovely person to be around. Any team that gets to work with Anders is fortunate — I certainly was.",
     "name": "Janus Tøth",
-    "title": "Engineering Leader, formerly Novo Nordisk"
+    "title": "Engineering Leader, formerly Novo Nordisk",
+    "order": 2
   }
 ]

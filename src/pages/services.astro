@@ -1,43 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
 
-const services = [
-  {
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>`,
-    name: 'Software architecture & design',
-    description:
-      'Architecture for both greenfield and legacy systems. Especially useful when the technical direction has become unclear, the system boundaries are weak, or important decisions need a calmer and more structured basis.',
-    tags: ['Architecture reviews', 'System boundaries', 'Event-driven design', 'API design', 'Regulated systems', 'Technical roadmap'],
-  },
-  {
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>`,
-    name: 'Cloud and AI solutions',
-    description:
-      'Cloud-native and AI-based solutions where they serve a real purpose. This includes platform work, containerised workloads, computer vision, and architecture that still has to function under operational and compliance constraints.',
-    tags: ['Microsoft Azure', 'Kubernetes / Docker', 'Computer vision', 'AI/ML integration', 'Dapr', 'CI/CD and IaC'],
-  },
-  {
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-    name: 'Technical leadership and mentoring',
-    description:
-      'Support for teams that need senior technical direction without unnecessary layers. Architecture reviews, sparring, mentoring, and practical help through the difficult parts of delivery.',
-    tags: ['Tech lead support', 'Architecture reviews', 'Mentoring', 'Delivery governance', 'Engineering practices'],
-  },
-  {
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>`,
-    name: 'Strategic IT advisory',
-    description:
-      'An independent architectural perspective on where to invest, where to simplify, and where not to build at all. Useful when important choices need to be made without turning the decision process into a performance of its own.',
-    tags: ['Technology strategy', 'Modernisation', 'Cloud migration', 'AI adoption', 'Stakeholder alignment'],
-  },
-  {
-    icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`,
-    name: 'Independent software auditing',
-    description:
-      'Third-party review of software deliveries against agreed expectations. Relevant for quality, SDLC maturity, security, reliability, and regulatory concerns where an outside assessment should be concrete and useful rather than ceremonial. Backed by direct experience as a court-appointed independent expert before Sø- og Handelsretten.',
-    tags: ['Third-party audit', 'SDLC review', 'Security assessment', 'Quality assurance', 'Regulatory compliance'],
-  },
-];
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout
@@ -55,16 +20,16 @@ const services = [
     </p>
 
     <div class="svc-grid">
-      {services.map((s, i) => (
-        <div class:list={['svc-card', 'card', { 'svc-featured': i === 0 }]}>
+      {services.map((s) => (
+        <div class:list={['svc-card', 'card', { 'svc-featured': s.data.featured }]}>
           <div class="svc-header">
             {/* set:html is safe here — icon SVGs are hardcoded static strings, not user input */}
-            <div class="svc-icon" set:html={s.icon} />
-            <h3 class="svc-title">{s.name}</h3>
+            <div class="svc-icon" set:html={s.data.icon} />
+            <h3 class="svc-title">{s.data.name}</h3>
           </div>
-          <p class="svc-desc">{s.description}</p>
+          <p class="svc-desc">{s.data.description}</p>
           <div class="svc-tags">
-            {s.tags.map(tag => <span class="tag">{tag}</span>)}
+            {s.data.tags.map(tag => <span class="tag">{tag}</span>)}
           </div>
         </div>
       ))}

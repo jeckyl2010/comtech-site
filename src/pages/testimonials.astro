@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
-const featured  = await getCollection('testimonialsF');
-const standard  = await getCollection('testimonialsS');
+const featured  = (await getCollection('testimonialsF')).sort((a, b) => a.data.order - b.data.order);
+const standard  = (await getCollection('testimonialsS')).sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout
@@ -40,7 +40,7 @@ const standard  = await getCollection('testimonialsS');
       <div class="testimonial-list">
         {standard.map((t) => (
           <article class="testimonial-item">
-            <div class="testimonial-meta">
+            <div>
               <p class="t-category label-caps-muted">{t.data.category}</p>
               <div class="t-author">
                 <strong>{t.data.name}</strong>
@@ -83,7 +83,6 @@ const standard  = await getCollection('testimonialsS');
   .testimonials-header {
     display: flex;
     flex-direction: column;
-    gap: 0;
   }
 
   .testimonials-lead {

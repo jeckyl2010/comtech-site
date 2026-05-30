@@ -2,31 +2,37 @@
   {
     "id": "architecture-long-view",
     "title": "Architecture with a long view",
-    "body": "Decisions should still make sense when the project pressure is gone. Maintainability, traceability, and operational reality are part of the job from the beginning."
+    "body": "Decisions should still make sense when the project pressure is gone. Maintainability, traceability, and operational reality are part of the job from the beginning.",
+    "order": 1
   },
   {
     "id": "pragmatic-clear-headed",
     "title": "Pragmatic and clear-headed",
-    "body": "There are no best practices, only good practices, and the judgment to know which ones fit here. It starts with listening. Understanding the actual problem before proposing a solution is not a courtesy. It is the work."
+    "body": "There are no best practices, only good practices, and the judgment to know which ones fit here. It starts with listening. Understanding the actual problem before proposing a solution is not a courtesy. It is the work.",
+    "order": 2
   },
   {
     "id": "hands-on",
     "title": "Hands-on when needed",
-    "body": "Architecture, delivery, reviews, mentoring, and implementation support. The work follows the problem instead of protecting a role description."
+    "body": "Architecture, delivery, reviews, mentoring, and implementation support. The work follows the problem instead of protecting a role description.",
+    "order": 3
   },
   {
     "id": "calm-under-pressure",
     "title": "Calm under delivery pressure",
-    "body": "Much of the work has been in programmes with real deadlines, competing stakeholders, and systems that could not simply fail and be retried later."
+    "body": "Much of the work has been in programmes with real deadlines, competing stakeholders, and systems that could not simply fail and be retried later.",
+    "order": 4
   },
   {
     "id": "knowledge-stays-behind",
     "title": "Knowledge that stays behind",
-    "body": "An engagement should leave the organisation with better understanding, better practices, and a team that can continue without artificial dependency."
+    "body": "An engagement should leave the organisation with better understanding, better practices, and a team that can continue without artificial dependency.",
+    "order": 5
   },
   {
     "id": "less-but-better",
     "title": "Less, but better",
-    "body": "Complexity is easy to add and expensive to carry. Good architecture often comes from reducing what is unnecessary and making the rest clearer."
+    "body": "Complexity is easy to add and expensive to carry. Good architecture often comes from reducing what is unnecessary and making the rest clearer.",
+    "order": 6
   }
 ]
