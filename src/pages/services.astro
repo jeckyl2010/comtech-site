@@ -89,7 +89,7 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
   }
   .svc-featured {
     grid-column: 1 / -1;
-    background: linear-gradient(135deg, #fafaff 0%, #f0f0ff 100%);
+    background: var(--featured-bg);
     border-color: var(--accent-border);
   }
   .svc-featured .svc-title { font-size: 1.25rem; }

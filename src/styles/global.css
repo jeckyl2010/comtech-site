@@ -61,6 +61,7 @@
   --accent-hover: #4340b0;
   --accent-dim: rgba(83, 82, 204, 0.08);
   --accent-border: rgba(83, 82, 204, 0.2);
+  --featured-bg: linear-gradient(135deg, #fafaff 0%, #f0f0ff 100%);
   --text: #111112;
   --text-2: #52525b;
   --text-3: #a1a1aa;
@@ -452,7 +453,6 @@ main { padding-top: var(--nav-h); }
   border-left: 3px solid var(--accent-light);
   border-radius: var(--radius);
   padding: 1.5rem;
-  font-style: italic;
   font-size: 0.9375rem;
   color: var(--dark-text-2);
   line-height: 1.7;
@@ -552,7 +552,7 @@ main { padding-top: var(--nav-h); }
 }
 .bento-featured {
   grid-column: span 2;
-  background: linear-gradient(135deg, #fafaff 0%, #f0f0ff 100%);
+  background: var(--featured-bg);
   border-color: var(--accent-border);
 }
 .bento-card h3 { font-size: 1.125rem; color: var(--text); }
@@ -600,7 +600,6 @@ main { padding-top: var(--nav-h); }
   border-left: 3px solid var(--accent);
 }
 .bento-pull {
-  font-style: italic;
   font-size: 0.9375rem;
   color: var(--text-2);
   line-height: 1.7;
@@ -625,7 +624,6 @@ main { padding-top: var(--nav-h); }
   padding: 1.5rem 1.75rem;
   background: var(--surface);
   border-radius: 0 var(--radius) var(--radius) 0;
-  font-style: italic;
   color: var(--text-2);
   font-size: 0.9375rem;
   line-height: 1.75;
