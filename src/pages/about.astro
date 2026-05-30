@@ -208,7 +208,7 @@ const awards = [
       </p>
       <div class="awards-list">
         {awards.map(a => (
-          <div class={`award-item${a.featured ? ' award-item--featured' : ''}`}>
+          <div class:list={['award-item', { 'award-item--featured': a.featured }]}>
             <div class="award-year section-label">{a.year}</div>
             <div class="award-content">
               <h4>{a.title}</h4>

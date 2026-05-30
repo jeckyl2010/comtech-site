@@ -56,8 +56,9 @@ const services = [
 
     <div class="svc-grid">
       {services.map((s, i) => (
-        <div class={`svc-card card${i === 0 ? ' svc-featured' : ''}`}>
+        <div class:list={['svc-card', 'card', { 'svc-featured': i === 0 }]}>
           <div class="svc-header">
+            {/* set:html is safe here — icon SVGs are hardcoded static strings, not user input */}
             <div class="svc-icon" set:html={s.icon} />
             <h3 class="svc-title">{s.name}</h3>
           </div>
