@@ -89,7 +89,7 @@ const standard = [
       <div class="featured-grid">
         {featured.map((t) => (
           <article class="featured-card">
-            <p class="t-category">{t.category}</p>
+            <p class="t-category label-caps-muted">{t.category}</p>
             <blockquote class="featured-excerpt">&ldquo;{t.excerpt}&rdquo;</blockquote>
             <div class="t-author">
               <strong>{t.name}</strong>
@@ -107,7 +107,7 @@ const standard = [
         {standard.map((t) => (
           <article class="testimonial-item">
             <div class="testimonial-meta">
-              <p class="t-category">{t.category}</p>
+              <p class="t-category label-caps-muted">{t.category}</p>
               <div class="t-author">
                 <strong>{t.name}</strong>
                 <span>{t.title}</span>
@@ -172,10 +172,6 @@ const standard = [
   }
 
   .signal-label {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 0.75rem;
   }
@@ -254,10 +250,6 @@ const standard = [
   }
 
   .t-category {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
     color: var(--text-3);
     margin-bottom: 0.875rem;
   }

@@ -273,9 +273,23 @@ main { padding-top: var(--nav-h); }
 
 /* ─── Section spacing ─── */
 .section { padding-top: 5rem; padding-bottom: 5rem; }
+/* ─── Label caps — shared uppercase label pattern ─── */
+.label-caps {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.label-caps-muted {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
 .section-label {
   font-size: 0.6875rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--accent);
@@ -672,7 +686,7 @@ blockquote {
   margin-top: 2rem;
 }
 .award-item { padding: 1.5rem; }
-.award-item .award-year { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+.award-item .award-year { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.875rem; }
 .award-item h4 { font-size: 0.9375rem; font-weight: 600; color: var(--text); margin-bottom: 0.25rem; }
 .award-item p { font-size: 0.8125rem; color: var(--text-3); }
 .award-item--featured {

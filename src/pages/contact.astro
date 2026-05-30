@@ -19,11 +19,11 @@ import Layout from '../layouts/Layout.astro';
 
         <div class="contact-links">
           <a href="mailto:anders@comtechconsulting.dk" class="contact-primary-link">
-            <span class="contact-link-label">Email</span>
+            <span class="contact-link-label label-caps-muted">Email</span>
             <span class="contact-link-value">anders@comtechconsulting.dk</span>
           </a>
           <a href="https://www.linkedin.com/in/andershybertz/" target="_blank" rel="noopener noreferrer" class="contact-primary-link contact-linkedin">
-            <span class="contact-link-label">LinkedIn</span>
+            <span class="contact-link-label label-caps-muted">LinkedIn</span>
             <span class="contact-link-value">linkedin.com/in/andershybertz</span>
           </a>
         </div>
@@ -32,7 +32,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="contact-right">
-        <p class="contact-process-label">How it usually starts</p>
+        <p class="contact-process-label label-caps">How it usually starts</p>
         <ul class="contact-steps">
           <li>
             <div class="step-icon">
@@ -112,10 +112,6 @@ import Layout from '../layouts/Layout.astro';
   .contact-primary-link:last-child { border-bottom: none; }
   .contact-primary-link:hover { background: var(--surface-2); }
   .contact-link-label {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     color: var(--text-3);
     min-width: 64px;
   }
@@ -134,10 +130,6 @@ import Layout from '../layouts/Layout.astro';
     color: var(--text-3);
   }
   .contact-process-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 1.75rem;
   }
