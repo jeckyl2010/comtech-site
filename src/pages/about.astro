@@ -1,12 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection } from 'astro:content';
-import aboutData from '../data/about.json';
+import { getCollection, z } from 'astro:content';
+import CtaStrip from '../components/CtaStrip.astro';
+import rawAbout from '../data/about.json';
 
 const strengths = (await getCollection('strengths')).sort((a, b) => a.data.order - b.data.order);
 const awards    = (await getCollection('awards')).sort((a, b) => a.data.order - b.data.order);
 
-const { domains, technologies } = aboutData;
+const { domains, technologies } = z.object({
+  domains:      z.array(z.string()),
+  technologies: z.array(z.string()),
+}).parse(rawAbout);
 ---
 
 <Layout
@@ -150,17 +154,16 @@ const { domains, technologies } = aboutData;
     </div>
   </section>
 
-  <section class="cta-strip">
-    <div class="container">
-      <p class="section-label">When to reach out</p>
-      <h2>Need a calm senior perspective on a difficult situation?</h2>
-      <p>If a system has become harder to steer, a delivery needs firmer technical footing, or an important decision should be worked through properly, write.</p>
-      <div class="btn-row">
-        <a href="/testimonials/" class="btn btn-ghost">Read testimonials</a>
-        <a href="/contact/" class="btn btn-primary">Contact Anders</a>
-      </div>
+  <CtaStrip
+    label="When to reach out"
+    heading="Need a calm senior perspective on a difficult situation?"
+    body="If a system has become harder to steer, a delivery needs firmer technical footing, or an important decision should be worked through properly, write."
+  >
+    <div class="btn-row">
+      <a href="/testimonials/" class="btn btn-ghost">Read testimonials</a>
+      <a href="/contact/" class="btn btn-primary">Contact Anders</a>
     </div>
-  </section>
+  </CtaStrip>
 
 </Layout>
 

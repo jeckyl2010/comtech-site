@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import CtaStrip from '../components/CtaStrip.astro';
 
-const featured  = (await getCollection('testimonialsF')).sort((a, b) => a.data.order - b.data.order);
-const standard  = (await getCollection('testimonialsS')).sort((a, b) => a.data.order - b.data.order);
+const all      = await getCollection('testimonials');
+const featured = all.filter(t => t.data.featured).sort((a, b) => a.data.order - b.data.order);
+const standard = all.filter(t => !t.data.featured).sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Layout
@@ -60,17 +62,13 @@ const standard  = (await getCollection('testimonialsS')).sort((a, b) => a.data.o
     </div>
   </section>
 
-  <section class="cta-strip">
-    <div class="container">
-      <p class="section-label">When to reach out</p>
-      <h2>Need a calm senior perspective on a difficult delivery?</h2>
-      <p>
-        If an important technical decision is approaching, a delivery has become harder to steer, or
-        the architecture needs to hold up outside the meeting room, write.
-      </p>
-      <a href="/contact/" class="btn btn-primary">Contact Anders</a>
-    </div>
-  </section>
+  <CtaStrip
+    label="When to reach out"
+    heading="Need a calm senior perspective on a difficult delivery?"
+    body="If an important technical decision is approaching, a delivery has become harder to steer, or the architecture needs to hold up outside the meeting room, write."
+  >
+    <a href="/contact/" class="btn btn-primary">Contact Anders</a>
+  </CtaStrip>
 </Layout>
 
 <style>

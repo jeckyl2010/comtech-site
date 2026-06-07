@@ -1,15 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { file } from 'astro/loaders';
 
-const testimonialSchema = z.object({
-  order:    z.number(),
-  category: z.string(),
-  excerpt:  z.string(),
-  quote:    z.string(),
-  name:     z.string(),
-  title:    z.string(),
-});
-
 const strengths = defineCollection({
   loader: file('./src/data/strengths.json'),
   schema: z.object({
@@ -26,19 +17,22 @@ const awards = defineCollection({
     year:     z.string(),
     title:    z.string(),
     issuer:   z.string(),
-    detail:   z.string(),
+    detail:   z.string().optional(),
     featured: z.boolean(),
   }),
 });
 
-const testimonialsF = defineCollection({
-  loader: file('./src/data/testimonials-featured.json'),
-  schema: testimonialSchema,
-});
-
-const testimonialsS = defineCollection({
-  loader: file('./src/data/testimonials-standard.json'),
-  schema: testimonialSchema,
+const testimonials = defineCollection({
+  loader: file('./src/data/testimonials.json'),
+  schema: z.object({
+    order:    z.number(),
+    featured: z.boolean(),
+    category: z.string(),
+    excerpt:  z.string(),
+    quote:    z.string(),
+    name:     z.string(),
+    title:    z.string(),
+  }),
 });
 
 const services = defineCollection({
@@ -53,4 +47,4 @@ const services = defineCollection({
   }),
 });
 
-export const collections = { strengths, awards, testimonialsF, testimonialsS, services };
+export const collections = { strengths, awards, testimonials, services };

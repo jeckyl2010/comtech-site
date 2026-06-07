@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CtaStrip from '../components/CtaStrip.astro';
 ---
 
 <Layout
@@ -129,17 +130,13 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <section class="cta-strip">
-    <div class="container">
-      <p class="section-label">When to reach out</p>
-      <h2>Need an experienced architectural perspective?</h2>
-      <p>
-        Typically when a delivery has become harder to steer, a technical decision carries real
-        consequences, or the team needs a calm senior perspective without turning the process into a performance.
-      </p>
-      <a href="/contact/" class="btn btn-primary">Get in touch</a>
-    </div>
-  </section>
+  <CtaStrip
+    label="When to reach out"
+    heading="Need an experienced architectural perspective?"
+    body="Typically when a delivery has become harder to steer, a technical decision carries real consequences, or the team needs a calm senior perspective without turning the process into a performance."
+  >
+    <a href="/contact/" class="btn btn-primary">Get in touch</a>
+  </CtaStrip>
 
 </Layout>
 

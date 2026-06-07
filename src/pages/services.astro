@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import CtaStrip from '../components/CtaStrip.astro';
 
 const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 ---
@@ -56,14 +57,13 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
     </div>
   </section>
 
-  <section class="cta-strip">
-    <div class="container">
-      <p class="section-label">When to reach out</p>
-      <h2>Not sure which kind of help fits yet?</h2>
-      <p>The useful first conversation is usually about the problem itself, what is at stake, and where clearer technical judgement would help most.</p>
-      <a href="/contact/" class="btn btn-primary">Contact Anders</a>
-    </div>
-  </section>
+  <CtaStrip
+    label="When to reach out"
+    heading="Not sure which kind of help fits yet?"
+    body="The useful first conversation is usually about the problem itself, what is at stake, and where clearer technical judgement would help most."
+  >
+    <a href="/contact/" class="btn btn-primary">Contact Anders</a>
+  </CtaStrip>
 
 </Layout>
 
