@@ -11,7 +11,7 @@
     "review:fast": "node scripts/review.js --no-build --open",
     "critique": "node scripts/critique.js",
     "critique:fast": "node scripts/critique.js --no-build",
-    "lint": "eslint src/**/*.astro src/layouts/**/*.astro"
+    "lint": "eslint src"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
