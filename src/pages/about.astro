@@ -56,7 +56,7 @@ const { domains, technologies } = z.object({
       <div class="strengths-grid">
         {strengths.map(s => (
           <div class="strength-item">
-            <h4>{s.data.title}</h4>
+            <h3>{s.data.title}</h3>
             <p>{s.data.body}</p>
           </div>
         ))}
@@ -144,7 +144,7 @@ const { domains, technologies } = z.object({
           <div class:list={['award-item', { 'award-item--featured': a.data.featured }]}>
             <div class="award-year section-label">{a.data.year}</div>
             <div>
-              <h4>{a.data.title}</h4>
+              <h3>{a.data.title}</h3>
               <p>{a.data.issuer}</p>
               {a.data.detail && <p class="award-detail">{a.data.detail}</p>}
             </div>

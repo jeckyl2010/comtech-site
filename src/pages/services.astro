@@ -26,7 +26,7 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
           <div class="svc-header">
             {/* set:html is safe here — icon SVGs are hardcoded static strings, not user input */}
             <div class="svc-icon" set:html={s.data.icon} />
-            <h3 class="svc-title">{s.data.name}</h3>
+            <h2 class="svc-title">{s.data.name}</h2>
           </div>
           <p class="svc-desc">{s.data.description}</p>
           <div class="svc-tags">
@@ -39,7 +39,7 @@ const services = (await getCollection('services')).sort((a, b) => a.data.order -
 
   <section class="section section-alt svc-principles-section">
     <div class="container">
-      <p class="section-label">Typical situations</p>
+      <h2 class="section-label">Typical situations</h2>
       <div class="card-grid">
         <div class="card">
           <h3>The system has become too hard to reason about</h3>

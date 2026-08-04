@@ -32,7 +32,7 @@ const nav = [
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
-  <meta name="theme-color" content="#09090b" />
+  <meta name="theme-color" content="#f9f9f8" />
   <link rel="canonical" href={canonicalURL} />
   <title>{title}</title>
 
@@ -53,9 +53,11 @@ const nav = [
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/inter-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <!-- The wordmark's <tech> is above the fold on every page — preload it with the rest.
+       Inter 600 is not preloaded: it only sets h3/strong, all below the fold. -->
+  <link rel="preload" href="/fonts/jetbrains-mono-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
   <ClientRouter />
   <!-- Stamp js class before first paint so fade-up initial state never flashes -->
   <script is:inline>document.documentElement.classList.add('js');</script>
@@ -137,6 +139,11 @@ const nav = [
       const links = document.querySelector<HTMLElement>('.nav-links');
       if (!toggle || !links) return;
 
+      const close = () => {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      };
+
       toggle.addEventListener('click', () => {
         const expanded = toggle.getAttribute('aria-expanded') === 'true';
         toggle.setAttribute('aria-expanded', String(!expanded));
@@ -144,10 +151,15 @@ const nav = [
       });
 
       links.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          links.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-        });
+        a.addEventListener('click', close);
+      });
+
+      // Escape dismisses the open menu and returns focus to the control that opened it
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+          close();
+          toggle.focus();
+        }
       });
     }
 
