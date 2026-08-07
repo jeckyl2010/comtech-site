@@ -32,5 +32,6 @@ Key structure:
 
 ## Deployment
 
-GitHub Actions installs Node 20, runs `npm ci`, builds with `npm run build`, and deploys `./dist` to GitHub Pages.
+GitHub Actions installs Node 26, runs `npm ci`, builds with `npm run build`, and deploys `./dist` to GitHub Pages.
+Linting is not part of CI — run `npm run lint` locally.
 The live site is at `https://comtechconsulting.dk/`.
