@@ -32,12 +32,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint
-        # ponytail: --no-experimental-require-module dodges a Node ERR_INTERNAL_ASSERTION
-        # crash when ESLint dynamic-imports its config on Linux. Drop when Node fixes it.
-        run: npm run lint
-        env:
-          NODE_OPTIONS: --no-experimental-require-module
+      # ponytail: lint runs locally (`npm run lint`), not here — ESLint crashes the
+      # Linux runner with a Node ERR_INTERNAL_ASSERTION loading its config. Restore
+      # the step once that's fixed upstream.
 
       - name: Build with Astro
         run: npm run build
