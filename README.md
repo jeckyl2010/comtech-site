@@ -30,7 +30,7 @@ src/
   styles/global.css      — design tokens, layout, typography, shared components
 public/
   favicon.svg            — site favicon
-  og-default.png         — default Open Graph image
+  og-default.png         — default Open Graph image (regenerate with `node scripts/gen-og.mjs`)
   CNAME                  — custom domain for GitHub Pages
   robots.txt             — search engine directives
 .github/workflows/

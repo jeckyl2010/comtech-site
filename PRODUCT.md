@@ -89,12 +89,14 @@ telecom and mobile, healthcare and life sciences, banking).
   the work, never slogans.
 - The 2022 court appointment was a one-off: never present it as a standing title or a headline
   credential. The patent is mentioned only in the work history.
+  Recognition (`src/data/awards.json`) holds awards and nominations only, never roles.
 
 ## Evidence on Hand
 
 Real, verifiable, and the only proof the site may use:
 
-- Court appointment, Danmarks Domstole · Sø- og Handelsretten (2022) — `src/data/awards.json`.
+- Court appointment, Danmarks Domstole · Sø- og Handelsretten (2022): a one-off role, recorded in the
+  work history (`src/data/clients.json`), not under recognition.
 - PSQIT Innovation Prize, Novo Nordisk (for 2020, presented 2021); Best Individual Performance of the Year, 7N (2020,
   2016); Best Team nominee, 7N (2016) — same file.
 - Named client testimonials with real people and affiliations —
