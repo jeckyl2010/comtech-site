@@ -1,652 +1,423 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-04T07:46:02.389Z",
+  "generatedAt": "2026-10-24T11:42:04Z",
   "title": "Design System: COM<tech>",
   "extensions": {
     "colorMeta": {
-      "indigo": {
-        "role": "primary",
-        "displayName": "Signal Indigo",
-        "canonical": "#5352cc",
+      "night": {
+        "role": "neutral",
+        "displayName": "Night",
+        "canonical": "oklch(16.6% 0.013 277.5)",
         "tonalRamp": [
-          "#131230",
-          "#221f5c",
-          "#332f89",
-          "#4340b0",
-          "#5352cc",
-          "#818cf8",
-          "#b4b8fb",
-          "#e6e7fe"
+          "#0a0b11",
+          "#23252b",
+          "#404149",
+          "#5f6169",
+          "#80828a",
+          "#a3a4ad",
+          "#c7c9d2",
+          "#eceef7"
         ]
       },
-      "indigo-hover": {
-        "role": "primary",
-        "displayName": "Deep Indigo",
-        "canonical": "#4340b0",
+      "night-2": {
+        "role": "neutral",
+        "displayName": "Night Raised",
+        "canonical": "oklch(21.2% 0.022 276.4)",
         "tonalRamp": [
-          "#100f2a",
-          "#1c1a4f",
-          "#2b2977",
-          "#3735a0",
-          "#4340b0",
-          "#6f6dd6",
-          "#a8a7ee",
-          "#e0e0fb"
+          "#090a14",
+          "#222430",
+          "#3f414e",
+          "#5e606e",
+          "#7e8190",
+          "#a1a4b3",
+          "#c5c8d8",
+          "#eaeefe"
         ]
       },
-      "indigo-light": {
-        "role": "primary",
-        "displayName": "Lifted Indigo",
-        "canonical": "#818cf8",
+      "night-line": {
+        "role": "neutral",
+        "displayName": "Night Line",
+        "canonical": "oklch(28.8% 0.026 275.2)",
         "tonalRamp": [
-          "#151a3c",
-          "#242c66",
-          "#343f90",
-          "#4a58bb",
-          "#6470dc",
-          "#818cf8",
-          "#b3bafb",
-          "#e4e7fe"
+          "#080a16",
+          "#212432",
+          "#3e4150",
+          "#5d6070",
+          "#7d8192",
+          "#a0a4b6",
+          "#c4c8db",
+          "#eaeeff"
         ]
       },
-      "indigo-text": {
-        "role": "primary",
-        "displayName": "Reading Indigo",
-        "canonical": "#7c7bef",
+      "night-text": {
+        "role": "neutral",
+        "displayName": "Night Text",
+        "canonical": "oklch(95.5% 0.006 264.5)",
         "tonalRamp": [
-          "#14133a",
-          "#221f63",
-          "#312e8c",
-          "#443fb4",
-          "#5d59d4",
-          "#7c7bef",
-          "#b0affa",
-          "#e3e3fe"
+          "#0a0b0e",
+          "#242528",
+          "#404245",
+          "#5f6165",
+          "#808286",
+          "#a3a5a9",
+          "#c7c9cd",
+          "#eceef2"
+        ]
+      },
+      "night-text-2": {
+        "role": "neutral",
+        "displayName": "Night Text Quiet",
+        "canonical": "oklch(75.2% 0.022 271.1)",
+        "tonalRamp": [
+          "#080b15",
+          "#212530",
+          "#3d424e",
+          "#5c616e",
+          "#7d8290",
+          "#a0a5b3",
+          "#c4c9d8",
+          "#e9eefe"
+        ]
+      },
+      "glow": {
+        "role": "secondary",
+        "displayName": "Glow",
+        "canonical": "oklch(68.6% 0.170 281.7)",
+        "tonalRamp": [
+          "#09012e",
+          "#22036b",
+          "#3a2997",
+          "#564dbd",
+          "#7570e4",
+          "#9798fd",
+          "#c0c3ff",
+          "#ebedff"
         ]
       },
       "paper": {
         "role": "neutral",
-        "displayName": "Drafting Paper",
-        "canonical": "#f9f9f8",
+        "displayName": "Paper",
+        "canonical": "oklch(96.9% 0.003 247.9)",
         "tonalRamp": [
-          "#1c1c1a",
-          "#31312e",
-          "#4d4d49",
-          "#6d6d68",
-          "#93938d",
-          "#bcbcb6",
-          "#e0e0dc",
-          "#f9f9f8"
+          "#0a0b0d",
+          "#242527",
+          "#414244",
+          "#606163",
+          "#818284",
+          "#a3a5a7",
+          "#c7c9cb",
+          "#edeff1"
         ]
       },
       "surface": {
         "role": "neutral",
-        "displayName": "Sheet White",
-        "canonical": "#ffffff",
+        "displayName": "Surface White",
+        "canonical": "oklch(100.0% 0.000 89.9)",
         "tonalRamp": [
-          "#1a1a1a",
-          "#303030",
-          "#4d4d4d",
-          "#6e6e6e",
-          "#949494",
-          "#bebebe",
-          "#e3e3e3",
-          "#ffffff"
-        ]
-      },
-      "surface-sunk": {
-        "role": "neutral",
-        "displayName": "Sunk Grey",
-        "canonical": "#f4f4f5",
-        "tonalRamp": [
-          "#18181b",
-          "#2e2e33",
-          "#4a4a51",
-          "#6b6b73",
-          "#919198",
-          "#bbbbc1",
-          "#dedee2",
-          "#f4f4f5"
-        ]
-      },
-      "hairline": {
-        "role": "neutral",
-        "displayName": "Hairline",
-        "canonical": "#e4e4e7",
-        "tonalRamp": [
-          "#161618",
-          "#2b2b2f",
-          "#46464b",
-          "#66666d",
-          "#8c8c93",
-          "#b4b4ba",
-          "#d2d2d7",
-          "#e4e4e7"
-        ]
-      },
-      "hairline-faint": {
-        "role": "neutral",
-        "displayName": "Faint Hairline",
-        "canonical": "#f0f0ef",
-        "tonalRamp": [
-          "#191918",
-          "#2e2e2d",
-          "#4a4a48",
-          "#6a6a68",
-          "#90908d",
-          "#b9b9b5",
-          "#dcdcd9",
-          "#f0f0ef"
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
         ]
       },
       "ink": {
         "role": "neutral",
-        "displayName": "Graphite",
-        "canonical": "#111112",
+        "displayName": "Ink",
+        "canonical": "oklch(16.9% 0.006 271.0)",
         "tonalRamp": [
-          "#111112",
-          "#2a2a2c",
-          "#454548",
-          "#656568",
-          "#8b8b8f",
-          "#b3b3b7",
-          "#d8d8db",
-          "#f4f4f5"
+          "#0a0b0e",
+          "#242528",
+          "#414246",
+          "#606165",
+          "#818286",
+          "#a3a5a9",
+          "#c7c9cd",
+          "#edeef3"
         ]
       },
       "ink-2": {
         "role": "neutral",
-        "displayName": "Pencil",
-        "canonical": "#52525b",
+        "displayName": "Ink Secondary",
+        "canonical": "oklch(41.1% 0.018 260.7)",
         "tonalRamp": [
-          "#141417",
-          "#292930",
-          "#3d3d45",
-          "#52525b",
-          "#717179",
-          "#95959c",
-          "#bebec3",
-          "#e6e6e9"
+          "#070b13",
+          "#20252e",
+          "#3c424c",
+          "#5b626c",
+          "#7c838e",
+          "#9fa5b1",
+          "#c2cad6",
+          "#e8effb"
         ]
       },
       "ink-3": {
         "role": "neutral",
-        "displayName": "Silverpoint",
-        "canonical": "#6b6b75",
+        "displayName": "Ink Quiet",
+        "canonical": "oklch(52.6% 0.022 262.9)",
         "tonalRamp": [
-          "#101013",
-          "#1e1e22",
-          "#31313a",
-          "#474751",
-          "#5a5a64",
-          "#6b6b75",
-          "#9d9da6",
-          "#dcdce0"
+          "#060b15",
+          "#1f2530",
+          "#3b424e",
+          "#5a626e",
+          "#7b8390",
+          "#9da6b3",
+          "#c1cad8",
+          "#e6effe"
         ]
       },
-      "night": {
+      "rule": {
         "role": "neutral",
-        "displayName": "Night",
-        "canonical": "#0d0d10",
+        "displayName": "Rule",
+        "canonical": "oklch(88.6% 0.010 252.8)",
         "tonalRamp": [
-          "#0d0d10",
-          "#17171c",
-          "#2a2a35",
-          "#43434f",
-          "#63636f",
-          "#8a8a94",
-          "#b7b7bd",
-          "#e5e5e8"
+          "#080b0f",
+          "#22252a",
+          "#3e4247",
+          "#5d6267",
+          "#7e8388",
+          "#a1a5ab",
+          "#c5cad0",
+          "#eaeff5"
         ]
       },
-      "night-surface": {
-        "role": "neutral",
-        "displayName": "Night Surface",
-        "canonical": "#17171c",
-        "tonalRamp": [
-          "#0b0b0e",
-          "#17171c",
-          "#282830",
-          "#3f3f4a",
-          "#5e5e68",
-          "#85858e",
-          "#b3b3b9",
-          "#e3e3e6"
-        ]
-      },
-      "night-hairline": {
-        "role": "neutral",
-        "displayName": "Night Hairline",
-        "canonical": "#2a2a35",
-        "tonalRamp": [
-          "#0c0c10",
-          "#18181f",
-          "#2a2a35",
-          "#3f3f4d",
-          "#5c5c6b",
-          "#84848f",
-          "#b2b2ba",
-          "#e3e3e6"
-        ]
-      },
-      "night-ink": {
-        "role": "neutral",
-        "displayName": "Night Ink",
-        "canonical": "#f4f4f5",
-        "tonalRamp": [
-          "#18181b",
-          "#2e2e33",
-          "#4a4a51",
-          "#6b6b73",
-          "#919198",
-          "#bbbbc1",
-          "#dedee2",
-          "#f4f4f5"
-        ]
-      },
-      "night-ink-2": {
-        "role": "neutral",
-        "displayName": "Night Pencil",
-        "canonical": "#a1a1aa",
-        "tonalRamp": [
-          "#17171a",
-          "#2d2d32",
-          "#48484f",
-          "#68686f",
-          "#8b8b93",
-          "#a1a1aa",
-          "#c7c7cd",
-          "#eaeaed"
-        ]
-      },
-      "night-ink-3": {
-        "role": "neutral",
-        "displayName": "Night Silverpoint",
-        "canonical": "#7c7c7c",
-        "tonalRamp": [
-          "#141414",
-          "#292929",
-          "#434343",
-          "#616161",
-          "#7c7c7c",
-          "#a0a0a0",
-          "#c6c6c6",
-          "#e9e9e9"
-        ]
-      },
-      "hairline-strong": {
-        "role": "neutral",
-        "displayName": "Strong Hairline",
-        "canonical": "#a1a1aa",
-        "tonalRamp": [
-          "#17171a",
-          "#2d2d32",
-          "#48484f",
-          "#68686f",
-          "#8b8b93",
-          "#a1a1aa",
-          "#c7c7cd",
-          "#eaeaed"
-        ]
-      },
-      "aurora-1": {
+      "signal": {
         "role": "primary",
-        "displayName": "Aurora Indigo",
-        "canonical": "#5352cc",
+        "displayName": "Signal",
+        "canonical": "oklch(47.0% 0.231 273.8)",
         "tonalRamp": [
-          "#131230",
-          "#221f5c",
-          "#332f89",
-          "#4340b0",
-          "#5352cc",
-          "#818cf8",
-          "#b4b8fb",
-          "#e6e7fe"
+          "#050032",
+          "#170571",
+          "#2c0eb8",
+          "#4243e0",
+          "#606ffc",
+          "#8a9dfb",
+          "#b9c6fd",
+          "#e9eefe"
         ]
       },
-      "aurora-2": {
-        "role": "tertiary",
-        "displayName": "Aurora Violet",
-        "canonical": "#7c3aed",
+      "signal-deep": {
+        "role": "primary",
+        "displayName": "Signal Deep",
+        "canonical": "oklch(38.4% 0.195 273.3)",
         "tonalRamp": [
-          "#1c0d35",
-          "#2f1659",
-          "#45217f",
-          "#5c2ba7",
-          "#7c3aed",
-          "#a274f3",
-          "#c7aef8",
-          "#e9dcfd"
+          "#050032",
+          "#170173",
+          "#2a26a6",
+          "#434dcd",
+          "#6072f5",
+          "#889dfe",
+          "#b8c6ff",
+          "#e9eefe"
         ]
       },
-      "aurora-3": {
-        "role": "tertiary",
-        "displayName": "Aurora Blue",
-        "canonical": "#1d4ed8",
+      "signal-tint": {
+        "role": "primary",
+        "displayName": "Signal Tint",
+        "canonical": "rgba(61, 58, 216, 0.16)",
         "tonalRamp": [
-          "#08142f",
-          "#0e2456",
-          "#143680",
-          "#1a45ab",
-          "#1d4ed8",
-          "#5b82e8",
-          "#9db4f2",
-          "#dce5fb"
+          "#050032",
+          "#170571",
+          "#2c0eb8",
+          "#4243e0",
+          "#606ffc",
+          "#8a9dfb",
+          "#b9c6fd",
+          "#e9eefe"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero headline only. One per site."
+        "purpose": "The home headline only (max 18ch)."
       },
-      "headline": {
-        "displayName": "Headline",
-        "purpose": "Page titles and section openers."
+      "page-title": {
+        "displayName": "Page title",
+        "purpose": "The night intro of every page except home (max 20ch)."
       },
-      "title": {
-        "displayName": "Title",
-        "purpose": "Card and list-item headings; near body size, distinguished by weight."
+      "h2": {
+        "displayName": "h2",
+        "purpose": "Section titles in the day middle and the night close."
+      },
+      "h2-sm": {
+        "displayName": "h2-sm",
+        "purpose": "Smaller section titles; carries a 10px signal square before it."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Opening paragraph under a title; max 50ch (46ch in page intros)."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "All prose, in Pencil, at 1.75 leading. Capped at ~68ch."
+        "purpose": "Running prose, held to --measure (58ch)."
       },
-      "label": {
-        "displayName": "Label",
-        "purpose": "Section labels, eyebrows, tag text, award years. The only uppercase in the system."
-      },
-      "mono": {
-        "displayName": "Signature",
-        "purpose": "Exclusively the <tech> fragment of the wordmark. Nowhere else."
-      },
-      "display-base": {
-        "displayName": "Display Base",
-        "purpose": "Bare h1 fallback; every real h1 overrides it."
-      },
-      "headline-2": {
-        "displayName": "Headline 2",
-        "purpose": "Section openers."
-      },
-      "title-lg": {
-        "displayName": "Title LG",
-        "purpose": "Featured card headings."
-      },
-      "title-md": {
-        "displayName": "Title MD",
-        "purpose": "Bento and service card headings."
-      },
-      "body-lg": {
-        "displayName": "Body LG",
-        "purpose": "Page leads and hero sub. 68ch / 46ch measure."
-      },
-      "body-sm": {
-        "displayName": "Body SM",
-        "purpose": "Card and quote prose — the most common text size on the site."
-      },
-      "body-xs": {
-        "displayName": "Body XS",
-        "purpose": "Nav links, buttons, bento links."
-      },
-      "caption": {
-        "displayName": "Caption",
-        "purpose": "Attributions, award detail, footer email."
-      },
-      "micro": {
-        "displayName": "Micro",
-        "purpose": "Tags and bento attributions."
+      "small": {
+        "displayName": "Small",
+        "purpose": "Notes, ladder examples, ledger rows, captions."
       }
     },
-    "shadows": [
-      {
-        "name": "resting",
-        "value": "0 1px 2px rgba(0,0,0,0.05)",
-        "purpose": "Every card, blockquote, and list item at rest. Almost subliminal."
-      },
-      {
-        "name": "lifted",
-        "value": "0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04)",
-        "purpose": "Card and bento hover — the sheet lifting under the hand."
-      },
-      {
-        "name": "overlay",
-        "value": "0 4px 6px rgba(0,0,0,0.06), 0 12px 24px rgba(0,0,0,0.06)",
-        "purpose": "Reserved for genuinely floating layers."
-      },
-      {
-        "name": "menu",
-        "value": "0 8px 24px rgba(0,0,0,0.08)",
-        "purpose": "The mobile nav panel dropping over content."
-      }
-    ],
+    "shadows": [],
     "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "--ease. The mark's bracket slide-in and the scroll reveal."
+      },
+      {
+        "name": "mark-settle",
+        "value": "0.8s 0.6s cubic-bezier(0.34, 1.4, 0.5, 1)",
+        "purpose": "The mark's square scaling into place between the brackets (home hero only)."
+      },
+      {
+        "name": "mark-brackets",
+        "value": "1s var(--ease)",
+        "purpose": "Brackets slide in 80px from each side (home hero only)."
+      },
+      {
+        "name": "mark-halo",
+        "value": "2.4s 1.1s ease-out",
+        "purpose": "One halo expands from the square to 3.2x and fades, once."
+      },
+      {
+        "name": "night-breathe",
+        "value": "9s ease-in-out infinite",
+        "purpose": "The night light breathes: opacity 0.85 to 1, scale 1 to 1.05."
+      },
+      {
+        "name": "reveal",
+        "value": "420ms var(--ease)",
+        "purpose": "Sections fade in on scroll, opacity only."
+      },
+      {
+        "name": "page-transition",
+        "value": "150ms ease-out out / 200ms ease-out in",
+        "purpose": "View-transition cross-fade between pages."
+      },
       {
         "name": "state",
         "value": "0.15s ease",
-        "purpose": "Color, background, and border transitions on links, buttons, and nav items."
+        "purpose": "Colour, background and border changes on links and buttons."
       },
       {
-        "name": "surface",
-        "value": "0.2s ease",
-        "purpose": "Shadow and border-color transitions on cards."
-      },
-      {
-        "name": "reveal-ease",
-        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
-        "purpose": "420ms scroll fade-in for .fade-up elements — opacity only, JS-gated."
-      },
-      {
-        "name": "page-out",
-        "value": "150ms ease-out",
-        "purpose": "Astro view-transition outgoing cross-fade."
-      },
-      {
-        "name": "page-in",
-        "value": "200ms ease-out",
-        "purpose": "Astro view-transition incoming cross-fade."
-      },
-      {
-        "name": "aurora",
-        "value": "11s–18s ease-in-out infinite",
-        "purpose": "Hero blob drift. Translation and scale only; disabled under reduced motion."
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Turns off every animation above; the halo is hidden and reveals show immediately."
       }
     ],
     "breakpoints": [
       {
-        "name": "hero-stack",
-        "value": "860px"
+        "name": "nav",
+        "value": "760px",
+        "purpose": "max-width. Nav collapses to a toggle with a night-2 drop panel."
       },
       {
-        "name": "grid-stack",
-        "value": "780px"
-      },
-      {
-        "name": "density",
-        "value": "768px"
-      },
-      {
-        "name": "nav-collapse",
-        "value": "680px"
-      },
-      {
-        "name": "strengths-single",
-        "value": "560px"
-      },
-      {
-        "name": "actions-stack",
-        "value": "480px"
+        "name": "layout",
+        "value": "900px",
+        "purpose": "max-width. Splits, intros, voice, close, ruled, ladder and steps go to one column; sections drop from 96px to 64px."
       }
-    ],
-    "layout": {
-      "maxWidth": "1100px",
-      "gutter": "2rem",
-      "gutterMobile": "1.25rem",
-      "navHeight": "64px",
-      "sectionRhythm": "5rem",
-      "sectionRhythmMobile": "3.5rem"
-    }
+    ]
   },
   "components": [
     {
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The single call to action on any surface — email, LinkedIn, page-to-page.",
-      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Get in touch</a>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.375rem; font-family: 'Inter', -apple-system, sans-serif; font-size: 0.875rem; font-weight: 500; padding: 0.625rem 1.25rem; border-radius: 8px; transition: all 0.15s ease; cursor: pointer; border: none; text-decoration: none; line-height: 1; white-space: nowrap; } .ds-btn-primary { background: #5352cc; color: #fff; } .ds-btn-primary:hover { background: #4340b0; color: #fff; } .ds-btn-primary:focus-visible { outline: 2px solid #5352cc; outline-offset: 3px; }"
+      "description": "The one action per view, in the signal colour. 52px tall.",
+      "html": "<a class=\"ds-btn ds-btn-primary\" href=\"#\">Start a conversation</a>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 24px; border-radius: var(--radius); font-family: var(--font); font-weight: 600; font-size: 17px; line-height: 1; white-space: nowrap; text-decoration: none; transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease; } .ds-btn-primary { background: var(--signal); color: #fff; } .ds-btn-primary:hover { background: var(--signal-deep); color: #fff; } .ds-btn:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }"
     },
     {
       "name": "Ghost Button",
       "kind": "button",
       "refersTo": "button-ghost",
-      "description": "The secondary action on paper ground — hairline border, no fill until hover.",
-      "html": "<a class=\"ds-btn ds-btn-ghost\" href=\"#\">See services</a>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 0.375rem; font-family: 'Inter', -apple-system, sans-serif; font-size: 0.875rem; font-weight: 500; padding: 0.625rem 1.25rem; border-radius: 8px; transition: all 0.15s ease; cursor: pointer; text-decoration: none; line-height: 1; white-space: nowrap; } .ds-btn-ghost { background: transparent; color: #52525b; border: 1px solid #e4e4e7; } .ds-btn-ghost:hover { color: #111112; border-color: #a1a1aa; background: #f4f4f5; } .ds-btn-ghost:focus-visible { outline: 2px solid #5352cc; outline-offset: 3px; }"
+      "description": "Secondary action beside the primary: a 1.5px rule outline, ink text.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Ways to work together</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: var(--radius); border: 1.5px solid var(--rule); background: transparent; color: var(--ink); font-family: var(--font); font-weight: 600; font-size: 17px; line-height: 1; text-decoration: none; transition: border-color 0.15s ease, color 0.15s ease; } .ds-btn-ghost:hover { border-color: var(--ink); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }"
     },
     {
-      "name": "Ghost Button (Night)",
-      "kind": "button",
-      "refersTo": "button-ghost-dark",
-      "description": "The secondary action inside the hero and other night-ground sections.",
-      "html": "<div class=\"ds-night-pad\"><a class=\"ds-btn ds-btn-ghost-dark\" href=\"#\">See services</a></div>",
-      "css": ".ds-night-pad { background: #0d0d10; padding: 1.5rem; border-radius: 8px; } .ds-btn { display: inline-flex; align-items: center; gap: 0.375rem; font-family: 'Inter', -apple-system, sans-serif; font-size: 0.875rem; font-weight: 500; padding: 0.625rem 1.25rem; border-radius: 8px; transition: all 0.15s ease; cursor: pointer; text-decoration: none; line-height: 1; white-space: nowrap; } .ds-btn-ghost-dark { background: transparent; color: #a1a1aa; border: 1px solid #2a2a35; } .ds-btn-ghost-dark:hover { color: #f4f4f5; border-color: #7c7c7c; } .ds-btn-ghost-dark:focus-visible { outline: 2px solid #818cf8; outline-offset: 3px; }"
-    },
-    {
-      "name": "Card",
-      "kind": "card",
-      "refersTo": "card",
-      "description": "The system's base surface — a sheet pinned flat to the board. Lifts optically on hover; never moves.",
-      "html": "<article class=\"ds-card\"><h3>Software architecture &amp; design</h3><p>Architecture for both greenfield and legacy systems, where the technical direction has become unclear.</p></article>",
-      "css": ".ds-card { background: #ffffff; border: 1px solid #e4e4e7; border-radius: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); padding: 2rem; font-family: 'Inter', -apple-system, sans-serif; transition: box-shadow 0.2s ease, border-color 0.2s ease; } .ds-card:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04); border-color: #d4d4d8; } .ds-card h3 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; color: #111112; margin: 0 0 0.625rem; } .ds-card p { font-size: 0.9375rem; line-height: 1.75; color: #52525b; margin: 0; }"
-    },
-    {
-      "name": "Featured Bento Card",
-      "kind": "card",
-      "refersTo": "card-featured",
-      "description": "The one cell in a bento grid that spans two columns, marked by an indigo gradient wash and an indigo-alpha border.",
-      "html": "<article class=\"ds-card-featured\"><span class=\"ds-tag-accent\">Court-appointed</span><h3>Independent software auditing</h3><p>Third-party review of software deliveries against agreed expectations.</p><a class=\"ds-bento-link\" href=\"#\">Read more</a></article>",
-      "css": ".ds-card-featured { background: linear-gradient(135deg, #fafaff 0%, #f0f0ff 100%); border: 1px solid rgba(83, 82, 204, 0.2); border-radius: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); padding: 2rem; display: flex; flex-direction: column; gap: 0.75rem; font-family: 'Inter', -apple-system, sans-serif; transition: box-shadow 0.2s ease, border-color 0.2s ease; } .ds-card-featured:hover { box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04); } .ds-card-featured h3 { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.015em; color: #111112; margin: 0; } .ds-card-featured p { font-size: 0.9375rem; line-height: 1.75; color: #52525b; margin: 0; flex: 1; } .ds-tag-accent { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5352cc; background: rgba(83, 82, 204, 0.08); padding: 0.2rem 0.6rem; border-radius: 999px; width: fit-content; } .ds-bento-link { font-size: 0.875rem; font-weight: 600; color: #5352cc; text-decoration: none; margin-top: auto; } .ds-bento-link:hover { text-decoration: underline; }"
-    },
-    {
-      "name": "Quote",
-      "kind": "custom",
-      "refersTo": "card",
-      "description": "The signature form: a 3px indigo left rule with the corners squared on that edge, so the rule reads as a margin mark.",
-      "html": "<figure class=\"ds-quote\"><p>A highly valuable and rare combination of so many different competencies in one single person.</p><figcaption class=\"ds-quote-attr\"><strong>Isabela Bolotti de Oliveira</strong> — Founder &amp; CEO, Meridian</figcaption></figure>",
-      "css": ".ds-quote { border-left: 3px solid #5352cc; padding: 1.5rem 1.75rem; background: #ffffff; border-radius: 0 8px 8px 0; box-shadow: 0 1px 2px rgba(0,0,0,0.05); font-family: 'Inter', -apple-system, sans-serif; margin: 0; } .ds-quote p { color: #52525b; font-size: 0.9375rem; line-height: 1.75; margin: 0; } .ds-quote-attr { margin-top: 1rem; font-style: normal; font-size: 0.8125rem; color: #a1a1aa; } .ds-quote-attr strong { color: #52525b; font-weight: 600; }"
-    },
-    {
-      "name": "Tag",
-      "kind": "chip",
-      "refersTo": "tag",
-      "description": "Neutral pill for technologies, domains, and service facets. Never interactive.",
-      "html": "<span class=\"ds-tag\">Microsoft Azure</span> <span class=\"ds-tag\">Kubernetes</span> <span class=\"ds-tag ds-tag-md\">Event-driven architecture</span>",
-      "css": ".ds-tag { font-family: 'Inter', -apple-system, sans-serif; font-size: 0.75rem; font-weight: 500; padding: 0.25rem 0.625rem; border-radius: 999px; background: #f4f4f5; color: #a1a1aa; border: 1px solid #e4e4e7; display: inline-flex; align-items: center; } .ds-tag-md { font-size: 0.8125rem; padding: 0.375rem 0.875rem; }"
-    },
-    {
-      "name": "Navigation",
+      "name": "Night Navigation",
       "kind": "nav",
-      "refersTo": "nav-link",
-      "description": "Fixed translucent paper bar with a blurred backdrop; the wordmark carries the system's only mono glyphs.",
-      "html": "<nav class=\"ds-nav\"><a class=\"ds-wordmark\" href=\"#\">COM<span class=\"ds-ct\">&lt;tech&gt;</span></a><ul class=\"ds-nav-links\"><li><a href=\"#\">Services</a></li><li><a href=\"#\" aria-current=\"page\">About</a></li><li><a href=\"#\">Contact</a></li></ul></nav>",
-      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 2rem; height: 64px; padding: 0 2rem; background: rgba(249, 249, 248, 0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid #e4e4e7; font-family: 'Inter', -apple-system, sans-serif; } .ds-wordmark { font-size: 1.625rem; font-weight: 800; letter-spacing: -0.035em; color: #111112; text-decoration: none; white-space: nowrap; line-height: 1; } .ds-ct { font-family: 'JetBrains Mono', 'Courier New', monospace; font-weight: 600; color: #5352cc; letter-spacing: -0.03em; } .ds-nav-links { display: flex; align-items: center; gap: 0.125rem; list-style: none; margin: 0; padding: 0; } .ds-nav-links a { font-size: 0.875rem; font-weight: 500; color: #52525b; padding: 0.4rem 0.875rem; border-radius: 8px; text-decoration: none; transition: color 0.15s ease, background 0.15s ease; } .ds-nav-links a:hover { color: #111112; background: #f4f4f5; } .ds-nav-links a[aria-current=\"page\"] { color: #5352cc; background: rgba(83, 82, 204, 0.08); } .ds-nav-links a:focus-visible { outline: 2px solid #5352cc; outline-offset: 3px; }"
+      "description": "Header in the night band: mark + wordmark, quiet links, current page marked by a 7px glow square.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-logo\" href=\"#\"><svg viewBox=\"0 0 440 280\" width=\"34\" height=\"22\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M150 18 L172 40 L72 140 L172 240 L150 262 L28 140 Z\"/><path fill=\"currentColor\" d=\"M290 18 L268 40 L368 140 L268 240 L290 262 L412 140 Z\"/><rect fill=\"var(--glow)\" x=\"190\" y=\"110\" width=\"60\" height=\"60\"/></svg><span>COM<span class=\"ds-logo-tech\">&lt;tech&gt;</span></span></a><ul><li><a href=\"#\">Services</a></li><li><a href=\"#\" aria-current=\"page\">About</a></li><li><a href=\"#\">Contact</a></li></ul></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 24px; background: var(--night); font-family: var(--font); } .ds-logo { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: var(--night-text); font-weight: 700; font-size: 22px; letter-spacing: -0.03em; text-decoration: none; } .ds-logo-tech { color: var(--glow); font-weight: 500; letter-spacing: -0.01em; } .ds-nav ul { display: flex; gap: 2px; list-style: none; margin: 0; padding: 0; } .ds-nav ul a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px; border-radius: 8px; font-size: 16px; color: var(--night-text-2); text-decoration: none; transition: color 0.15s ease; } .ds-nav ul a:hover { color: #fff; background: rgba(255, 255, 255, 0.06); } .ds-nav ul a[aria-current='page'] { color: var(--night-text); } .ds-nav ul a[aria-current='page']::before { content: ''; width: 7px; height: 7px; background: var(--glow); flex: none; } .ds-nav a:focus-visible { outline: 2px solid var(--glow); outline-offset: 3px; }"
     },
     {
-      "name": "Section Label",
-      "kind": "custom",
-      "refersTo": "tag-accent",
-      "description": "The uppercase indigo eyebrow that opens every section. The only uppercase in the system.",
-      "html": "<div class=\"ds-label-block\"><p class=\"ds-section-label\">What I do</p><h2 class=\"ds-section-title\">Senior technical consulting</h2></div>",
-      "css": ".ds-label-block { font-family: 'Inter', -apple-system, sans-serif; } .ds-section-label { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5352cc; margin: 0 0 0.875rem; } .ds-section-title { font-size: clamp(1.5rem, 2.5vw, 2.125rem); font-weight: 700; line-height: 1.15; letter-spacing: -0.025em; color: #111112; margin: 0; }"
+      "name": "Ladder Card",
+      "kind": "card",
+      "refersTo": "ladder-card",
+      "description": "One of the three ways to work together: depth squares (1 to 3 filled), title, body, and a ruled 'Recently' line.",
+      "html": "<article class=\"ds-ladder\"><span class=\"ds-depth\" aria-hidden=\"true\"><i class=\"on\"></i><i class=\"on\"></i><i></i></span><h3>Architecture review</h3><p>An outside read of a decision before it is locked in.</p><p class=\"ds-example\">Recently: <strong>Danish public agency</strong>, 2025</p></article>",
+      "css": ".ds-ladder { display: flex; flex-direction: column; gap: 14px; max-width: 380px; padding: 28px; border: 1px solid var(--rule); border-radius: 14px; background: var(--paper); font-family: var(--font); } .ds-depth { display: flex; gap: 6px; } .ds-depth i { display: block; width: 12px; height: 12px; border: 1.5px solid var(--signal); } .ds-depth i.on { background: var(--signal); } .ds-ladder h3 { margin: 0; font-size: 23px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; color: var(--ink); } .ds-ladder p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink-2); } .ds-example { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 15px !important; color: var(--ink-3) !important; } .ds-example strong { font-weight: 600; color: var(--ink); }"
     },
     {
-      "name": "Night Award Row",
+      "name": "Section Title with Signal Square",
       "kind": "custom",
-      "refersTo": "card",
-      "description": "The hero's proof stack — tonal panels on night ground, separated by hairlines rather than shadow.",
-      "html": "<div class=\"ds-awards\"><div class=\"ds-award-row\"><span class=\"ds-award-label\">Court-Appointed Software Expert</span><span class=\"ds-award-year\">2022</span></div><div class=\"ds-award-row\"><span class=\"ds-award-label\">PSQIT Innovation Prize, Novo Nordisk</span><span class=\"ds-award-year\">2021</span></div></div>",
-      "css": ".ds-awards { border: 1px solid #2a2a35; border-radius: 8px; overflow: hidden; font-family: 'Inter', -apple-system, sans-serif; } .ds-award-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 0.875rem 1.25rem; background: #17171c; font-size: 0.8125rem; } .ds-award-row + .ds-award-row { border-top: 1px solid #2a2a35; } .ds-award-label { color: #a1a1aa; } .ds-award-year { color: #818cf8; font-weight: 600; white-space: nowrap; }"
+      "description": "h2-sm: a smaller section title led by a 10px filled signal square.",
+      "html": "<h2 class=\"ds-h2-sm\">Earlier work</h2>",
+      "css": ".ds-h2-sm { display: flex; align-items: center; gap: 12px; margin: 0; font-family: var(--font); font-size: clamp(22px, 2vw, 28px); font-weight: 600; letter-spacing: -0.018em; line-height: 1.2; color: var(--ink); } .ds-h2-sm::before { content: ''; width: 10px; height: 10px; background: var(--signal); flex: none; }"
+    },
+    {
+      "name": "Ruled Columns",
+      "kind": "custom",
+      "description": "Three columns, each topped by a 2px ink rule.",
+      "html": "<div class=\"ds-ruled\"><div><h3>Architecture</h3><p>Systems shaped to last.</p></div><div><h3>Delivery</h3><p>Hands on the code.</p></div><div><h3>Advice</h3><p>A second opinion.</p></div></div>",
+      "css": ".ds-ruled { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 32px; font-family: var(--font); } .ds-ruled > * { border-top: 2px solid var(--ink); padding-top: 20px; } .ds-ruled h3 { margin: 0 0 8px; font-size: 21px; font-weight: 600; letter-spacing: -0.012em; line-height: 1.25; color: var(--ink); } .ds-ruled p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink-2); }"
+    },
+    {
+      "name": "Numbered Steps",
+      "kind": "custom",
+      "description": "Steps numbered inside a 34px outlined signal square (8px corners).",
+      "html": "<ol class=\"ds-steps\"><li><h3>Write</h3><p>Send a short note.</p></li><li><h3>Talk</h3><p>A first call.</p></li><li><h3>Start</h3><p>Agree the shape of the work.</p></li></ol>",
+      "css": ".ds-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 40px; counter-reset: step; font-family: var(--font); } .ds-steps li { counter-increment: step; } .ds-steps li::before { content: counter(step); display: inline-grid; place-items: center; width: 34px; height: 34px; margin-bottom: 14px; border: 1.5px solid var(--signal); border-radius: 8px; color: var(--signal); font-weight: 600; } .ds-steps h3 { margin: 0 0 8px; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.3; color: var(--ink); } .ds-steps p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--ink-2); }"
+    },
+    {
+      "name": "Timeline",
+      "kind": "custom",
+      "description": "Work history to scale: one hairline track per organisation, ink-3 bars, the ongoing engagement in signal fading at its open end.",
+      "html": "<figure class=\"ds-timeline\"><ol><li><span class=\"name\">Agency A</span><span class=\"track\"><span class=\"bar\" style=\"left: 4%; width: 22%\"></span></span></li><li><span class=\"name\">Bank B</span><span class=\"track\"><span class=\"bar\" style=\"left: 30%; width: 28%\"></span></span></li><li><span class=\"name\">Client C</span><span class=\"track\"><span class=\"bar ongoing\" style=\"left: 72%; width: 28%\"></span></span></li></ol></figure>",
+      "css": ".ds-timeline { margin: 0; font-family: var(--font); } .ds-timeline ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; } .ds-timeline li { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; align-items: center; } .ds-timeline .name { font-size: 14px; line-height: 1.2; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .ds-timeline .track { position: relative; height: 12px; background: linear-gradient(var(--rule), var(--rule)) 0 50% / 100% 1px no-repeat; } .ds-timeline .bar { position: absolute; top: 0; bottom: 0; min-width: 6px; background: var(--ink-3); } .ds-timeline .bar.ongoing { background: linear-gradient(90deg, var(--signal) 70%, var(--signal-tint)); }"
+    },
+    {
+      "name": "Night Close",
+      "kind": "custom",
+      "description": "The closing night band: a conversational h2, a line of text, and the email underlined in glow.",
+      "html": "<section class=\"ds-close\"><div><h2>Have a hard technical decision ahead?</h2><p>Write directly. The conversation starts with me.</p></div><a class=\"ds-close-mail\" href=\"#\">anders@comtechconsulting.dk</a></section>",
+      "css": ".ds-close { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 28px 80px; align-items: end; padding: 64px 32px 56px; background: var(--night); color: var(--night-text); font-family: var(--font); } .ds-close h2 { margin: 0; font-size: clamp(28px, 3vw, 44px); font-weight: 600; line-height: 1.08; letter-spacing: -0.026em; } .ds-close p { margin: 18px 0 0; font-size: 18px; line-height: 1.6; max-width: 46ch; color: var(--night-text-2); } .ds-close-mail { display: inline-block; padding: 10px 0 4px; border-bottom: 2px solid var(--glow); font-size: clamp(20px, 1.9vw, 26px); font-weight: 600; color: var(--night-text); text-decoration: none; overflow-wrap: anywhere; } .ds-close-mail:hover { color: #fff; border-color: #fff; } .ds-close-mail:focus-visible { outline: 2px solid var(--glow); outline-offset: 3px; }"
     }
   ],
   "narrative": {
-    "northStar": "The Architect's Drawing Room",
-    "overview": "This is a drafting table, not a storefront. The page is paper (#f9f9f8) — very slightly warm, never pure white — and everything placed on it is drawn rather than decorated. Structure is carried by hairline rules (1px, #e4e4e7) at the strength of a pencil line on vellum. Cards are drawings pinned flat to the board: white sheets, thin borders, a shadow soft enough that you read the lift before you notice the shadow. Type is one family, Inter, doing all the work through weight and scale; JetBrains Mono appears exactly once, in the <tech> of the wordmark, as the mark of a technical hand signing the sheet.\n\nThe system has a deliberate day/night structure. The hero and footer are night (#0d0d10) with three slow, heavily blurred indigo aurora blobs and a 5.5% grain overlay — the only atmosphere in the entire system, and it is confined to those bookends. Between them, the working middle is bright, dense with information, and completely unatmospheric. That contrast is the composition: the drawing room is lit; the drawings themselves are read in daylight.\n\nIndigo (#5352cc) is the single hue in an otherwise fully neutral system, and it is allowed to work broadly — as fill, as 8%-tint background, as 20%-alpha border, as the 3px left rule on a quote, as the gradient wash on a featured card. What it may not do is multiply into a second accent. One hue, many jobs.",
+    "northStar": "One clear signal held between two lines.",
+    "overview": "The mark is two brackets holding a single square. Everything in the system follows from it: the brackets are the structure (night bands, ruled lines, plain grotesk type), and the square is the one signal (indigo, used for actions, markers, and the thing that matters on each page).\n\nEvery page has the same three movements. It opens in **night** (#0d0e14) with one soft indigo light, the header, and the page's opening. The **day** middle is paper (#f3f5f7) and white bands separated by hairline rules, where the content is read. It closes in **night** again with a conversational call and the legal line. The middle never has atmosphere; the bookends never hold dense content.\n\nThe design's voice matches the copy: senior, technical, calm. No slogans set large, no decorative effects, one authored animation.",
     "keyCharacteristics": [
-      "Warm paper ground (#f9f9f8), never pure white as a page background",
-      "Hairline borders as the primary structural device",
-      "Softly lifted cards — resting shadow is present but almost subliminal, deepening on hover",
-      "A single indigo hue carrying every accent job across the site",
-      "Night bookends (hero, footer) with aurora + grain; bright, flat middle",
-      "One typeface (Inter) plus one mono glyph-set used as a signature, not a system",
-      "1100px maximum measure; nothing ever runs full-bleed except the night sections"
+      "The middle never has atmosphere; the bookends never hold dense content.",
+      "No slogans set large, no decorative effects, one authored animation.",
+      "Hierarchy comes from size and weight, with tight negative tracking on large sizes. Numerals are tabular."
     ],
     "rules": [
       {
-        "name": "The One Hue Rule",
-        "body": "Indigo is the only chromatic color in the system, and it may work freely — fill, tint, border, rule, gradient. But a second accent hue is never introduced. If something needs to be distinguished, it is distinguished by weight, ground, or a hairline, not by a new color.",
+        "name": "One signal rule",
+        "body": "No second accent. If something needs to stand out, it gets weight, a rule, or the signal colour, never a new hue.",
         "section": "colors"
       },
       {
-        "name": "The No Pure White Page Rule",
-        "body": "#ffffff is a surface, never a background. Any full-page or section ground is Drafting Paper or Night.",
-        "section": "colors"
-      },
-      {
-        "name": "The Night Bookends Rule",
-        "body": "Dark ground belongs to the hero and the footer. A dark band in the middle of a page breaks the day/night structure the whole system is built on.",
-        "section": "colors"
-      },
-      {
-        "name": "The One Mono Rule",
-        "body": "JetBrains Mono appears in the <tech> of the wordmark and nowhere else. Not in code samples, not in labels, not in metadata. Its scarcity is the entire point of loading it.",
+        "name": "No kicker rule",
+        "body": "Nothing small and uppercase sits above a heading.",
         "section": "typography"
-      },
-      {
-        "name": "The Measure Rule",
-        "body": "Prose never exceeds ~68ch; short-form leads sit at 46ch. Line length is enforced with max-width in ch, not with column widths.",
-        "section": "typography"
-      },
-      {
-        "name": "The Weight-Not-Size Rule",
-        "body": "Card headings are barely larger than body text. When something needs to stand out at small scale, raise weight to 600 and shift color to Graphite; do not raise size.",
-        "section": "typography"
-      },
-      {
-        "name": "The Optical Lift Rule",
-        "body": "Hover changes shadow and border color only. No translateY, no scale, no rotation on cards. The sheet stays pinned to the board.",
-        "section": "elevation"
-      },
-      {
-        "name": "The Shadowless Night Rule",
-        "body": "On night ground, depth is tonal and hairline-defined. Do not attempt shadow-based elevation against #0d0d10.",
-        "section": "elevation"
-      },
-      {
-        "name": "The Contrast Floor Rule",
-        "body": "Every text token clears 4.5:1 against every ground it is used on. When a neutral needs to be lighter than that, it becomes a border token, not a text token.",
-        "section": "colors"
       }
     ],
     "dos": [
-      "Do use Drafting Paper (#f9f9f8) for page grounds and Sheet White (#ffffff) only for surfaces sitting on it.",
-      "Do define structure with 1px hairlines before reaching for a shadow.",
-      "Do keep dark ground to the hero and footer bookends.",
-      "Do raise weight to 600 and color to Graphite when small text needs emphasis, rather than raising its size.",
-      "Do cap prose at ~68ch (46ch for hero-scale leads).",
-      "Do put every new motion behind prefers-reduced-motion: reduce.",
-      "Do reach for the existing indigo tints (--accent-dim, --accent-border) when an accent ground or edge is needed.",
-      "Do keep the aurora and grain confined to the hero — they are the system's only atmosphere.",
-      "Do keep --text-3 for text and --border-strong for borders; they are no longer the same value."
+      "**Do** open and close every page in night, and keep content in the day middle.",
+      "**Do** give the signal colour one job per element: action, marker, or highlight.",
+      "**Do** give every link and button a 44px target."
     ],
     "donts": [
-      "Don't introduce a second accent hue. Indigo works alone — the aurora set is the single licensed exception, confined to hero atmosphere.",
-      "Don't use JetBrains Mono anywhere except the <tech> of the wordmark.",
-      "Don't use pure white as a page or section background.",
-      "Don't move cards on hover — no translate, no scale. Shadow and border color only.",
-      "Don't use Signal Indigo (#5352cc) on night ground; use Lifted Indigo (#818cf8) there.",
-      "Don't italicize quotes or attributions; the system is upright throughout.",
-      "Don't add a radius outside the 2 / 8 / 12 / 999px scale.",
-      "Don't attempt shadow-based elevation on #0d0d10."
+      "**Don't** add a second accent colour, gradients on content, or coloured side borders.",
+      "**Don't** set slogans large. Headlines state facts about the work.",
+      "**Don't** add effects that are not the mark's own motion."
     ]
   }
 }

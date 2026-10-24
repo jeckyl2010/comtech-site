@@ -12,10 +12,11 @@ colors:
   surface: "#ffffff"
   ink: "#0e0f12"
   ink-2: "#454b55"
-  ink-3: "#6b7380"
+  ink-3: "#646b78"
   rule: "#d5dae0"
   signal: "#3d3ad8"
   signal-deep: "#2b28a8"
+  signal-bright: "#4f4cf0"
   signal-tint: "rgba(61, 58, 216, 0.16)"
 typography:
   display:
@@ -97,10 +98,10 @@ The design's voice matches the copy: senior, technical, calm. No slogans set lar
 
 ## Colours
 
-- **Signal** (`--signal`, #3d3ad8): the only hue. Primary buttons, links, depth squares, list markers, highlighted quotes (`--signal-tint`).
+- **Signal** (`--signal`, #3d3ad8): the only hue. Primary buttons, links, depth squares, list markers, highlighted quotes (`--signal-tint`). Hover states use `--signal-deep` on day ground and `--signal-bright` on night.
 - **Glow** (`--glow`, #8b89ff): the signal as it appears on night ground. The mark's square, the current-page marker, evidence lines, the closing email underline.
 - **Night** (`--night`, `--night-2`, `--night-line`, `--night-text`, `--night-text-2`): the bookends.
-- **Day** (`--paper`, `--surface`, `--ink`, `--ink-2`, `--ink-3`, `--rule`): the middle. Ink-3 is the quietest text colour and still clears 4.5:1 on paper.
+- **Day** (`--paper`, `--surface`, `--ink`, `--ink-2`, `--ink-3`, `--rule`): the middle. Ink-3 is the quietest text colour and clears 4.5:1 on both paper (4.9:1) and white (5.4:1).
 
 **One signal rule.** No second accent. If something needs to stand out, it gets weight, a rule, or the signal colour, never a new hue.
 
@@ -111,7 +112,7 @@ One family, **Familjen Grotesk** (400–700), self-hosted in `public/fonts/`. Hi
 - **Display**: the home headline only.
 - **Page title**: the night intro of every other page.
 - **h2 / h2-sm**: section titles. `h2-sm` carries the small signal square before it.
-- **Lead / body**: 19px and 18px, held to `--measure` (58ch).
+- **Lead / body**: 19px and 18px. Body is held to `--measure` (58ch); lead to 50ch (46ch in page intros).
 
 **No kicker rule.** Nothing small and uppercase sits above a heading.
 
@@ -124,6 +125,8 @@ A centred container (`--max-w` 1320px) with a fluid `--gutter`. Day sections are
 - **Ladder**: the three ways to work together, as cards with one to three filled depth squares.
 - **Voice**: one large quote with its attribution beside it.
 - **Steps**: numbered in a small outlined signal square.
+- **Timeline** (`src/components/Timeline.astro`): the work history drawn to scale from `src/data/clients.json`, one hairline track per organisation with a solid ink-3 bar for its period. The ongoing engagement is the only bar in the signal colour, fading out at its open end. It is a chart of real data, never decoration.
+- **Ledger lists**: earlier work and recognition on About, as year + text rows divided by hairlines.
 
 ## The mark and motion
 

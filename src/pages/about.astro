@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Timeline from '../components/Timeline.astro';
 import { getCollection, getEntry, z } from 'astro:content';
 import rawAbout from '../data/about.json';
 
@@ -36,6 +37,7 @@ const { domains, technologies } = z.object({
       <div class="split">
         <div>
           <h2 id="h-story" class="h2">Three decades of software that had to work</h2>
+          <Timeline />
         </div>
         <div>
           <p class="body">Since 2000, my work has centred on software architecture, technical leadership, and difficult deliveries across regulated industries and complex organisations. The common denominator is not a particular technology. It is situations where the architecture matters, the systems have to hold up in practice, and the organisation needs clear judgement rather than noise.</p>

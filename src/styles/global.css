@@ -47,12 +47,13 @@
   --surface: #ffffff;
   --ink: #0e0f12;
   --ink-2: #454b55;
-  --ink-3: #6b7380;
+  --ink-3: #646b78;
   --rule: #d5dae0;
 
   /* The one signal: the mark's square, actions, and markers */
   --signal: #3d3ad8;
   --signal-deep: #2b28a8;
+  --signal-bright: #4f4cf0;
   --signal-tint: rgba(61, 58, 216, 0.16);
 
   --font: 'Familjen Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -269,8 +270,8 @@ a:hover { color: var(--signal-deep); }
   transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 .btn-primary { background: var(--signal); color: #fff; }
-.btn-primary:hover { background: #2f2cc0; color: #fff; }
-.night .btn-primary:hover { background: #4f4cf0; }
+.btn-primary:hover { background: var(--signal-deep); color: #fff; }
+.night .btn-primary:hover { background: var(--signal-bright); }
 .btn-ghost { border: 1.5px solid var(--rule); color: var(--ink); }
 .btn-ghost:hover { border-color: var(--ink); color: var(--ink); }
 .night .btn-ghost { border-color: var(--night-line); color: var(--night-text); }

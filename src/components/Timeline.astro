@@ -1,0 +1,67 @@
+---
+// Thirty years of work drawn to scale from src/data/clients.json: one row per organisation,
+// a bar for its period, the ongoing engagement in the signal colour.
+import { getCollection } from 'astro:content';
+
+const thisYear = new Date().getFullYear();
+const rows = (await getCollection('clients'))
+  .map(({ data: c }) => {
+    const [from, to] = c.years.split('–');
+    const start = Number(from);
+    const ongoing = to === '';
+    const end = ongoing ? thisYear : Number(to ?? from);
+    return { name: c.name.split(' · ').pop()!, years: c.years, start, end, ongoing };
+  })
+  .sort((a, b) => a.start - b.start || a.end - b.end);
+
+const first = Math.min(...rows.map(r => r.start));
+const span = thisYear + 1 - first;
+const pos = (year: number) => ((year - first) / span) * 100;
+const ticks = [first, ...[2000, 2005, 2010, 2015, 2020, 2025].filter(y => y > first && y <= thisYear)];
+---
+
+<figure class="timeline">
+  <ol>
+    {rows.map(r => (
+      <li>
+        <span class="name">{r.name}<span class="sr-only">, {r.years}</span></span>
+        <span class="track" aria-hidden="true">
+          <span
+            class:list={['bar', { ongoing: r.ongoing }]}
+            style={`left: ${pos(r.start)}%; width: ${pos(r.end + 1) - pos(r.start)}%`}
+          ></span>
+        </span>
+      </li>
+    ))}
+  </ol>
+  <div class="axis" aria-hidden="true">
+    <span></span>
+    <span class="ticks">
+      {ticks.map(y => <span style={`left: ${pos(y)}%`}>{y}</span>)}
+    </span>
+  </div>
+  <figcaption class="sr-only">Organisations Anders Hybertz has worked with, from {first} to today.</figcaption>
+</figure>
+
+<style>
+  .timeline { margin-top: 44px; }
+  .timeline ol { list-style: none; display: grid; gap: 9px; }
+  .timeline li, .axis { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; align-items: center; }
+  .name { font-size: 14px; line-height: 1.2; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .track {
+    position: relative;
+    height: 12px;
+    background: linear-gradient(var(--rule), var(--rule)) 0 50% / 100% 1px no-repeat;
+  }
+  .bar { position: absolute; top: 0; bottom: 0; min-width: 6px; background: var(--ink-3); }
+  .bar.ongoing { background: linear-gradient(90deg, var(--signal) 70%, var(--signal-tint)); }
+  .axis { margin-top: 12px; }
+  .ticks { position: relative; height: 18px; border-top: 1px solid var(--rule); }
+  .ticks span { position: absolute; top: 4px; transform: translateX(-50%); font-size: 12px; color: var(--ink-3); }
+  .ticks span:first-child { transform: none; }
+  @media (max-width: 900px) {
+    .timeline li, .axis { grid-template-columns: 126px minmax(0, 1fr); gap: 10px; }
+    .name { font-size: 13px; }
+    .ticks span:nth-child(even) { display: none; }
+  }
+</style>
