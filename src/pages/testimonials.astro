@@ -9,16 +9,16 @@ const standard = all.filter(t => !t.data.featured).sort((a, b) => a.data.order -
 ---
 
 <Layout
-  title="Testimonials | COM<tech>"
+  title="Recommendations | COM<tech>"
   description="Selected recommendations for Anders Hybertz and COM<tech>. From engineering leaders and clients at Novo Nordisk, KPMG, N3O, and others — on architecture, technical leadership, and delivery under pressure."
 >
   <section class="section">
     <div class="container testimonials-page">
       <div class="testimonials-header">
-        <p class="section-label">Client testimonials</p>
-        <h1 class="page-h1">What clients say when the work has to hold up</h1>
-        <p class="page-lead testimonials-lead">
-          Selected recommendations from clients, colleagues, and direct reports. Full text expandable below each excerpt.
+        <h1 class="page-h1">Recommendations from the people who were there</h1>
+        <p class="page-lead">
+          Selected recommendations from clients, colleagues, and direct reports. Each excerpt is quoted
+          word for word; the full recommendation opens below it.
         </p>
       </div>
 
@@ -32,7 +32,7 @@ const standard = all.filter(t => !t.data.featured).sort((a, b) => a.data.order -
               <span>{t.data.title}</span>
             </div>
             <details class="quote-details">
-              <summary>Read full recommendation</summary>
+              <summary>Read full recommendation<span class="sr-only"> from {t.data.name}</span></summary>
               <blockquote class="full-quote">&ldquo;{t.data.quote}&rdquo;</blockquote>
             </details>
           </article>
@@ -50,9 +50,9 @@ const standard = all.filter(t => !t.data.featured).sort((a, b) => a.data.order -
               </div>
             </div>
             <div class="testimonial-body">
-              <p class="testimonial-excerpt">{t.data.excerpt}</p>
+              <blockquote class="testimonial-excerpt">&ldquo;{t.data.excerpt}&rdquo;</blockquote>
               <details class="quote-details">
-                <summary aria-label="Read full recommendation">Read full recommendation</summary>
+                <summary>Read full recommendation<span class="sr-only"> from {t.data.name}</span></summary>
                 <blockquote class="full-quote">&ldquo;{t.data.quote}&rdquo;</blockquote>
               </details>
             </div>
@@ -63,7 +63,6 @@ const standard = all.filter(t => !t.data.featured).sort((a, b) => a.data.order -
   </section>
 
   <CtaStrip
-    label="When to reach out"
     heading="Need a calm senior perspective on a difficult delivery?"
     body="If an important technical decision is approaching, a delivery has become harder to steer, or the architecture needs to hold up outside the meeting room, write."
   >
@@ -81,11 +80,6 @@ const standard = all.filter(t => !t.data.featured).sort((a, b) => a.data.order -
   .testimonials-header {
     display: flex;
     flex-direction: column;
-  }
-
-  .testimonials-lead {
-    max-width: 62ch;
-    margin-top: -0.5rem;
   }
 
   .featured-grid {
@@ -131,6 +125,7 @@ const standard = all.filter(t => !t.data.featured).sort((a, b) => a.data.order -
   }
 
   .testimonial-excerpt {
+    max-width: var(--measure);
     color: var(--text);
     font-size: 1rem;
     line-height: 1.7;
@@ -157,10 +152,11 @@ const standard = all.filter(t => !t.data.featured).sort((a, b) => a.data.order -
 
   .quote-details {
     border-top: 1px solid var(--border-subtle);
-    padding-top: 0.875rem;
+    padding-top: 0.25rem;
   }
 
   .quote-details summary {
+    min-height: 2.75rem;
     list-style: none;
     cursor: pointer;
     font-size: 0.8125rem;
@@ -193,12 +189,12 @@ const standard = all.filter(t => !t.data.featured).sort((a, b) => a.data.order -
   }
 
   .full-quote {
-    margin-top: 1rem;
+    max-width: var(--measure);
+    margin-top: 0.5rem;
     font-size: 0.9375rem;
     line-height: 1.8;
     color: var(--text-2);
-    border-left: 3px solid var(--accent);
-    padding: 0 0 0 1rem;
+    white-space: pre-line;
   }
 
   @media (max-width: 980px) {

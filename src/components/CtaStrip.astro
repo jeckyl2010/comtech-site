@@ -1,16 +1,14 @@
 ---
 interface Props {
-  label:   string;
   heading: string;
   body:    string;
 }
 
-const { label, heading, body } = Astro.props;
+const { heading, body } = Astro.props;
 ---
 
 <section class="cta-strip">
   <div class="container">
-    <p class="section-label">{label}</p>
     <h2>{heading}</h2>
     <p>{body}</p>
     <slot />

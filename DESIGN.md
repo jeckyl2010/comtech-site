@@ -172,12 +172,6 @@ components:
     textColor: "{colors.ink-3}"
     rounded: "{rounded.pill}"
     padding: "0.25rem 0.625rem"
-  tag-accent:
-    backgroundColor: "{colors.indigo-dim}"
-    textColor: "{colors.indigo}"
-    typography: "{typography.label}"
-    rounded: "{rounded.pill}"
-    padding: "0.2rem 0.6rem"
   nav-link:
     backgroundColor: "transparent"
     textColor: "{colors.ink-2}"
@@ -209,7 +203,7 @@ dense with information, and completely unatmospheric. That contrast is the compo
 room is lit; the drawings themselves are read in daylight.
 
 Indigo (#5352cc) is the single hue in an otherwise fully neutral system, and it is allowed to work
-broadly — as fill, as 8%-tint background, as 20%-alpha border, as the 3px left rule on a quote, as
+broadly — as fill, as 8%-tint background, as 20%-alpha border, as the short tick that signs off a quote, as
 the gradient wash on a featured card. What it may not do is multiply into a second accent. One hue,
 many jobs.
 
@@ -229,13 +223,13 @@ daylight set and a dark night set.
 
 ### Primary
 - **Signal Indigo** (`--accent`): The system's only hue. Carries primary buttons, the `<tech>`
-  wordmark, section labels, the current nav item, award years, bento links, and the 3px left rule
-  on light-ground quotes. Its tinted forms — an 8% dim and a 20% border alpha — provide accent
+  wordmark, the current nav item, award years, bento links, and the attribution tick on
+  light-ground quotes. Its tinted forms — an 8% dim and a 20% border alpha — provide accent
   backgrounds and borders without introducing a second color.
 - **Deep Indigo** (`--accent-hover`): Primary button hover only. Reads as pressure, not as a
   separate color.
-- **Lifted Indigo** (`--accent-light`): The indigo that survives on night ground. Section labels
-  inside dark sections, the hero quote's left rule, and hero award years. Never used on paper.
+- **Lifted Indigo** (`--accent-light`): The indigo that survives on night ground. The hero
+  quote's attribution tick and hero award years. Never used on paper.
 - **Reading Indigo** (`--accent-text`): Reserved for indigo body-scale text on dark ground where
   Signal Indigo would fall below contrast.
 
@@ -298,14 +292,17 @@ wordmark), which is what keeps large type from reading as loud.
 - **Title LG / MD / base** (700/600, 1.25 / 1.125 / 1.0625rem): Featured card headings, bento and
   service card headings, and standard card headings respectively. Deliberately close to body size —
   hierarchy comes from weight and color, not scale.
-- **Body LG** (400, 1.0625rem, 1.7): Page leads and the hero sub, capped at 68ch and 46ch.
+- **Body LG** (400, 1.0625rem, 1.7): Page leads and the hero sub, capped at `--measure` and 46ch.
 - **Body** (400, 1rem, 1.75): All prose, in Pencil. The generous 1.75 leading is load-bearing.
 - **Body SM** (400, 0.9375rem, 1.7): Card and quote prose — the site's most common text size.
 - **Body XS** (500, 0.875rem, 1.65): Nav links, buttons, bento links, strength-item prose.
 - **Caption** (400, 0.8125rem, 1.6): Attributions, award detail, hero award rows, footer email.
 - **Micro** (500, 0.75rem, 1.5): Tags and bento attributions.
-- **Label** (700, 0.6875rem, +0.1em, uppercase): Section labels, eyebrows, tag text, award years.
-  The only uppercase in the system.
+- **Label** (700, 0.6875rem, +0.1em, uppercase): Metadata only — award years, recommendation
+  categories, contact-link labels. The only uppercase in the system.
+
+**The No Kicker Rule.** No label or eyebrow ever sits above a heading. The heading carries its own
+weight; if it needs a label to make sense, rewrite the heading.
 - **Signature** (JetBrains Mono 600, -0.03em): Exclusively the `<tech>` fragment of the wordmark.
 
 The ramp below 1rem is fine-grained on purpose — five steps between 0.6875 and 0.9375rem. That
@@ -316,8 +313,9 @@ density is what lets dense information sections stay legible without any of them
 **The One Mono Rule.** JetBrains Mono appears in the `<tech>` of the wordmark and nowhere else. Not
 in code samples, not in labels, not in metadata. Its scarcity is the entire point of loading it.
 
-**The Measure Rule.** Prose never exceeds ~68ch; short-form leads sit at 46ch. Line length is
-enforced with `max-width` in `ch`, not with column widths.
+**The Measure Rule.** Prose runs at 65–75 characters per line, enforced with the `--measure` token
+(58ch, because Inter's "0" is wider than its average glyph); short-form leads sit at 46ch. Line
+length is enforced with `max-width`, not with column widths.
 
 **The Weight-Not-Size Rule.** Card headings are barely larger than body text. When something needs
 to stand out at small scale, raise weight to 600 and shift color to Graphite; do not raise size.
@@ -361,16 +359,17 @@ tonal layering (Night Surface panels on Night ground) plus hairline borders.
 ### Shadow Vocabulary
 - **Resting** (`box-shadow: 0 1px 2px rgba(0,0,0,0.05)`): Every card, blockquote, and list item at
   rest.
-- **Lifted** (`box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04)`): Card and
-  bento hover.
+- **Lifted** (`box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04)`): Contact
+  link panel; available for a card that is itself a link.
 - **Overlay** (`box-shadow: 0 4px 6px rgba(0,0,0,0.06), 0 12px 24px rgba(0,0,0,0.06)`): Reserved
   for genuinely floating layers.
 - **Menu** (`box-shadow: 0 8px 24px rgba(0,0,0,0.08)`): The mobile nav panel dropping over content.
 
 ### Named Rules
 
-**The Optical Lift Rule.** Hover changes shadow and border color only. No `translateY`, no
-`scale`, no rotation on cards. The sheet stays pinned to the board.
+**The Optical Lift Rule.** Only something clickable reacts to hover, and then by shadow and border
+color only. No `translateY`, no `scale`, no rotation on cards. A card that is not a link does not
+lift: the sheet stays pinned to the board.
 
 **The Shadowless Night Rule.** On night ground, depth is tonal and hairline-defined. Do not attempt
 shadow-based elevation against #0d0d10.
@@ -382,10 +381,9 @@ the skip link; cards use `calc(var(--radius) * 1.5)` = 12px; tags and pills use 
 ring rounds at 2px.
 
 Corners are the only softening in the system — there are no diagonals, no clip-paths, no
-decorative shapes. The recurring form is the **3px left rule**: a thick indigo bar on the leading
-edge of a quote (Signal Indigo on paper, Lifted Indigo on night), with the quote's own corners
-squared on that edge (`border-radius: 0 8px 8px 0`) so the rule reads as an attached margin mark
-rather than a border.
+decorative shapes. The recurring mark is the **attribution tick**: a 1.5rem × 2px indigo stroke
+above a quote's attribution (Signal Indigo on paper, Lifted Indigo on night), like a signature line
+on a drawing. Coloured side borders on cards and quotes are not part of the system.
 
 The one non-rectilinear element in the system is the hero aurora: three circles (560/420/320px) at
 90px blur and 12–20% opacity, drifting on 11–18s ease-in-out loops, disabled entirely under
@@ -408,16 +406,14 @@ The one non-rectilinear element in the system is the hero aurora: three circles 
 - **Corner Style:** 12px.
 - **Background:** Sheet White. The featured bento cell instead takes a 135° wash from #fafaff to
   #f0f0ff with an indigo-alpha border.
-- **Shadow Strategy:** Resting at rest, Lifted on hover (see Elevation).
-- **Border:** 1px Hairline, darkening to #d4d4d8 on hover.
+- **Shadow Strategy:** Resting. Cards are not links, so they do not change on hover.
+- **Border:** 1px Hairline.
 - **Internal Padding:** 2rem for cards and bento cells; 1.5rem for the denser strength and award
   items.
 
 ### Chips / Tags
 - **Style:** Pill (999px), Sunk Grey fill, hairline border, Silverpoint text at 0.75rem/500. A
   `.tag-md` variant scales up to 0.8125rem with 0.375rem × 0.875rem padding.
-- **Accent variant:** The bento tag inverts to Signal Indigo text on an indigo 8% dim, at label
-  typography (0.6875rem, 700, +0.08em, uppercase).
 
 ### Navigation
 - **Style:** Fixed 64px bar, paper at 88% opacity with a 16px backdrop blur and a hairline bottom
@@ -431,11 +427,14 @@ The one non-rectilinear element in the system is the hero aurora: three circles 
   Indigo. Inverts to Night Ink on dark ground.
 
 ### Quotes
-- **Style:** Sheet White ground, 3px Signal Indigo left rule, squared on that edge and 8px on the
-  other three, 1.5rem × 1.75rem padding, 0.9375rem/1.75 Pencil text, Resting shadow.
-- **Attribution:** 0.8125rem Silverpoint, upright (never italic), with the name in 600 Pencil.
-- **Night variant:** Night Surface ground, Night Hairline border, Lifted Indigo left rule, and the
-  attribution ramp shifts to the night text ramp.
+- **Style:** `<figure>` with `<blockquote>` and `<figcaption>`. Sheet White card (hairline border,
+  12px radius, Resting shadow), 1.75rem × 2rem padding, 1rem/1.7 Graphite text held to `--measure`.
+- **Attribution:** 0.8125rem Silverpoint, upright (never italic), with the name in 600 Pencil,
+  signed off by the attribution tick.
+- **Truthfulness:** Text in quotation marks is verbatim. Excerpts are fragments of the full
+  recommendation joined by "…"; `src/content.config.ts` fails the build otherwise.
+- **Night variant:** No card — the quote sits directly on night ground under the hero proof panel,
+  with a Lifted Indigo tick and the night text ramp.
 
 ### Motion
 - **State transitions:** 0.15s ease on color, background, and border; 0.2s ease on shadow.
@@ -455,7 +454,8 @@ The one non-rectilinear element in the system is the hero aurora: three circles 
 - **Do** keep dark ground to the hero and footer bookends.
 - **Do** raise weight to 600 and color to Graphite when small text needs emphasis, rather than
   raising its size.
-- **Do** cap prose at ~68ch (46ch for hero-scale leads).
+- **Do** cap prose with `--measure` (46ch for hero-scale leads).
+- **Do** give every link, button, and toggle a 44px tap target.
 - **Do** put every new motion behind `prefers-reduced-motion: reduce`.
 - **Do** reach for the existing indigo tints (`--accent-dim`, `--accent-border`) when an accent
   ground or edge is needed.
@@ -465,7 +465,10 @@ The one non-rectilinear element in the system is the hero aurora: three circles 
 - **Don't** introduce a second accent hue. Indigo works alone.
 - **Don't** use JetBrains Mono anywhere except the `<tech>` of the wordmark.
 - **Don't** use pure white as a page or section background.
-- **Don't** move cards on hover — no translate, no scale. Shadow and border color only.
+- **Don't** move cards on hover — no translate, no scale — and don't react to hover at all on a
+  card that is not a link.
+- **Don't** put a label or eyebrow above a heading.
+- **Don't** put a coloured border on one side of a card or quote.
 - **Don't** use Signal Indigo (#5352cc) on night ground; use Lifted Indigo (#818cf8) there.
 - **Don't** italicize quotes or attributions; the system is upright throughout.
 - **Don't** add a radius outside the 2 / 8 / 12 / 999px scale.

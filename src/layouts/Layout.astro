@@ -6,12 +6,14 @@ interface Props {
   title: string;
   description?: string;
   ogImage?: string;
+  noindex?: boolean;
 }
 
 const {
   title,
   description = 'Senior Software Architect & Technical Lead. COM<tech> Consulting, Copenhagen.',
   ogImage = '/og-default.png',
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -21,7 +23,7 @@ const currentPath = Astro.url.pathname;
 const nav = [
   { href: '/services/', label: 'Services' },
   { href: '/about/', label: 'About' },
-  { href: '/testimonials/', label: 'Testimonials' },
+  { href: '/testimonials/', label: 'Recommendations' },
   { href: '/contact/', label: 'Contact' },
 ];
 ---
@@ -33,6 +35,7 @@ const nav = [
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   <meta name="theme-color" content="#f9f9f8" />
+  {noindex && <meta name="robots" content="noindex" />}
   <link rel="canonical" href={canonicalURL} />
   <title>{title}</title>
 
@@ -78,6 +81,8 @@ const nav = [
         "@type": "Organization",
         "@id": "https://comtechconsulting.dk/#org",
         "name": "COM<tech>",
+        "legalName": "COM-tech v/Anders Hybertz",
+        "vatID": "DK25567471",
         "url": "https://comtechconsulting.dk/",
         "founder": { "@id": "https://comtechconsulting.dk/#person" },
         "address": { "@type": "PostalAddress", "addressLocality": "Copenhagen", "addressCountry": "DK" }
@@ -121,10 +126,10 @@ const nav = [
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-left">
-        <a href="/" class="wordmark" aria-label="COM<tech>">
+        <a href="/" class="wordmark" aria-label="COM<tech> home">
           COM<span class="ct">&lt;tech&gt;</span>
         </a>
-        <span class="footer-cvr">CVR 25567471</span>
+        <a class="footer-cvr" href="https://datacvr.virk.dk/enhed/virksomhed/25567471" rel="noopener">CVR 25567471</a>
       </div>
       <a href="mailto:anders@comtechconsulting.dk" class="footer-email">
         anders@comtechconsulting.dk
@@ -153,15 +158,17 @@ const nav = [
       links.querySelectorAll('a').forEach(a => {
         a.addEventListener('click', close);
       });
-
-      // Escape dismisses the open menu and returns focus to the control that opened it
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-          close();
-          toggle.focus();
-        }
-      });
     }
+
+    // Escape dismisses the open menu and returns focus to the control that opened it.
+    // Registered once: the document outlives client-side page swaps, the nav does not.
+    document.addEventListener('keydown', (e) => {
+      const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+      if (e.key !== 'Escape' || toggle?.getAttribute('aria-expanded') !== 'true') return;
+      document.querySelector('.nav-links')?.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    });
 
     // ── Scroll-triggered fade-up ─────────────────────────────────────────────
     function initFadeUp() {

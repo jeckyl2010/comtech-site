@@ -11,7 +11,6 @@ import Layout from '../layouts/Layout.astro';
     <div class="container contact-layout">
 
       <div>
-        <p class="section-label">Contact</p>
         <h1 class="page-h1">Get in touch directly</h1>
         <p class="contact-sub">
           If you have a technical challenge, an architectural decision to make, or need an outside perspective, reach out. The conversation starts directly with Anders.
@@ -32,7 +31,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div>
-        <p class="contact-process-label label-caps">How it usually starts</p>
+        <h2 class="contact-process-title">How it usually starts</h2>
         <ul class="contact-steps">
           <li>
             <div class="step-icon">
@@ -128,8 +127,9 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.8125rem;
     color: var(--text-3);
   }
-  .contact-process-label {
-    color: var(--accent);
+  .contact-process-title {
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
     margin-bottom: 1.75rem;
   }
   .contact-steps {

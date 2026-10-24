@@ -32,7 +32,12 @@ const testimonials = defineCollection({
     quote:    z.string(),
     name:     z.string(),
     title:    z.string(),
-  }),
+  }).refine(
+    // Excerpts are shown in quotation marks, so every fragment between ellipses
+    // must appear verbatim in the full recommendation.
+    t => t.excerpt.split('…').map(s => s.trim()).filter(Boolean).every(s => t.quote.includes(s)),
+    { message: 'excerpt must be a verbatim fragment of quote' },
+  ),
 });
 
 const services = defineCollection({
@@ -47,4 +52,16 @@ const services = defineCollection({
   }),
 });
 
-export const collections = { strengths, awards, testimonials, services };
+const clients = defineCollection({
+  loader: file('./src/data/clients.json'),
+  schema: z.object({
+    order:  z.number(),
+    years:  z.string(),
+    name:   z.string(),
+    sector: z.string(),
+    work:   z.string(),
+    link:   z.object({ label: z.string(), href: z.string().url() }).optional(),
+  }),
+});
+
+export const collections = { strengths, awards, testimonials, services, clients };

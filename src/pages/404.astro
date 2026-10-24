@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Page not found | COM<tech>"
+  description="This page does not exist on comtechconsulting.dk."
+  noindex
+>
+  <section class="section not-found">
+    <div class="container">
+      <h1 class="page-h1">This page does not exist</h1>
+      <p class="page-lead">
+        The link may be out of date, or the address may have a typo. Everything on the site is
+        reachable from here, and email always works.
+      </p>
+      <ul class="not-found-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/testimonials/">Recommendations</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <a href="mailto:anders@comtechconsulting.dk" class="btn btn-primary">anders@comtechconsulting.dk</a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .not-found { flex: 1; }
+  .not-found-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .not-found-links a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-2);
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .not-found-links a:hover { color: var(--accent); border-color: var(--accent-border); }
+</style>

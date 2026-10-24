@@ -54,9 +54,9 @@ whether to proceed. Based in Copenhagen, working across Denmark and internationa
 Service areas: software architecture & design; cloud and AI solutions; technical leadership and
 mentoring; strategic IT advisory; independent software auditing and expert assessment.
 
-Industries served: pharmaceutical manufacturing, financial services, insurance, banking, energy and
-utilities, manufacturing and industrial, telecom and mobile, healthcare and life sciences, public
-sector.
+Industries served: the list in `src/data/about.json` is canonical (pharmaceutical manufacturing,
+financial services and insurance, manufacturing and industrial, energy and utilities, public sector,
+telecom and mobile, healthcare and life sciences, banking).
 
 ## Capabilities and Constraints
 
@@ -67,9 +67,14 @@ sector.
 - **English only.** No Danish version, despite the Copenhagen base.
 - **No availability, rates, or pricing** anywhere on the site — no capacity status, no day rates,
   no packaged offerings.
-- Routes: `/`, `/services/`, `/about/`, `/testimonials/`, `/contact/`.
-- Structured content lives in `src/data/*.json` (services, strengths, awards, testimonials, about)
-  and is mirrored for machine readers in `public/llms.txt`.
+- Routes: `/`, `/services/`, `/about/`, `/testimonials/` (titled "Recommendations"), `/contact/`,
+  plus a branded `404.html`.
+- Structured content lives in `src/data/*.json` (services, strengths, awards, testimonials, about).
+  `/llms.txt` is generated from it at build time (`src/pages/llms.txt.ts`), and the home page reads
+  its quotes, industries, and court appointment from it, so facts are stated once.
+- The registered name is "COM-tech v/Anders Hybertz" (the CVR register does not accept `<` `>`); it
+  appears only in structured data. The footer links the CVR number to its register entry. The
+  registered address is private and never appears on the site.
 
 ## Brand Commitments
 
@@ -90,10 +95,13 @@ Real, verifiable, and the only proof the site may use:
 - Named client testimonials with real people and affiliations —
   `src/data/testimonials*.json`.
 - Technology and domain lists — `src/data/about.json`.
+- Organisations worked with, with period and a one-line description of the work, taken from
+  Anders' LinkedIn profile — `src/data/clients.json`. Brokers (7N, ProjectBinder) are channels, not
+  clients, and are not listed. Names only: no client logos.
 
 **Nothing may be fabricated.** No invented client logos, no made-up metrics or case studies, no
 unattributed quotes, no synthetic company photography presented as real. Absences that future work
-must not paper over: there are no published case studies, no named-client project write-ups, no
+must not paper over: there are no published case studies, no project write-ups beyond those one-line descriptions, no
 headcount, no revenue or delivery statistics.
 
 ## Product Principles

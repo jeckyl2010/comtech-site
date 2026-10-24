@@ -1,0 +1,94 @@
+[
+  {
+    "id": "rockwool",
+    "order": 1,
+    "years": "2026–",
+    "name": "ROCKWOOL Group",
+    "sector": "Manufacturing",
+    "work": "Manufacturing lead architect in the group architecture team: scalable solution architecture and standardised services across manufacturing use cases."
+  },
+  {
+    "id": "klimadatastyrelsen",
+    "order": 2,
+    "years": "2025",
+    "name": "Klimadatastyrelsen",
+    "sector": "Public sector",
+    "work": "Independent third-party audit of a software documentation delivery: security, quality assurance, SDLC, operations, and compliance."
+  },
+  {
+    "id": "novo-nordisk",
+    "order": 3,
+    "years": "2019–2025",
+    "name": "Novo Nordisk",
+    "sector": "Pharmaceutical manufacturing",
+    "work": "Technical lead and architect: AI-powered CCTV analytics for GxP-regulated production, mobile knowledge sharing for production lines, and IoT and machine learning for line optimisation."
+  },
+  {
+    "id": "domstole",
+    "order": 4,
+    "years": "2022–2023",
+    "name": "Danmarks Domstole · Sø- og Handelsretten",
+    "sector": "Public sector",
+    "work": "Court-appointed independent software expert on a five-member panel in a commercial software dispute between a public-sector customer and a software vendor."
+  },
+  {
+    "id": "rsa-codan",
+    "order": 5,
+    "years": "2011–2019",
+    "name": "RSA / Codan",
+    "sector": "Insurance",
+    "work": "Solution and software architect: a new insurance platform, moving the claims domain to an external platform, a performance programme, and the .NET centre of excellence."
+  },
+  {
+    "id": "sdc",
+    "order": 6,
+    "years": "2005–2011",
+    "name": "SDC",
+    "sector": "Banking",
+    "work": "Architect and team lead on digital property registration for about 50 Danish banks; before that, stabilising and optimising a J2EE bank portal."
+  },
+  {
+    "id": "bec",
+    "order": 7,
+    "years": "2007",
+    "name": "BEC",
+    "sector": "Banking",
+    "work": "System integration architect on an SOA pension solution for around 100 Danish banks."
+  },
+  {
+    "id": "mobile-cohesion",
+    "order": 8,
+    "years": "2002–2005",
+    "name": "Mobile Cohesion",
+    "sector": "Telecom and mobile",
+    "work": "Senior software architect and co-inventor of the Hydra mobile messaging gateway.",
+    "link": {
+      "label": "US patent 7,684,418: Service access gateway (granted 2010)",
+      "href": "https://patents.google.com/patent/US7684418B2/en"
+    }
+  },
+  {
+    "id": "openwave",
+    "order": 9,
+    "years": "2000–2002",
+    "name": "Openwave Systems",
+    "sector": "Telecom and mobile",
+    "work": "Chief software architect and team lead on an SDK for WAP simulation."
+  },
+  {
+    "id": "valtech",
+    "order": 10,
+    "years": "2000",
+    "name": "Valtech",
+    "sector": "Banking",
+    "work": "Software architect on an internet banking system."
+  },
+  {
+    "id": "licenergy",
+    "order": 11,
+    "years": "1995–2000",
+    "name": "LICenergy",
+    "sector": "Energy and utilities",
+    "work": "Real-time applications for the oil and gas industry, including onsite integration in England, Germany, Portugal, and New Zealand."
+  }
+]
