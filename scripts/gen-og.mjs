@@ -1,4 +1,4 @@
-// Renders public/og-default.png (1200×630), the image LinkedIn and others show when the site
+// Renders src/assets/og-default.png (1200×630), the image LinkedIn and others show when the site
 // is shared: the mark as a sculpture (scripts/assets/og-sculpture.webp, generated with Codex)\n// with the headline in Familjen Grotesk. Only the share image uses it; the site stays flat.
 // Run: node scripts/gen-og.mjs
 import { chromium } from 'playwright';
@@ -43,6 +43,6 @@ const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
 await page.setContent(html, { waitUntil: 'load' });
 await page.evaluate(() => document.fonts.ready);
-await page.screenshot({ path: path.join(root, 'public/og-default.png') });
+await page.screenshot({ path: path.join(root, 'src/assets/og-default.png') });
 await browser.close();
-console.log('wrote public/og-default.png');
+console.log('wrote src/assets/og-default.png');

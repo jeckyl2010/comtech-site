@@ -28,9 +28,9 @@ src/
   layouts/Layout.astro   — shared shell, nav, footer, head
   pages/*.astro          — route-based pages
   styles/global.css      — design tokens, layout, typography, shared components
+  assets/og-default.png  — link-preview image, hashed at build (regenerate with `node scripts/gen-og.mjs`)
 public/
   favicon.svg            — site favicon
-  og-default.png         — default Open Graph image (regenerate with `node scripts/gen-og.mjs`)
   CNAME                  — custom domain for GitHub Pages
   robots.txt             — search engine directives
 .github/workflows/

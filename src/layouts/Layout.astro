@@ -2,6 +2,9 @@
 import { ClientRouter } from 'astro:transitions';
 import Mark from '../components/Mark.astro';
 import SiteClose from '../components/SiteClose.astro';
+// Imported, not served from public/, so the URL carries a content hash: a new image gets a new
+// address, and LinkedIn and others cannot keep showing a cached old one.
+import ogDefault from '../assets/og-default.png';
 import '../styles/global.css';
 
 interface Props {
@@ -16,7 +19,7 @@ interface Props {
 const {
   title,
   description = 'Senior Software Architect & Technical Lead. COM<tech> Consulting, Copenhagen.',
-  ogImage = '/og-default.png',
+  ogImage = ogDefault.src,
   noindex = false,
   closeHeading,
   closeBody,
@@ -51,6 +54,9 @@ const nav = [
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content={ogImageURL} />
+  {ogImage === ogDefault.src && <meta property="og:image:width" content={String(ogDefault.width)} />}
+  {ogImage === ogDefault.src && <meta property="og:image:height" content={String(ogDefault.height)} />}
+  <meta property="og:image:alt" content="The COM<tech> mark as a sculpture, with the headline: Software architecture built for the places where it has to work." />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:site_name" content="COM&lt;tech&gt; Consulting" />
 
