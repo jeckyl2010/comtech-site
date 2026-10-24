@@ -31,6 +31,7 @@ src/
   assets/og-default.png  — link-preview image, hashed at build (regenerate with `node scripts/gen-og.mjs`)
 public/
   favicon.svg            — site favicon
+  apple-touch-icon.png, icon-*.png, site.webmanifest — home-screen icons (regenerate with `node scripts/gen-icons.mjs`)
   CNAME                  — custom domain for GitHub Pages
   robots.txt             — search engine directives
 .github/workflows/
