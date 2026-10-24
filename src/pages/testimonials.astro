@@ -22,7 +22,7 @@ const recommendations = (await getCollection('testimonials'))
 
 <Layout
   title="Recommendations | COM<tech> Consulting"
-  description="Recommendations for Anders Hybertz from clients, colleagues, and people he has led at Novo Nordisk, RSA Codan, SDC, and others, in full."
+  description="Recommendations for Anders Hybertz from clients, colleagues, and people he has led at Novo Nordisk, RSA / Codan, SDC, and others, in full."
   closeHeading="Let's discuss your architecture."
   closeBody="Send a short description of the system and the decision in front of you."
 >
@@ -63,7 +63,7 @@ const recommendations = (await getCollection('testimonials'))
   .recs li:last-child { border-bottom: 0; }
   .who h2 { font-size: 21px; letter-spacing: -0.012em; line-height: 1.25; }
   .who p { margin-top: 6px; font-size: 15px; line-height: 1.5; }
-  .ctx { padding-top: 12px; margin-top: 14px !important; border-top: 1px solid var(--rule); color: var(--ink-3); }
+  .who .ctx { padding-top: 12px; margin-top: 14px; border-top: 1px solid var(--rule); color: var(--ink-3); }
   .text {
     max-width: 62ch;
     font-size: clamp(18px, 1.5vw, 20px);

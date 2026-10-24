@@ -67,7 +67,7 @@
 
 /* ─── Reset ─── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; scroll-behavior: smooth; scrollbar-gutter: stable; }
+html { font-size: 16px; scroll-behavior: smooth; }
 img, svg { display: block; max-width: 100%; }
 img { height: auto; }
 input, textarea, select { font-size: 16px; max-width: 100%; }
@@ -348,7 +348,6 @@ a:hover { color: var(--signal-deep); }
 .ladder p { font-size: 16px; line-height: 1.6; }
 .ladder .includes { color: var(--ink); font-size: 15px; }
 .ladder .example { margin-top: auto; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 15px; color: var(--ink-3); }
-.ladder .example strong { font-weight: 600; }
 
 /* A quote given room */
 .voice { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 28px 80px; align-items: end; }
@@ -400,6 +399,7 @@ a:hover { color: var(--signal-deep); }
 .legal .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 8px 16px;
   flex-wrap: wrap;
   padding-top: 18px;
@@ -421,11 +421,10 @@ a:hover { color: var(--signal-deep); }
 }
 
 /* ─── Page transitions and reveal ─── */
-@keyframes page-fade-in { from { opacity: 0; } to { opacity: 1; } }
-::view-transition-old(root) { animation: 150ms ease-out both page-fade-in reverse; }
-::view-transition-new(root) { animation: 200ms ease-out both page-fade-in; }
-
 @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+::view-transition-old(root) { animation: 150ms ease-out both fade-in reverse; }
+::view-transition-new(root) { animation: 200ms ease-out both fade-in; }
+
 .js .fade-up { opacity: 0; }
 .js .fade-up.visible { animation: fade-in 420ms var(--ease) both; }
 

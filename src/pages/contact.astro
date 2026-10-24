@@ -51,14 +51,17 @@ import Mark from '../components/Mark.astro';
     margin-bottom: 24px;
     padding-bottom: 6px;
     border-bottom: 3px solid var(--signal);
-    font-size: clamp(28px, 4.4vw, 64px);
+    font-size: clamp(20px, 5.4vw, 64px);
     font-weight: 600;
     letter-spacing: -0.035em;
     line-height: 1.1;
     color: var(--ink);
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
   }
   .mail:hover { color: var(--signal); }
   .links { margin-top: 28px; }
   .where { margin-top: 56px; font-size: 15px; color: var(--ink-3); }
+  @media (max-width: 720px) {
+    .watermark { display: none; }
+  }
 </style>

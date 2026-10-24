@@ -17,7 +17,7 @@ const service = (name: string) => {
 };
 ---
 
-<ol class="ladder">
+<ol class:list={['ladder', { 'ladder-detailed': detailed }]}>
   {ways.map(({ data: w }) => (
     <li>
       <span class="depth" aria-hidden="true">{[1, 2, 3].map(n => <i class:list={{ on: n <= w.depth }}></i>)}</span>
@@ -30,13 +30,15 @@ const service = (name: string) => {
               <p>{service(name).description}</p>
             </div>
           ))
-        : <p class="includes">{w.services.map(service).map(s => s.name).join(' · ')}</p>}
+        : <p class="includes">{w.services.map(name => service(name).name).join(' · ')}</p>}
       <p class="example">Recently: <strong>{w.example}</strong>, {w.when}</p>
     </li>
   ))}
 </ol>
 
 <style>
+  .ladder-detailed { align-items: start; }
+  .ladder-detailed .example { margin-top: 0; }
   .ladder-service { padding-top: 14px; border-top: 1px solid var(--rule); }
   .ladder-service h4 { margin-bottom: 4px; font-size: 16px; font-weight: 600; color: var(--ink); }
   .ladder-service p { font-size: 15px; }

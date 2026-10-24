@@ -39,9 +39,9 @@ account manager.
 ## Positioning
 
 Three decades of software architecture, technical leadership, and complex delivery in regulated and
-demanding environments — carried by one person, not a team behind a brand. The claim a neighbouring
-consultancy cannot truthfully copy: appointed by Danmarks Domstole (Sø- og Handelsretten) in 2022 to
-a five-member expert panel as an independent software expert in a commercial software dispute.
+demanding environments — carried by one person, not a team behind a brand. What sets the work apart
+is the combination: AI taken into highly regulated production (GxP, GDPR, and the EU AI Act),
+software architecture for the factory floor, and architecture and delivery led by the same person.
 
 The voice matches the work: calm, direct, no performance. "Less, but better."
 
@@ -95,7 +95,7 @@ telecom and mobile, healthcare and life sciences, banking).
 Real, verifiable, and the only proof the site may use:
 
 - Court appointment, Danmarks Domstole · Sø- og Handelsretten (2022) — `src/data/awards.json`.
-- PSQIT Innovation Prize, Novo Nordisk (2021); Best Individual Performance of the Year, 7N (2020,
+- PSQIT Innovation Prize, Novo Nordisk (for 2020, presented 2021); Best Individual Performance of the Year, 7N (2020,
   2016); Best Team nominee, 7N (2016) — same file.
 - Named client testimonials with real people and affiliations —
   `src/data/testimonials*.json`.

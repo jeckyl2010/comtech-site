@@ -22,9 +22,9 @@ const {
   closeBody,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
 const currentPath = Astro.url.pathname;
+const canonicalURL = new URL(currentPath, Astro.site);
+const ogImageURL = new URL(ogImage, Astro.site);
 
 const nav = [
   { href: '/services/', label: 'How I work' },
@@ -42,15 +42,15 @@ const nav = [
   <meta name="description" content={description} />
   <meta name="theme-color" content="#0d0e14" />
   {noindex && <meta name="robots" content="noindex" />}
-  <link rel="canonical" href={canonicalURL} />
+  {!noindex && <link rel="canonical" href={canonicalURL} />}
   <title>{title}</title>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content={canonicalURL} />
+  {!noindex && <meta property="og:url" content={canonicalURL} />}
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+  <meta property="og:image" content={ogImageURL} />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:site_name" content="COM&lt;tech&gt; Consulting" />
 
@@ -58,7 +58,7 @@ const nav = [
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+  <meta name="twitter:image" content={ogImageURL} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preload" href="/fonts/familjen-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/familjen-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
