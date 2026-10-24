@@ -67,11 +67,12 @@ telecom and mobile, healthcare and life sciences, banking).
 - **English only.** No Danish version, despite the Copenhagen base.
 - **No availability, rates, or pricing** anywhere on the site — no capacity status, no day rates,
   no packaged offerings.
-- Routes: `/`, `/services/`, `/about/`, `/testimonials/` (titled "Recommendations"), `/contact/`,
-  plus a branded `404.html`.
-- Structured content lives in `src/data/*.json` (services, strengths, awards, testimonials, about).
-  `/llms.txt` is generated from it at build time (`src/pages/llms.txt.ts`), and the home page reads
-  its quotes, industries, and court appointment from it, so facts are stated once.
+- Routes: `/`, `/services/` (titled "How I work"), `/about/`, `/testimonials/` (titled
+  "Recommendations"), `/contact/`, plus a branded `404.html`.
+- Structured content lives in `src/data/*.json` (services, ways, strengths, awards, clients,
+  testimonials, about). `/llms.txt` is generated from it at build time (`src/pages/llms.txt.ts`),
+  and the pages read quotes, the three ways to work together, and the work history from it, so facts
+  are stated once.
 - The registered name is "COM-tech v/Anders Hybertz" (the CVR register does not accept `<` `>`); it
   appears only in structured data. The footer links the CVR number to its register entry. The
   registered address is private and never appears on the site.
@@ -80,10 +81,14 @@ telecom and mobile, healthcare and life sciences, banking).
 
 - Name is **COM\<tech\>**, written with the angle brackets around `tech`.
 - Legal identity: CVR 25567471. Contact `anders@comtechconsulting.dk`.
-- Typefaces already committed and self-hosted: Inter (400–800) and JetBrains Mono (600), in
-  `public/fonts/`.
+- Typeface committed and self-hosted: Familjen Grotesk (400–700), in `public/fonts/`.
+- The mark: two brackets holding one square (`src/components/Mark.astro`, `public/favicon.svg`).
 - Voice is calm, plain, and unsold — it states what is true and stops. No hype, no urgency, no
-  sales language.
+  sales language. The site speaks in the first person ("I"), as a one-person company.
+- Language is professional and specific to software and architecture. Headlines state facts about
+  the work, never slogans.
+- The 2022 court appointment was a one-off: never present it as a standing title or a headline
+  credential. The patent is mentioned only in the work history.
 
 ## Evidence on Hand
 

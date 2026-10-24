@@ -1,175 +1,64 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Mark from '../components/Mark.astro';
 ---
 
 <Layout
-  title="Contact | COM<tech>"
-  description="Contact Anders Hybertz at COM<tech>. Based in Copenhagen, working with clients across Denmark and internationally. Direct contact — no account managers, no intake steps."
+  title="Contact | COM<tech> Consulting"
+  description="Contact Anders Hybertz at COM<tech> Consulting in Copenhagen. Direct contact by email or LinkedIn: no account managers, no intake steps."
 >
+  <div slot="opening" class="intro">
+    <div class="container">
+      <h1 class="page-title">Get in touch</h1>
+      <p class="lead">Write to me directly. A short description of the system and the decision in front of you is enough to start.</p>
+    </div>
+  </div>
 
-  <section class="section contact-section">
-    <div class="container contact-layout">
-
-      <div>
-        <h1 class="page-h1">Get in touch directly</h1>
-        <p class="contact-sub">
-          If you have a technical challenge, an architectural decision to make, or need an outside perspective, reach out. The conversation starts directly with Anders.
-        </p>
-
-        <div class="contact-links">
-          <a href="mailto:anders@comtechconsulting.dk?subject=Enquiry%20via%20comtechconsulting.dk" class="contact-primary-link">
-            <span class="contact-link-label label-caps-muted">Email</span>
-            <span class="contact-link-value">anders@comtechconsulting.dk</span>
-          </a>
-          <a href="https://www.linkedin.com/in/andershybertz/" target="_blank" rel="noopener noreferrer" class="contact-primary-link">
-            <span class="contact-link-label label-caps-muted">LinkedIn</span>
-            <span class="contact-link-value">linkedin.com/in/andershybertz</span>
-          </a>
-        </div>
-
-        <p class="contact-note">Based in Copenhagen. Working with clients across Denmark and internationally.</p>
+  <section class="section contact" aria-labelledby="h-mail">
+    <div class="watermark" aria-hidden="true"><Mark /></div>
+    <div class="container">
+      <h2 id="h-mail" class="sr-only">Email and LinkedIn</h2>
+      <a class="mail" href="mailto:anders@comtechconsulting.dk?subject=Enquiry%20via%20comtechconsulting.dk">anders@comtechconsulting.dk</a>
+      <p class="body">If you have a technical challenge, an architectural decision to make, or need an outside perspective, the conversation starts directly with me. No account managers, no intake steps.</p>
+      <div class="actions links">
+        <a class="btn btn-primary" href="mailto:anders@comtechconsulting.dk?subject=Enquiry%20via%20comtechconsulting.dk">Write an email</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/andershybertz/">LinkedIn</a>
       </div>
-
-      <div>
-        <h2 class="contact-process-title">How it usually starts</h2>
-        <ul class="contact-steps">
-          <li>
-            <div class="step-icon">
-              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            </div>
-            <div>
-              <strong>You write with the context you have</strong>
-              <p>A short description is enough. It does not have to be fully structured before the first conversation.</p>
-            </div>
-          </li>
-          <li>
-            <div class="step-icon">
-              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            </div>
-            <div>
-              <strong>We talk through the problem</strong>
-              <p>The point is to understand the situation and whether there is a sensible fit. Not to turn the call into a sales exercise.</p>
-            </div>
-          </li>
-          <li>
-            <div class="step-icon">
-              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-            </div>
-            <div>
-              <strong>Then we decide whether to proceed</strong>
-              <p>If there is a good match, we define the next step in a practical way. If not, the conversation should still have been useful.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
     </div>
   </section>
 
+  <section class="section section-white" aria-labelledby="h-start">
+    <div class="container">
+      <div class="section-head"><h2 id="h-start" class="h2">How it starts</h2></div>
+      <ol class="steps">
+        <li><h3>You write with the context you have</h3><p>A short description is enough. It does not have to be fully structured before the first conversation.</p></li>
+        <li><h3>We talk through the problem</h3><p>The point is to understand the situation and whether there is a sensible fit. Not to turn the call into a sales exercise.</p></li>
+        <li><h3>Then we decide whether to proceed</h3><p>If there is a good match, we define the next step in a practical way. If not, the conversation should still have been useful.</p></li>
+      </ol>
+      <p class="where">Based in Copenhagen, working with clients across Denmark and internationally. COM&lt;tech&gt; Consulting, <a href="https://datacvr.virk.dk/enhed/virksomhed/25567471" rel="noopener">CVR 25567471</a>.</p>
+    </div>
+  </section>
 </Layout>
 
 <style>
-  .contact-section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-  .contact-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
-  }
-  .contact-sub {
-    font-size: 1.0625rem;
-    max-width: 42ch;
-    color: var(--text-2);
-    margin-bottom: 2.5rem;
-    line-height: 1.65;
-  }
-  .contact-links {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--border);
-    border-radius: calc(var(--radius) * 1.5);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-  }
-  .contact-primary-link {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    padding: 1.125rem 1.25rem;
-    background: var(--surface);
-    text-decoration: none;
-    border-bottom: 1px solid var(--border);
-    transition: background 0.15s ease;
-  }
-  .contact-primary-link:last-child { border-bottom: none; }
-  .contact-primary-link:hover { background: var(--surface-2); }
-  .contact-link-label {
-    color: var(--text-3);
-    min-width: 64px;
-  }
-  .contact-link-value {
-    font-size: 0.9375rem;
-    font-weight: 500;
-    color: var(--text);
-    transition: color 0.15s ease;
-    min-width: 0;
-    overflow-wrap: break-word;
-  }
-  .contact-primary-link:hover .contact-link-value { color: var(--accent); }
-  .contact-note {
-    margin-top: 1.5rem;
-    font-size: 0.8125rem;
-    color: var(--text-3);
-  }
-  .contact-process-title {
-    font-size: 1.25rem;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.75rem;
-  }
-  .contact-steps {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .contact-steps li {
-    display: flex;
-    gap: 1.25rem;
-    align-items: start;
-  }
-  .step-icon {
-    width: 36px;
-    height: 36px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--accent-dim);
-    border-radius: var(--radius);
-    color: var(--accent);
-    margin-top: 0.1rem;
-  }
-  .contact-steps strong {
-    display: block;
-    font-size: 0.9375rem;
+  .contact { position: relative; overflow: hidden; }
+  .contact .container { position: relative; z-index: 1; }
+  .watermark { position: absolute; right: -4vw; top: 50%; width: min(52vw, 760px); transform: translateY(-50%); color: #e3e7eb; pointer-events: none; }
+  .watermark :global(.mark) { width: 100%; height: auto; }
+  .watermark :global(.mark-sq) { fill: #dcdffa; }
+  .mail {
+    display: inline-block;
+    margin-bottom: 24px;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--signal);
+    font-size: clamp(28px, 4.4vw, 64px);
     font-weight: 600;
-    color: var(--text);
-    margin-bottom: 0.375rem;
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+    color: var(--ink);
+    overflow-wrap: anywhere;
   }
-  .contact-steps p {
-    font-size: 0.875rem;
-    color: var(--text-2);
-    line-height: 1.65;
-  }
-
-  @media (max-width: 768px) {
-    .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
-    .contact-section { padding-top: 3.5rem; padding-bottom: 3.5rem; }
-  }
+  .mail:hover { color: var(--signal); }
+  .links { margin-top: 28px; }
+  .where { margin-top: 56px; font-size: 15px; color: var(--ink-3); }
 </style>

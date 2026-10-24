@@ -1,13 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getCollection, getEntry, z } from 'astro:content';
-import CtaStrip from '../components/CtaStrip.astro';
 import rawAbout from '../data/about.json';
 
-const strengths = (await getCollection('strengths')).sort((a, b) => a.data.order - b.data.order);
-const awards    = (await getCollection('awards')).sort((a, b) => a.data.order - b.data.order);
-const clients   = (await getCollection('clients')).sort((a, b) => a.data.order - b.data.order);
-const morten    = (await getEntry('testimonials', 'morten-foltmar'))!.data;
+const clients = (await getCollection('clients')).sort((a, b) => a.data.order - b.data.order);
+const recent  = clients.slice(0, 4);
+const earlier = clients.slice(4);
+const awards  = (await getCollection('awards')).sort((a, b) => a.data.order - b.data.order);
+const isabela = (await getEntry('testimonials', 'isabela-bolotti'))!.data;
 
 const { domains, technologies } = z.object({
   domains:      z.array(z.string()),
@@ -16,273 +16,136 @@ const { domains, technologies } = z.object({
 ---
 
 <Layout
-  title="About | COM<tech>"
-  description="About Anders Hybertz and COM<tech>. Three decades of software architecture, technical leadership, and complex delivery across pharmaceutical manufacturing, finance, energy, and the public sector. One senior point of contact from the first conversation."
+  title="About | COM<tech> Consulting"
+  description="Anders Hybertz: senior software architect and technical lead in Copenhagen since 2000. Recent work for ROCKWOOL Group, Klimadatastyrelsen, and Novo Nordisk, and three decades across finance, insurance, telecom, and energy."
+  closeHeading="Let's discuss your architecture."
+  closeBody="Send a short description of the system and the decision in front of you."
 >
-
-  <section class="section">
+  <div slot="opening" class="intro">
     <div class="container">
-      <div class="about-intro-grid">
+      <div>
+        <h1 class="page-title">Anders Hybertz</h1>
+        <p class="role">Senior software architect and technical lead · Copenhagen</p>
+      </div>
+      <p class="lead">COM&lt;tech&gt; is a one-person consultancy by design. You work directly with me, from the first conversation and throughout the engagement.</p>
+    </div>
+  </div>
+
+  <section class="section" aria-labelledby="h-story">
+    <div class="container">
+      <div class="split">
         <div>
-          <h1 class="page-h1">Anders Hybertz</h1>
-          <p class="about-lead">
-            COM&lt;tech&gt; is a one-person consultancy by design. Clients work directly with Anders from the first conversation and throughout the engagement.
-          </p>
-          <p class="about-body">
-            Since 2000, the work has centred on software architecture, technical leadership, and difficult deliveries across regulated industries and complex organisations. The common denominator is not a particular technology. It is situations where the architecture matters, the systems have to hold up in practice, and the organisation needs clear judgement rather than noise.
-          </p>
-          <p class="about-body about-body-spaced">
-            The working style is pragmatic, calm, and long-term minded. Good solutions balance technical quality, business reality, and a team's ability to evolve them over time. The preference is to be present from the first architectural decision through to production — and to see value delivered, not just handed over.
-          </p>
-          <p class="about-court">
-            In 2022, Danmarks Domstole appointed Anders to a five-member expert panel at Sø- og Handelsretten
-            as an independent software expert in a commercial software dispute.{' '}
-            <a href="#recognition">See recognition</a>
-          </p>
+          <h2 id="h-story" class="h2">Three decades of software that had to work</h2>
         </div>
         <div>
-          <figure class="about-pull-quote blockquote-card">
-            <blockquote>&ldquo;{morten.excerpt}&rdquo;</blockquote>
-            <figcaption class="testimonial-author"><strong>{morten.name}</strong>, {morten.title}</figcaption>
+          <p class="body">Since 2000, my work has centred on software architecture, technical leadership, and difficult deliveries across regulated industries and complex organisations. The common denominator is not a particular technology. It is situations where the architecture matters, the systems have to hold up in practice, and the organisation needs clear judgement rather than noise.</p>
+          <p class="body">I work pragmatically, calmly, and with the long term in mind. I prefer to be there from the first architectural decision through to production, and to see value delivered, not just handed over.</p>
+          <figure class="aside-quote">
+            <blockquote>&ldquo;{isabela.excerpt}&rdquo;</blockquote>
+            <figcaption><strong>{isabela.name}</strong>{isabela.title}</figcaption>
           </figure>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section-alt">
+  <section class="section section-white" aria-labelledby="h-recent">
     <div class="container">
-      <h2 class="section-h2">Professional craftsmanship over noise</h2>
-      <p class="section-sub section-sub-wide">
-        The aim is to create clarity, reduce unnecessary complexity, and make sound decisions that the organisation can live with afterwards. Less noise. More substance. Architecture should help the work move forward, not become a separate performance around it.
-      </p>
-      <div class="strengths-grid">
-        {strengths.map(s => (
-          <div class="strength-item">
-            <h3>{s.data.title}</h3>
-            <p>{s.data.body}</p>
-          </div>
-        ))}
+      <div class="section-head">
+        <h2 id="h-recent" class="h2">Recent work</h2>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2 class="section-h2 section-h2-tight">What clients typically bring me in for</h2>
-      <p class="section-sub">
-        Architecture work under delivery pressure. Modernisation without unnecessary rewrites. Technical leadership where teams need direction, calm, and practical judgement.
-      </p>
-      <div class="focus-grid">
-
-        <div class="card focus-card">
-          <h3>Architecture and delivery recovery</h3>
-          <p>When a programme or project has become technically unclear, too coupled, or difficult to steer, the first task is usually to make the shape of the problem visible and help the team regain control.</p>
-        </div>
-
-        <div class="card focus-card">
-          <h3>Regulated and high-consequence systems</h3>
-          <p>Work where traceability, auditability, documentation, and reliability are not administrative extras but part of what makes the solution acceptable.</p>
-        </div>
-
-        <div class="card focus-card">
-          <h3>Cloud, platform, and AI decisions</h3>
-          <p>Especially where there is a need to separate useful technology choices from fashionable ones, and where operations and adoption matter as much as the architecture diagram.</p>
-        </div>
-
-        <div class="card focus-card">
-          <h3>Senior sparring for teams and leaders</h3>
-          <p>Architecture reviews, technical direction, mentoring, and independent judgement in situations where internal teams need an experienced outside perspective without a lot of consulting noise.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-h2 section-h2-snug">Organisations I have worked with</h2>
-      <p class="section-sub">Most recent first, with the period and the work.</p>
-      <ol class="client-ledger">
-        {clients.map(c => (
-          <li class="client-row">
-            <span class="client-years">{c.data.years}</span>
-            <div class="client-who">
+      <ul class="work">
+        {recent.map(c => (
+          <li>
+            <span class="when">{c.data.years}</span>
+            <div>
               <h3>{c.data.name}</h3>
-              <p class="client-sector">{c.data.sector}</p>
+              <p class="sector">{c.data.sector}</p>
+              <p>{c.data.work}</p>
             </div>
-            <p class="client-work">
-              {c.data.work}
-              {c.data.link && <a class="client-link" href={c.data.link.href} rel="noopener">{c.data.link.label}</a>}
-            </p>
           </li>
         ))}
-      </ol>
+      </ul>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" aria-labelledby="h-earlier">
     <div class="container">
-      <div class="domains-tech-grid">
+      <div class="cols">
         <div>
-          <h2 class="section-h2 section-h2-snug">Where I have worked</h2>
-          <p class="section-sub section-sub-snug">
-            Different sectors, but usually with real operational, financial, or regulatory consequences.
-          </p>
-          <div class="domain-list">
-            {domains.map(d => <span class="tag tag-md">{d}</span>)}
-          </div>
+          <h2 id="h-earlier" class="h2-sm">Earlier work</h2>
+          <ul class="earlier">
+            {earlier.map(c => (
+              <li>
+                <span class="y">{c.data.years}</span>
+                <span>
+                  <strong>{c.data.name}</strong> · {c.data.work}
+                  {c.data.link && <> <a href={c.data.link.href} rel="noopener">{c.data.link.label}</a></>}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
-          <h2 class="section-h2 section-h2-snug">Core stack</h2>
-          <p class="section-sub section-sub-snug">
-            Strongest around the Microsoft ecosystem, but guided by architecture and context rather than attachment to a stack.
-          </p>
-          <div class="domain-list">
-            {technologies.map(t => <span class="tag tag-md">{t}</span>)}
-          </div>
+          <h2 class="h2-sm">Recognition</h2>
+          <ul class="facts">
+            {awards.map(a => (
+              <li><span class="y">{a.data.year}</span><span><strong>{a.data.title}</strong> · {a.data.issuer}{a.data.detail && <span class="detail">{a.data.detail}</span>}</span></li>
+            ))}
+          </ul>
+          <h2 class="h2-sm stack-h">Industries</h2>
+          <p class="list">{domains.join(' · ')}</p>
+          <h2 class="h2-sm stack-h">Technologies</h2>
+          <p class="list">{technologies.join(' · ')}</p>
+          <p class="note">Strongest around the Microsoft ecosystem, but guided by the problem rather than attachment to a stack.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <section class="section section-alt" id="recognition">
-    <div class="container">
-      <h2 class="section-h2 section-h2-snug">Appointments, awards, and nominations</h2>
-      <p class="section-sub section-sub-narrow">
-        Recognition from clients, peers, the freelance network, and courts. Useful as a trust signal, but always secondary to whether the work itself stands up.
-      </p>
-      <div class="awards-list">
-        {awards.map(a => (
-          <div class:list={['award-item', { 'award-item--featured': a.data.featured }]}>
-            <div class="award-year label-caps">{a.data.year}</div>
-            <div>
-              <h3>{a.data.title}</h3>
-              <p>{a.data.issuer}</p>
-              {a.data.detail && <p class="award-detail">{a.data.detail}</p>}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <CtaStrip
-    heading="Need a calm senior perspective on a difficult situation?"
-    body="If a system has become harder to steer, a delivery needs firmer technical footing, or an important decision should be worked through properly, write."
-  >
-    <div class="btn-row">
-      <a href="/testimonials/" class="btn btn-ghost">Read recommendations</a>
-      <a href="/contact/" class="btn btn-primary">Contact Anders</a>
-    </div>
-  </CtaStrip>
-
 </Layout>
 
 <style>
-  .about-intro-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-  .about-lead {
-    font-size: 1.0625rem;
-    font-weight: 500;
-    color: var(--text);
-    margin-bottom: 0.875rem;
-    line-height: 1.7;
-  }
-  .about-body {
-    font-size: 1rem;
-    color: var(--text-2);
-    line-height: 1.75;
-  }
-  .about-body-spaced { margin-top: 1rem; }
-  .section-h2 { margin-bottom: 1rem; }
-  .section-h2-tight { margin-bottom: 0.5rem; }
-  .section-h2-snug { margin-bottom: 0.75rem; }
-  .section-sub { max-width: 58ch; margin-bottom: 2rem; color: var(--text-2); }
-  .section-sub-wide { max-width: 60ch; margin-bottom: 2.5rem; }
-  .section-sub-snug { max-width: none; margin-bottom: 1.25rem; }
-  .section-sub-narrow { max-width: 52ch; }
-  .award-detail { margin-top: 0.375rem; max-width: var(--measure); }
-  .about-court {
-    margin-top: 1.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--border);
-    font-size: 0.9375rem;
-    color: var(--text);
-  }
-  .about-court a {
-    color: var(--accent);
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .about-court a:hover { color: var(--accent-hover); }
-  #recognition { scroll-margin-top: var(--nav-h); }
-  .about-pull-quote {
-    margin-top: 3rem;
-  }
-  .domains-tech-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-  }
-  @media (max-width: 768px) {
-    .about-intro-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .about-pull-quote { margin-top: 0; }
-    .domains-tech-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  }
+  .role { margin-top: 14px; font-size: 18px; }
+  .aside-quote { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--rule); }
+  .aside-quote blockquote { font-size: 22px; line-height: 1.45; font-weight: 500; letter-spacing: -0.012em; }
+  .aside-quote figcaption { margin-top: 14px; font-size: 15px; line-height: 1.5; color: var(--ink-2); }
+  .aside-quote strong { display: block; }
 
-  .client-ledger {
-    list-style: none;
-    border-top: 1px solid var(--border);
-  }
-  .client-row {
+  .work { list-style: none; display: grid; gap: 16px; }
+  .work li {
     display: grid;
-    grid-template-columns: 6.5rem minmax(0, 15rem) minmax(0, 1fr);
-    gap: 1.5rem;
-    align-items: baseline;
-    padding: 1.125rem 0;
-    border-bottom: 1px solid var(--border);
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 8px 40px;
+    padding: 26px 28px;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    background: var(--paper);
   }
-  .client-years {
-    font-size: 0.8125rem;
-    font-weight: 600;
-    color: var(--accent);
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
-  }
-  .client-who h3 { font-size: 0.9375rem; }
-  .client-sector { font-size: 0.8125rem; color: var(--text-3); }
-  .client-work { max-width: var(--measure); font-size: 0.9375rem; line-height: 1.65; }
-  .client-link {
-    display: block;
-    width: fit-content;
-    margin-top: 0.25rem;
-    color: var(--accent);
-    font-weight: 500;
-    text-decoration: underline;
-    text-decoration-color: var(--accent-border);
-    text-underline-offset: 0.2em;
-  }
-  .client-link:hover { color: var(--accent-hover); text-decoration-color: currentColor; }
-  @media (max-width: 768px) {
-    .client-row { grid-template-columns: 1fr; gap: 0.25rem; }
-    .client-work { margin-top: 0.375rem; }
-  }
+  .when { padding-top: 4px; font-size: 15px; font-weight: 600; color: var(--signal); }
+  .work h3 { font-size: 22px; letter-spacing: -0.014em; line-height: 1.25; }
+  .sector { margin: 2px 0 10px; font-size: 15px; color: var(--ink-3); }
+  .work p:not(.sector) { font-size: 16px; line-height: 1.65; max-width: 72ch; }
 
-  .focus-grid {
+  .cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 80px; }
+  .earlier, .facts { list-style: none; margin-top: 20px; }
+  .earlier li, .facts li {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-2);
   }
-  .focus-card { padding: 1.5rem; }
-  .focus-card h3 { font-size: 0.9375rem; margin-bottom: 0.5rem; }
-  .focus-card p { font-size: 0.875rem; line-height: 1.65; }
-  @media (max-width: 640px) {
-    .focus-grid { grid-template-columns: 1fr; }
+  .y { font-weight: 600; color: var(--ink-3); }
+  .detail { display: block; margin-top: 4px; color: var(--ink-3); }
+  .stack-h { margin-top: 44px; }
+  .list { margin-top: 14px; font-size: 16px; line-height: 1.7; color: var(--ink); }
+  .note { margin-top: 10px; font-size: 15px; }
+
+  @media (max-width: 900px) {
+    .work li, .cols { grid-template-columns: 1fr; }
+    .cols { gap: 48px; }
   }
 </style>

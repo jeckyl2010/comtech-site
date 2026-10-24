@@ -1,157 +1,166 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getCollection, getEntry } from 'astro:content';
-import CtaStrip from '../components/CtaStrip.astro';
-import about from '../data/about.json';
+import Mark from '../components/Mark.astro';
+import Ladder from '../components/Ladder.astro';
+import { getEntry } from 'astro:content';
 
-const { domains } = about;
-const countWords = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve'];
-const domainCount = countWords[domains.length] ?? String(domains.length);
-
-const court = (await getCollection('awards')).find(a => a.data.featured)!.data;
-const quote = async (id: string) => (await getEntry('testimonials', id))!.data;
-const [isabela, arne, mads, janus] = await Promise.all(
-  ['isabela-bolotti', 'arne-beck', 'mads-jaeger', 'janus-toth'].map(quote),
-);
+const janus = (await getEntry('testimonials', 'janus-toth'))!.data;
 ---
 
 <Layout
-  title="COM<tech> | Software Architecture & Technical Leadership"
-  description="Senior software architect based in Copenhagen. Architecture, technical leadership, and pragmatic delivery for organisations where reliability, traceability, and long-term maintainability matter."
+  title="COM<tech> Consulting | Software architecture by Anders Hybertz"
+  description="Senior software architect and technical lead in Copenhagen. Architecture, AI in regulated production, and technical delivery for organisations where the software has to work."
+  closeHeading="Let's discuss your architecture."
+  closeBody="Send a short description of the system and the decision in front of you. The first conversation is about the problem, not a sales pitch."
 >
-
-  <section class="hero dark-section">
-    <div class="aurora" aria-hidden="true">
-      <div class="aurora-blob aurora-blob-1"></div>
-      <div class="aurora-blob aurora-blob-2"></div>
-      <div class="aurora-blob aurora-blob-3"></div>
-    </div>
-    <div class="grain" aria-hidden="true"></div>
-    <div class="hero-inner">
-
+  <Fragment slot="opening">
+    <div class="container home-hero">
       <div>
-        <h1>Software architecture built for the places where it has to work.</h1>
-        <p class="hero-sub">
-          COM&lt;tech&gt; is Anders Hybertz, a senior software architect and technical lead with
-          three decades of experience across pharmaceutical manufacturing, finance, energy,
-          telecom, and the public sector. Brought in when the architecture matters, the delivery
-          has to work, and the solution should still make sense after the excitement has worn off.
-        </p>
-        <div class="hero-actions">
-          <a href="/services/" class="btn btn-primary">See services</a>
-          <a href="/contact/" class="btn btn-ghost-dark">Contact Anders</a>
+        <h1 class="display">Software architecture built for the places where it has to work.</h1>
+        <p class="lead home-sub">I'm <strong>Anders Hybertz</strong>, senior software architect and technical lead in Copenhagen. I design and lead the delivery of software in pharmaceutical manufacturing, finance, insurance, energy, and the public sector, from system architecture and cloud platforms to AI in regulated production. You work with me directly, with no account managers in between.</p>
+        <div class="actions home-actions">
+          <a class="btn btn-primary" href="/contact/">Discuss your architecture <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#ways">Ways to work together</a>
         </div>
       </div>
-
-      <div class="hero-proof">
-        <ul class="hero-awards-stack">
-          <li class="hero-award-row hero-award-row--featured">
-            <span class="hero-award-label">
-              Court-appointed independent software expert
-              <span class="hero-award-issuer">{court.issuer}</span>
-            </span>
-            <span class="hero-award-year">{court.year}</span>
-          </li>
-          <li class="hero-award-row">
-            <span class="hero-award-label">Best Individual Performance, 7N consultancy network</span>
-            <span class="hero-award-year">2016 &amp; 2020</span>
-          </li>
-          <li class="hero-award-row">
-            <span class="hero-award-label">PSQIT Innovation Prize, Novo Nordisk</span>
-            <span class="hero-award-year">2020</span>
-          </li>
-        </ul>
-        <figure class="hero-quote">
-          <blockquote>&ldquo;{isabela.excerpt}&rdquo;</blockquote>
-          <figcaption class="testimonial-author">
-            <strong>{isabela.name}</strong><br />
-            {isabela.title}
-          </figcaption>
-        </figure>
-      </div>
-
+      <Mark hero />
     </div>
-  </section>
 
-  <section class="section">
     <div class="container">
-      <h2 class="section-title">Practical help where architecture and delivery meet</h2>
-      <div class="bento-grid">
-
-        <div class="bento-card bento-featured">
-          <h3>Clear architecture for complex environments</h3>
-          <p>
-            Greenfield or legacy. Regulated environments or ordinary line-of-business systems.
-            The goal is the same: sound decisions, clear boundaries, and a solution the team can
-            work with over time.
-          </p>
-          <a href="/services/" class="bento-link">View all services &rarr;</a>
-        </div>
-
-        <div class="bento-card bento-domains">
-          <p class="bento-stat">{domainCount} industries.<br />One senior point of contact.</p>
-          <div class="bento-tag-cloud">
-            {domains.map(d => <span class="tag">{d}</span>)}
-          </div>
-        </div>
-
-        <div class="bento-card">
-          <h3>Cloud and AI, used where it creates value</h3>
-          <p>
-            Azure-native platforms, event-driven systems, containerised workloads, and AI solutions
-            that still have to meet operational, compliance, and delivery realities.
-          </p>
-        </div>
-
-        <div class="bento-card">
-          <h3>Teams should be stronger when the engagement ends</h3>
-          <p>
-            Architecture reviews, mentoring, technical direction, and hands-on support where needed.
-            The aim is not dependency. It is a team that can carry the work forward with confidence.
-          </p>
-        </div>
-
-        <figure class="bento-card bento-mini-quote">
-          <blockquote class="bento-pull">&ldquo;{arne.excerpt}&rdquo;</blockquote>
-          <figcaption class="testimonial-author"><strong>{arne.name}</strong>, {arne.title}</figcaption>
-        </figure>
-
-      </div>
+      <ul class="capabilities" aria-label="What to expect">
+        <li>
+          <h2>AI in highly regulated environments</h2>
+          <span class="cap-text">
+            <p>Computer vision on production lines where the cameras also covered people at work. Built to GxP and GDPR, and to the EU AI Act from its early drafts. From idea to production, cloud to air-gapped factory networks.</p>
+            <span class="evidence">Novo Nordisk, 2019–2025</span>
+          </span>
+        </li>
+        <li>
+          <h2>Architecture for the factory floor</h2>
+          <span class="cap-text">
+            <p>Manufacturing IT that connects production lines, operators, and the cloud: IoT, event-driven platforms, and standardised services.</p>
+            <span class="evidence">Novo Nordisk · ROCKWOOL Group</span>
+          </span>
+        </li>
+        <li>
+          <h2>Architecture and delivery as one</h2>
+          <span class="cap-text">
+            <p>From the first architecture decision to production, with the people who will use the solution kept in the design all the way. Leading the team and aligning vendors and internal IT, hands-on where it helps.</p>
+            <span class="evidence">Programme tech lead, 4 product teams</span>
+          </span>
+        </li>
+      </ul>
     </div>
-  </section>
+  </Fragment>
 
-  <section class="section section-alt">
+  <section class="section" aria-labelledby="h-frame">
     <div class="container">
-      <h2 class="section-title">From the people who worked alongside him</h2>
-      <div class="quote-pair">
-        {[mads, janus].map(t => (
-          <figure class="blockquote-card">
-            <blockquote>&ldquo;{t.excerpt}&rdquo;</blockquote>
-            <figcaption class="testimonial-author"><strong>{t.name}</strong>, {t.title}</figcaption>
-          </figure>
-        ))}
+      <div class="split">
+        <h2 id="h-frame" class="h2">Architecture decisions are the expensive ones to change.</h2>
+        <div>
+          <p class="body">System boundaries, integration patterns, data ownership, platform and cloud choices, and how the solution is built, validated, and operated. Made well, they keep a system changeable for years. Made badly, every later change costs more than the last.</p>
+          <p class="body">I work on those decisions with your team, in greenfield and legacy systems, under delivery pressure, and in regulated environments where traceability and documentation are part of the solution.</p>
+        </div>
       </div>
-      <a href="/testimonials/" class="btn btn-ghost quote-pair-cta">Read all recommendations</a>
+      <div class="ruled frame-cols">
+        <div><h3>Architecture you can reason about</h3><p>Clear system boundaries, deliberate integration and API design, and event-driven patterns where they fit.</p></div>
+        <div><h3>Technology chosen for its use</h3><p>.NET, Azure, Kubernetes, Dapr, and AI/ML, selected by the problem, not by the trend.</p></div>
+        <div><h3>Built to be operated and audited</h3><p>CI/CD and infrastructure as code, traceability, and documentation that holds up in GxP and audits.</p></div>
+      </div>
     </div>
   </section>
 
-  <CtaStrip
-    heading="Need an experienced architectural perspective?"
-    body="Typically when a delivery has become harder to steer, a technical decision carries real consequences, or the team needs a calm senior perspective without turning the process into a performance."
-  >
-    <a href="/contact/" class="btn btn-primary">Get in touch</a>
-  </CtaStrip>
+  <section id="ways" class="section section-white" aria-labelledby="h-ways">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="h-ways" class="h2">Three ways to work together</h2>
+        <p>From an outside view to leading the technical delivery, depending on what the situation needs.</p>
+      </div>
+      <Ladder />
+    </div>
+  </section>
 
+  <section class="section" aria-labelledby="h-voice">
+    <div class="container">
+      <h2 id="h-voice" class="sr-only">A recommendation</h2>
+      <figure class="voice">
+        <blockquote>&ldquo;{janus.excerpt}&rdquo;</blockquote>
+        <figcaption>
+          <strong>{janus.name}</strong>
+          {janus.title}. {janus.context}
+          <br /><a class="more" href="/testimonials/">Read all recommendations →</a>
+        </figcaption>
+      </figure>
+      <p class="clients"><span>Clients include</span> <b>ROCKWOOL Group</b> <b>Klimadatastyrelsen</b> <b>Novo Nordisk</b> <b>RSA / Codan</b> <b>SDC</b></p>
+    </div>
+  </section>
 </Layout>
 
 <style>
-  .quote-pair {
+  .home-hero {
+    position: relative;
+    z-index: 1;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 40px 56px;
+    align-items: center;
+    padding-top: 64px;
+    padding-bottom: 88px;
   }
-  .quote-pair-cta { margin-top: 2rem; }
-  @media (max-width: 780px) {
-    .quote-pair { grid-template-columns: 1fr; }
+  .home-hero :global(.mark-hero) { justify-self: center; color: var(--night-text); }
+  .home-sub { margin-top: 28px; max-width: 54ch; }
+  .home-actions { margin-top: 34px; }
+
+  /* Three capabilities. Each column is as wide as its one-line title; the text wraps beneath it. */
+  .capabilities {
+    position: relative;
+    z-index: 1;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: space-between;
+    column-gap: 48px;
+    border-top: 1px solid var(--night-line);
+  }
+  .capabilities li { padding: 24px 0 30px; }
+  .capabilities h2 {
+    margin-bottom: 8px;
+    font-size: clamp(17px, calc((100vw - 240px) / 52), 24px);
+    letter-spacing: -0.018em;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .cap-text { display: block; width: 0; min-width: 100%; }
+  .capabilities p { font-size: 16px; line-height: 1.5; }
+  .evidence { display: flex; align-items: center; gap: 8px; margin-top: 12px; font-size: 14px; color: var(--glow); }
+  .evidence::before { content: ''; width: 7px; height: 7px; background: var(--glow); flex: none; }
+
+  .frame-cols { margin-top: 72px; }
+
+  .clients {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px 32px;
+    margin-top: 72px;
+    padding-top: 26px;
+    border-top: 1px solid var(--rule);
+    font-size: 15px;
+    color: var(--ink-3);
+  }
+  .clients b { font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+
+  @media (max-width: 1100px) {
+    .capabilities { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .capabilities h2 { white-space: normal; }
+    .cap-text { width: auto; }
+  }
+  @media (max-width: 900px) {
+    .home-hero { grid-template-columns: 1fr; padding-top: 24px; padding-bottom: 56px; }
+    .home-hero :global(.mark-hero) { order: -1; width: 150px; justify-self: start; }
+    .capabilities { grid-template-columns: 1fr; }
+    .capabilities li { padding: 20px 0; border-bottom: 1px solid var(--night-line); }
+    .capabilities li:last-child { border-bottom: 0; }
+    .frame-cols, .clients { margin-top: 48px; }
   }
 </style>

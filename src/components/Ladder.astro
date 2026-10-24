@@ -1,0 +1,43 @@
+---
+// The three ways to work together, from src/data/ways.json. `detailed` adds each
+// included service's description from src/data/services.json.
+import { getCollection } from 'astro:content';
+
+interface Props {
+  detailed?: boolean;
+}
+
+const { detailed = false } = Astro.props;
+const ways = (await getCollection('ways')).sort((a, b) => a.data.order - b.data.order);
+const services = await getCollection('services');
+const service = (name: string) => {
+  const s = services.find(x => x.data.name === name);
+  if (!s) throw new Error(`ways.json names an unknown service: ${name}`);
+  return s.data;
+};
+---
+
+<ol class="ladder">
+  {ways.map(({ data: w }) => (
+    <li>
+      <span class="depth" aria-hidden="true">{[1, 2, 3].map(n => <i class:list={{ on: n <= w.depth }}></i>)}</span>
+      <h3>{w.title}</h3>
+      <p>{w.body}</p>
+      {detailed
+        ? w.services.map(name => (
+            <div class="ladder-service">
+              <h4>{name}</h4>
+              <p>{service(name).description}</p>
+            </div>
+          ))
+        : <p class="includes">{w.services.map(service).map(s => s.name).join(' · ')}</p>}
+      <p class="example">Recently: <strong>{w.example}</strong>, {w.when}</p>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .ladder-service { padding-top: 14px; border-top: 1px solid var(--rule); }
+  .ladder-service h4 { margin-bottom: 4px; font-size: 16px; font-weight: 600; color: var(--ink); }
+  .ladder-service p { font-size: 15px; }
+</style>

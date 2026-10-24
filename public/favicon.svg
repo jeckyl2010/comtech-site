@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#5352cc"/>
-  <!-- < -->
-  <polyline points="13,9 7,16 13,23" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <!-- > -->
-  <polyline points="19,9 25,16 19,23" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- The COM<tech> mark on night ground: two brackets holding one square -->
+  <rect width="32" height="32" rx="7" fill="#0d0e14"/>
+  <path fill="#eef0f4" d="M11.6 7.6 L13.2 9.2 L6.5 16 L13.2 22.8 L11.6 24.4 L3.2 16 Z"/>
+  <path fill="#eef0f4" d="M20.4 7.6 L18.8 9.2 L25.5 16 L18.8 22.8 L20.4 24.4 L28.8 16 Z"/>
+  <rect fill="#8b89ff" x="13.6" y="13.6" width="4.8" height="4.8"/>
 </svg>

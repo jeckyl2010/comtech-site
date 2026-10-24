@@ -1,5 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions';
+import Mark from '../components/Mark.astro';
+import SiteClose from '../components/SiteClose.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -7,6 +9,8 @@ interface Props {
   description?: string;
   ogImage?: string;
   noindex?: boolean;
+  closeHeading?: string;
+  closeBody?: string;
 }
 
 const {
@@ -14,6 +18,8 @@ const {
   description = 'Senior Software Architect & Technical Lead. COM<tech> Consulting, Copenhagen.',
   ogImage = '/og-default.png',
   noindex = false,
+  closeHeading,
+  closeBody,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -21,7 +27,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPath = Astro.url.pathname;
 
 const nav = [
-  { href: '/services/', label: 'Services' },
+  { href: '/services/', label: 'How I work' },
   { href: '/about/', label: 'About' },
   { href: '/testimonials/', label: 'Recommendations' },
   { href: '/contact/', label: 'Contact' },
@@ -34,7 +40,7 @@ const nav = [
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
-  <meta name="theme-color" content="#f9f9f8" />
+  <meta name="theme-color" content="#0d0e14" />
   {noindex && <meta name="robots" content="noindex" />}
   <link rel="canonical" href={canonicalURL} />
   <title>{title}</title>
@@ -46,7 +52,7 @@ const nav = [
   <meta property="og:description" content={description} />
   <meta property="og:image" content={new URL(ogImage, Astro.site)} />
   <meta property="og:locale" content="en_GB" />
-  <meta property="og:site_name" content="COM&lt;tech&gt;" />
+  <meta property="og:site_name" content="COM&lt;tech&gt; Consulting" />
 
   <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -54,13 +60,8 @@ const nav = [
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="preload" href="/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="/fonts/inter-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="/fonts/inter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="/fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <!-- The wordmark's <tech> is above the fold on every page — preload it with the rest.
-       Inter 600 is not preloaded: it only sets h3/strong, all below the fold. -->
-  <link rel="preload" href="/fonts/jetbrains-mono-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/familjen-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/familjen-grotesk-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
   <ClientRouter />
   <!-- Stamp js class before first paint so fade-up initial state never flashes -->
   <script is:inline>document.documentElement.classList.add('js');</script>
@@ -81,9 +82,11 @@ const nav = [
         "@type": "Organization",
         "@id": "https://comtechconsulting.dk/#org",
         "name": "COM<tech>",
+        "alternateName": "COM<tech> Consulting",
         "legalName": "COM-tech v/Anders Hybertz",
         "vatID": "DK25567471",
         "url": "https://comtechconsulting.dk/",
+        "logo": "https://comtechconsulting.dk/favicon.svg",
         "founder": { "@id": "https://comtechconsulting.dk/#person" },
         "address": { "@type": "PostalAddress", "addressLocality": "Copenhagen", "addressCountry": "DK" }
       }
@@ -94,11 +97,13 @@ const nav = [
 
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  <header>
-    <nav class="nav" aria-label="Main navigation">
-      <div class="nav-inner">
-        <a href="/" class="wordmark" aria-label="COM<tech> home">
-          COM<span class="ct">&lt;tech&gt;</span>
+  <div class="night">
+    <div class="night-light" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="container" aria-label="Main navigation">
+        <a href="/" class="logo" aria-label="COM<tech> Consulting home">
+          <Mark />
+          <span>COM<span class="logo-tech">&lt;tech&gt;</span></span>
         </a>
         <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
           <span></span><span></span><span></span>
@@ -106,36 +111,20 @@ const nav = [
         <ul class="nav-links" id="nav-links">
           {nav.map(({ href, label }) => (
             <li>
-              <a
-                href={href}
-                aria-current={currentPath.startsWith(href) ? 'page' : undefined}
-              >
-                {label}
-              </a>
+              <a href={href} aria-current={currentPath.startsWith(href) ? 'page' : undefined}>{label}</a>
             </li>
           ))}
         </ul>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
+    <slot name="opening" />
+  </div>
 
   <main id="main-content">
     <slot />
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-left">
-        <a href="/" class="wordmark" aria-label="COM<tech> home">
-          COM<span class="ct">&lt;tech&gt;</span>
-        </a>
-        <a class="footer-cvr" href="https://datacvr.virk.dk/enhed/virksomhed/25567471" rel="noopener">CVR 25567471</a>
-      </div>
-      <a href="mailto:anders@comtechconsulting.dk" class="footer-email">
-        anders@comtechconsulting.dk
-      </a>
-    </div>
-  </footer>
+  <SiteClose heading={closeHeading} body={closeBody} />
 
   <script>
     // ── Nav mobile toggle ────────────────────────────────────────────────────
@@ -172,7 +161,6 @@ const nav = [
 
     // ── Scroll-triggered fade-up ─────────────────────────────────────────────
     function initFadeUp() {
-      // Skip for users who prefer reduced motion
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
       const observer = new IntersectionObserver(
@@ -187,14 +175,9 @@ const nav = [
         { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
       );
 
-      document.querySelectorAll('section').forEach(el => {
-        // Hero is already in viewport on load — show immediately, no animation
-        if (el.classList.contains('hero')) {
-          el.classList.add('fade-up', 'visible');
-        } else {
-          el.classList.add('fade-up');
-          observer.observe(el);
-        }
+      document.querySelectorAll('main section').forEach(el => {
+        el.classList.add('fade-up');
+        observer.observe(el);
       });
     }
 

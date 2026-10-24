@@ -8,9 +8,7 @@ export const GET: APIRoute = async () => {
   const services     = (await getCollection('services')).sort(byOrder);
   const awards       = (await getCollection('awards')).sort(byOrder);
   const clients      = (await getCollection('clients')).sort(byOrder);
-  const testimonials = (await getCollection('testimonials')).sort(
-    (a, b) => Number(b.data.featured) - Number(a.data.featured) || byOrder(a, b),
-  );
+  const testimonials = (await getCollection('testimonials')).sort(byOrder);
 
   const body = `# COM<tech> — comtechconsulting.dk
 

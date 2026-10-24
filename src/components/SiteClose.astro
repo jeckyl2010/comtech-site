@@ -1,0 +1,35 @@
+---
+// The night band that ends every page: an optional closing call, then the legal line.
+interface Props {
+  heading?: string;
+  body?: string;
+}
+
+const { heading, body } = Astro.props;
+---
+
+<footer class="night">
+  <div class="night-light night-light--low" aria-hidden="true"></div>
+  {heading && (
+    <section class="close" aria-labelledby="close-heading">
+      <div class="container">
+        <div>
+          <h2 id="close-heading" class="h2">{heading}</h2>
+          {body && <p>{body}</p>}
+        </div>
+        <div>
+          <a class="close-mail" href="mailto:anders@comtechconsulting.dk?subject=Enquiry%20via%20comtechconsulting.dk">anders@comtechconsulting.dk</a>
+        </div>
+      </div>
+    </section>
+  )}
+  <div class="legal">
+    <div class="container">
+      <span>COM&lt;tech&gt; Consulting · Anders Hybertz · Copenhagen</span>
+      <span class="legal-links">
+        <a href="https://www.linkedin.com/in/andershybertz/">LinkedIn</a>
+        <a href="https://datacvr.virk.dk/enhed/virksomhed/25567471" rel="noopener">CVR 25567471</a>
+      </span>
+    </div>
+  </div>
+</footer>

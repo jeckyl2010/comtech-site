@@ -1,0 +1,18 @@
+---
+// The COM<tech> mark: two brackets holding one square, the single signal.
+// `hero` plays the one-time closing animation; the default is the static logo size.
+interface Props {
+  hero?: boolean;
+}
+
+const { hero = false } = Astro.props;
+const left = 'M150 18 L172 40 L72 140 L172 240 L150 262 L28 140 Z';
+const right = 'M290 18 L268 40 L368 140 L268 240 L290 262 L412 140 Z';
+---
+
+<svg class:list={['mark', { 'mark-hero': hero }]} viewBox="0 0 440 280" aria-hidden="true" focusable="false">
+  {hero && <rect class="mark-halo" fill="none" stroke="var(--glow)" stroke-width="3" x="190" y="110" width="60" height="60" />}
+  <path class="mark-l" fill="currentColor" d={left} />
+  <path class="mark-r" fill="currentColor" d={right} />
+  <rect class="mark-sq" fill="var(--glow)" x="190" y="110" width="60" height="60" />
+</svg>

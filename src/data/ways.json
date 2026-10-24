@@ -1,0 +1,40 @@
+[
+  {
+    "id": "outside",
+    "order": 1,
+    "depth": 1,
+    "title": "An outside view",
+    "body": "An independent assessment of where you stand: architecture reviews, strategic IT advice, or a third-party audit of a delivery.",
+    "services": [
+      "Strategic IT advisory",
+      "Independent software auditing"
+    ],
+    "example": "An independent audit for Klimadatastyrelsen",
+    "when": "2025"
+  },
+  {
+    "id": "hands-on",
+    "order": 2,
+    "depth": 2,
+    "title": "Architecture, hands-on",
+    "body": "Designing the system with you, greenfield or legacy, including cloud and AI where they serve a real purpose.",
+    "services": [
+      "Software architecture & design",
+      "Cloud and AI solutions"
+    ],
+    "example": "Manufacturing architecture at ROCKWOOL Group",
+    "when": "2026"
+  },
+  {
+    "id": "lead",
+    "order": 3,
+    "depth": 3,
+    "title": "Leading the technical delivery",
+    "body": "Technical lead through the difficult parts of delivery, with the team, the vendors, and the stakeholders.",
+    "services": [
+      "Technical leadership and mentoring"
+    ],
+    "example": "AI computer vision in GxP production at Novo Nordisk",
+    "when": "2019–2025"
+  }
+]

@@ -18,7 +18,6 @@ const awards = defineCollection({
     title:    z.string(),
     issuer:   z.string(),
     detail:   z.string().optional(),
-    featured: z.boolean(),
   }),
 });
 
@@ -26,12 +25,11 @@ const testimonials = defineCollection({
   loader: file('./src/data/testimonials.json'),
   schema: z.object({
     order:    z.number(),
-    featured: z.boolean(),
-    category: z.string(),
     excerpt:  z.string(),
     quote:    z.string(),
     name:     z.string(),
     title:    z.string(),
+    context:  z.string(),
   }).refine(
     // Excerpts are shown in quotation marks, so every fragment between ellipses
     // must appear verbatim in the full recommendation.
@@ -48,7 +46,6 @@ const services = defineCollection({
     icon:        z.string(),
     description: z.string(),
     tags:        z.array(z.string()),
-    featured:    z.boolean(),
   }),
 });
 
@@ -64,4 +61,17 @@ const clients = defineCollection({
   }),
 });
 
-export const collections = { strengths, awards, testimonials, services, clients };
+const ways = defineCollection({
+  loader: file('./src/data/ways.json'),
+  schema: z.object({
+    order:    z.number(),
+    depth:    z.number().int().min(1).max(3),
+    title:    z.string(),
+    body:     z.string(),
+    services: z.array(z.string()),
+    example:  z.string(),
+    when:     z.string(),
+  }),
+});
+
+export const collections = { strengths, awards, testimonials, services, clients, ways };

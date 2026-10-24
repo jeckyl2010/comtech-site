@@ -5,7 +5,6 @@
     "title": "Court-Appointed Independent Software Expert",
     "issuer": "Danmarks Domstole · Sø- og Handelsretten",
     "detail": "Appointed to a five-member expert panel to provide independent technical assessment in a commercial software dispute. Held primary responsibility for architecture, application design, performance, and adherence to established engineering practices. Contributed to resolving the matter before the first court date.",
-    "featured": true,
     "order": 1
   },
   {
@@ -14,7 +13,6 @@
     "title": "PSQIT Innovation Prize",
     "issuer": "Novo Nordisk · Product, Supply, Quality & IT",
     "detail": "Team prize for a solution that optimised batch changeover procedures on production lines. Awarded for 2020, presented March 2021.",
-    "featured": false,
     "order": 2
   },
   {
@@ -22,7 +20,6 @@
     "year": "2020",
     "title": "Best Individual Performance of the Year",
     "issuer": "7N, associated with Novo Nordisk",
-    "featured": false,
     "order": 3
   },
   {
@@ -30,7 +27,6 @@
     "year": "2016",
     "title": "Best Individual Performance of the Year",
     "issuer": "7N, associated with RSA / Codan",
-    "featured": false,
     "order": 4
   },
   {
@@ -38,7 +34,6 @@
     "year": "2016",
     "title": "Nominee, Best Team Performance of the Year",
     "issuer": "7N, associated with RSA / Codan",
-    "featured": false,
     "order": 5
   }
 ]
