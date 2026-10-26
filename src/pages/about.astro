@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 import Timeline from '../components/Timeline.astro';
+import portrait from '../assets/portrait.jpg';
 import { getCollection, getEntry, z } from 'astro:content';
 import rawAbout from '../data/about.json';
 
@@ -25,6 +27,7 @@ const { domains, technologies } = z.object({
   <div slot="opening" class="intro">
     <div class="container">
       <div>
+        <Image class="portrait" src={portrait} alt="Anders Hybertz" width={400} widths={[200, 400]} sizes="200px" loading="eager" fetchpriority="high" />
         <h1 class="page-title">Anders Hybertz</h1>
         <p class="role">Senior software architect and technical lead · Copenhagen</p>
       </div>
@@ -107,6 +110,13 @@ const { domains, technologies } = z.object({
 </Layout>
 
 <style>
+  .portrait {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin-bottom: 32px;
+    border-radius: 14px;
+  }
   .role { margin-top: 14px; font-size: 18px; }
   .aside-quote { margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--rule); }
   .aside-quote blockquote { font-size: 22px; line-height: 1.45; font-weight: 500; letter-spacing: -0.012em; }
