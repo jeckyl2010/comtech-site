@@ -1,0 +1,4 @@
+Contact: mailto:anders@comtechconsulting.dk
+Expires: 2027-11-11T00:00:00.000Z
+Preferred-Languages: en, da
+Canonical: https://comtechconsulting.dk/.well-known/security.txt
