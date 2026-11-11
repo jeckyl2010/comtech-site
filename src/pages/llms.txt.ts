@@ -10,7 +10,21 @@ export const GET: APIRoute = async () => {
   const clients      = (await getCollection('clients')).sort(byOrder);
   const testimonials = (await getCollection('testimonials')).sort(byOrder);
 
+  const site = 'https://comtechconsulting.dk';
+
+  // Follows the llms.txt layout (llmstxt.org): H1, a one-line blockquote summary, then
+  // sections. Links are Markdown links with absolute URLs so agents can follow them.
   const body = `# COM<tech> — comtechconsulting.dk
+
+> COM<tech> is a one-person software architecture and technical leadership consultancy in Copenhagen, run by Anders Hybertz. It helps organisations in regulated and demanding environments with architecture, cloud and AI solutions, technical leadership, strategic IT advisory, and independent software audits.
+
+## Pages
+
+- [Home](${site}/): Overview, services summary, recommendations
+- [Services](${site}/services/): Full services detail and typical engagement situations
+- [About](${site}/about/): Background, focus areas, organisations worked with, industries, technologies, and recognition
+- [Testimonials](${site}/testimonials/): Recommendations in full
+- [Contact](${site}/contact/): How to get in touch and how engagements typically start
 
 ## Who
 
@@ -29,7 +43,7 @@ ${about.domains.join(', ')}.
 
 ## Organisations worked with (most recent first)
 
-${clients.map(c => `- ${c.data.name} (${c.data.sector}, ${c.data.years}): ${c.data.work}${c.data.link ? ` ${c.data.link.label}: ${c.data.link.href}` : ''}`).join('\n')}
+${clients.map(c => `- ${c.data.name} (${c.data.sector}, ${c.data.years}): ${c.data.work}${c.data.link ? ` [${c.data.link.label}](${c.data.link.href})` : ''}`).join('\n')}
 
 ## Recognition
 
@@ -41,18 +55,10 @@ ${testimonials.map(t => `"${t.data.excerpt}" — ${t.data.name}, ${t.data.title}
 
 ## Contact
 
-Email: anders@comtechconsulting.dk
-LinkedIn: https://www.linkedin.com/in/andershybertz/
-Based in Copenhagen. Working with clients across Denmark and internationally.
-CVR 25567471
-
-## Site structure
-
-- / — Home: overview, services summary, recommendations
-- /services/ — Full services detail and typical engagement situations
-- /about/ — Background, focus areas, organisations worked with, industries, technologies, and recognition
-- /testimonials/ — Recommendations in full
-- /contact/ — How to get in touch and how engagements typically start
+- Email: [anders@comtechconsulting.dk](mailto:anders@comtechconsulting.dk)
+- LinkedIn: [linkedin.com/in/andershybertz](https://www.linkedin.com/in/andershybertz/)
+- Based in Copenhagen. Working with clients across Denmark and internationally.
+- CVR 25567471
 `;
 
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
